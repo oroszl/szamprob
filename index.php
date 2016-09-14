@@ -92,6 +92,7 @@
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
 <td style="text-align:center; border: 1px solid #dddddd "> 
+<td style="text-align:center; border: 1px solid #dddddd "> 
 
 </tr>
 </tbody>
