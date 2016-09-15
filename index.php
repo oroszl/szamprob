@@ -76,16 +76,22 @@
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Mintapéldák </p> </td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/mintapelda00.html'>Mintapelda-00</a> 
                                                           <a href='notebooks/Package00/mintapelda00.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/mintapelda01.html'>Mintapelda-01</a> 
+                                                          <a href='notebooks/Package01/mintapelda01.ipynb' download>(forrás)</a></td>
 
+    
 </tr>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Feladatok </p> </td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/feladat00.html'>Feladat-00</a> 
                                                           <a href='notebooks/Package00/feladat00.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/feladat01.html'>Feladat-01</a> 
+                                                          <a href='notebooks/Package01/feladat01.ipynb' download>(forrás)</a></td>
 
 </tr>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
+<td style="text-align:center; border: 1px solid #dddddd "> 
 <td style="text-align:center; border: 1px solid #dddddd "> 
 
 </tr>
