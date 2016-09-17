@@ -97,7 +97,7 @@
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
 <td style="text-align:center; border: 1px solid #dddddd "></td> 
 <td style="text-align:center; border: 1px solid #dddddd "></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_seat02.html'>Vezérő utasítások és függvények</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheat02.html'>Vezérő utasítások és függvények</a></td>
     
 </tr>
 </tbody>
