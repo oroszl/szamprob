@@ -53,7 +53,10 @@
 <a href="http://nyelvek.inf.elte.hu/leirasok/Python/index.php">ELTE python dokumentáció </a><br>
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf">Python 3 Cheat Sheat</a><br>
 <a href="http://www.ntg.nl/doc/nemeth/lrovid.pdf">Latex-ről magyarul</a></p>
-
+</td>
+<td style="border: 0px solid #ffffff ">
+<h2 id="linkek">&nbsp;&nbsp;&nbsp;&nbsp; HF montázs </h3>
+<img src="wc.png" width=400></img>
 </td>
 
 </tbody>
