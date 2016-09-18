@@ -55,8 +55,8 @@
 <a href="http://www.ntg.nl/doc/nemeth/lrovid.pdf">Latex-ről magyarul</a></p>
 </td>
 <td style="border: 0px solid #ffffff ">
-<h2 id="linkek">&nbsp;&nbsp;&nbsp;&nbsp; HF montázs </h3>
-<img src="wc.png" width=400></img>
+<h2 id="linkek"  style="text-align: right">HF montázs</h3>
+<img src="wc.png" width=300></img>
 </td>
 
 </tbody>
@@ -100,7 +100,7 @@
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
 <td style="text-align:center; border: 1px solid #dddddd "></td> 
 <td style="text-align:center; border: 1px solid #dddddd "></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheat02.html'>Vezérő utasítások és függvények</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheat02.html'>Vezérő utasítások<br>függvények</a></td>
     
 </tr>
 </tbody>
