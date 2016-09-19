@@ -52,8 +52,12 @@
 <a href="http://django.arek.uni-obuda.hu/python3-doc/html/tutorial/index.html"> Magyar python dokumentáció </a><br>
 <a href="http://nyelvek.inf.elte.hu/leirasok/Python/index.php">ELTE python dokumentáció </a><br>
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf">Python 3 Cheat Sheat</a><br>
-<a href="http://www.ntg.nl/doc/nemeth/lrovid.pdf">Latex-ről magyarul</a></p>
-
+<a href="http://www.ntg.nl/doc/nemeth/lrovid.pdf">Latex-ről magyarul</a><br>
+<a href="./old_2015">Régi honlap</a>
+</td>
+<td style="border: 0px solid #ffffff ">
+<h2 id="linkek"  style="text-align: right">HF montázs</h3>
+<img src="wc.png" width=300></img>
 </td>
 
 </tbody>
@@ -67,33 +71,38 @@
 <hr><div class="se-section-delimiter"></div>
 
 <h2 id="notebooks">Notebookok</h2>
-<p>Az alábbi táblázat tartalmazza statikus(.html) és notebook (.ipynb) formátumban az órai és a házi feladat IPython notebook-okat. Továbbá néhány rövid összefoglaló puskát is a melyek alapvető feladatok megoldásában nyújthatnak némi segítséget. </p>
+<p>Az alábbi táblázat tartalmazza statikus(.html) és notebook (.ipynb) formátumban az órai és a házi feladat IPython notebook-okat. Továbbá néhány rövid összefoglaló puskát is a melyek alapvető feladatok megoldásában nyújthatnak némi segítséget. A feladatok közt szereplő ☠-el jelölt feladatok vagy alfeladatok nem kötelezőek viszont megoldásuk pozitívan befolyásolják a félév végén megszerzett érdemjegyet.</p>
 <div align="center">
 
 <table>
 <tbody>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Mintapéldák </p> </td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/mintapelda00.html'>Mintapelda-00</a> 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/mintapelda00.html'>Mintapelda-00</a><br> 
                                                           <a href='notebooks/Package00/mintapelda00.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/mintapelda01.html'>Mintapelda-01</a> 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/mintapelda01.html'>Mintapelda-01</a><br> 
                                                           <a href='notebooks/Package01/mintapelda01.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/mintapelda02.html'>Mintapelda-02</a><br>  
+                                                          <a href='notebooks/Package02/mintapelda02.ipynb' download>(forrás)</a></td>
 
     
 </tr>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Feladatok </p> </td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/feladat00.html'>Feladat-00</a> 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/feladat00.html'>Feladat-00</a><br>  
                                                           <a href='notebooks/Package00/feladat00.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/feladat01.html'>Feladat-01</a> 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/feladat01.html'>Feladat-01</a><br>  
                                                           <a href='notebooks/Package01/feladat01.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href=''>Feladat-02</a><br>  
+                                                          <a href='' download>(forrás)</a></td>
 
 </tr>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
-<td style="text-align:center; border: 1px solid #dddddd "> 
-<td style="text-align:center; border: 1px solid #dddddd "> 
-
+<td style="text-align:center; border: 1px solid #dddddd "></td> 
+<td style="text-align:center; border: 1px solid #dddddd "></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheat02.html'>Vezérő utasítások<br>függvények</a></td>
+    
 </tr>
 </tbody>
 </table>

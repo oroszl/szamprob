@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat01</title>
+<title>mintapelda02</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,9 +11751,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><p>Minden feladatot külön notebookba oldj meg! A megoldásnotebook neve tartalmazza a feladat számát!
-A megoldasok kerüljenek a MEGOLDASOK mappába!</p>
-<hr>
+<h1 id="Alapvet&#337;-vez&#233;rl&#337;-utas&#237;t&#225;sok">Alapvet&#337; vez&#233;rl&#337; utas&#237;t&#225;sok<a class="anchor-link" href="#Alapvet&#337;-vez&#233;rl&#337;-utas&#237;t&#225;sok">&#182;</a></h1><p>Bonyolultabb programok sok egymás után következő utasítás végrehajtásából állnak. Azt hogy melyik utasítás mikor kerül végrehajtásra a vezérlőutasítások határozzák meg. Minden program nyelvben két alapvető vezérlő utasítás mindenképpen megtalálható, a feltételválasztó és a ciklus szervező.</p>
 
 </div>
 </div>
@@ -11763,35 +11761,492 @@ A megoldasok kerüljenek a MEGOLDASOK mappába!</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-komment">01-komment<a class="anchor-link" href="#01-komment">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Tegyél kommentjeleket az alábbi kódcellába úgy, hogy a futtatás végeredményben azt írja ki, hogy <strong><code>A bárányok hallgatnak</code></strong>. </li>
-<li>Mit jelent a <code>+=</code> jel? Fogalmazd meg szavakkal !</li>
-</ul>
+<h2 id="Az-if-utas&#237;t&#225;s">Az <code>if</code> utas&#237;t&#225;s<a class="anchor-link" href="#Az-if-utas&#237;t&#225;s">&#182;</a></h2><p>Az <strong><code>if</code></strong> utasítás tölti be a legtöbb nyelvben a feltételválsztó utasítás szerepét. Segítségével határozhatjuk meg hogy bizonyos körülmények teljesülésekor a program a megfelelő utasításokat hajtsa végre. 
+Lássunk erre egy példát:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mondat</span><span class="o">=</span><span class="s2">&quot;A &quot;</span>
-<span class="n">mondat</span><span class="o">+=</span><span class="s2">&quot;mezőn legelésző &quot;</span>
-<span class="n">mondat</span><span class="o">+=</span><span class="s2">&quot;bárányok &quot;</span>
-<span class="n">mondat</span><span class="o">+=</span><span class="s2">&quot;mélyen &quot;</span>
-<span class="n">mondat</span><span class="o">+=</span><span class="s2">&quot;hallgatnak.&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="mi">2</span><span class="o">+</span><span class="mi">2</span><span class="o">==</span><span class="mi">4</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A matematika még mindig működik&#39;</span><span class="p">)</span>
+</pre></div>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">mondat</span><span class="p">)</span>
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A matematika még mindig működik
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><p style="color:darkred;"> <b>Figyelem, a második sort beljebb húztuk!</b> A behúzás a Python jelölése az utasítások csoportosítására! </p> A behúzás mértékére általánosan bevett szokás hogy a szintaktikailag alacsonyabb szintű programrészek négy szóközzel beljebb vannak tolva. Ha tehát két <strong><code>if</code></strong> utasítást ágyazunk egymásba akkot a második által teljesítendő utasítások 8 szóközzel lesznek beljebb húzva. Ezt a behúzás a <code>jupyter</code> notebook kódcelláiban automatikusan is megtörténik. A <code>:</code> utáni ENTER leütése után a következő sor 4 szóközzel kerül beljebb, további ENTER leütés hatására a hierarhia azonos szintjén kezdjük az új sort. Ha feljebb szeretnénk lépni akkor a behúzást ki kell törölni. A C, C++, Java nyelvekben kapcsos zárójeleket {} használnak az egybefüggő kódrészletek elkülönítésére, kb. így:</p>
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">print</span> <span class="n">i</span>
+<span class="p">}</span>
+</pre></div>
+<p>A FORTRAN nyelvben az <em>END</em> szócska kiírása jelzi a kódrészlet végét. A pythonban a kettőspont (":"), majd szóközökkel beljebb írt sorok szolgálnak erre. Ha más programokból másolunk át részleteket figyeljünk arra, hogy a behúzás helyett nem TAB-ot használ-e. (A TAB néhol megengedett, de kerülendő. A modern <a href="http://django.arek.uni-obuda.hu/python3-doc/html/tutorial/controlflow.html#intermezzo-kodolasi-stilus">python kódolási stílusirányzat</a> minden behúzást, ahogy azt fennt is említettük, 4 szóköznek javasol.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">today</span><span class="o">=</span><span class="s1">&#39;Monday&#39;</span><span class="p">;</span>
+<span class="n">time</span><span class="o">=</span><span class="s1">&#39;12:00&#39;</span><span class="p">;</span>
+<span class="k">if</span> <span class="n">today</span><span class="o">==</span><span class="s1">&#39;Monday&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">time</span><span class="o">==</span><span class="s1">&#39;12:00&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nyomassuk a pythont!&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Nyomassuk a pythont!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bonyolultabb kritériumszerkezetet az <strong><code>else</code></strong> és <strong><code>elif</code></strong> parancsok segítségével konstruálhatunk:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Negatív, lecseréltem nullára&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nulla&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Egy&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Egynél több.&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Egy
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hiányozhat, de lehet egy vagy akár egynél több <strong><code>elif</code></strong> rész, a <strong><code>else</code></strong> rész szintén elmaradhat. Az <strong><code>elif</code></strong> kulcsszó – amely az ‘else if’ rövidítése – hasznos a felesleges behúzások elkerülésre. Egy <strong><code>if</code></strong> ...<strong><code>elif</code></strong> ... <strong><code>elif</code></strong> ... sor helyettesíti a más nyelvekben található <code>switch</code> és <code>case</code> utasításokat.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-for-utas&#237;t&#225;s">A <strong><code>for</code></strong> utas&#237;t&#225;s<a class="anchor-link" href="#A-for-utas&#237;t&#225;s">&#182;</a></h2><p>A számítógépek legfontosabb tulajdonságai közt szerepel az, hogy nagyon gyorsak és "fáradhatatlanok". Olyan feladatok megoldásában a leghatékonyabbak, amikor a feladatot kevés munkával meg lehet fogalmazni ("az alkotó pihen") de végrehajtása nagyon sok ismétlést, iterációt igényel ("a gép forog"). Az iteráció (angol: iterate) azt jelenti, hogy például egy lista elemein egyesével végigmegy a program, és műveleteket végez el rajtuk. A Python-ban az egyik erre használható utasítás a <strong><code>for</code></strong> parancs (magyarul kb. a ...-ra, azaz pl. a hét minden napjára, a lista minden elemére):</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">days_of_the_week</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">,</span><span class="s2">&quot;Monday&quot;</span><span class="p">,</span><span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span><span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span><span class="s2">&quot;Thursday&quot;</span><span class="p">,</span><span class="s2">&quot;Friday&quot;</span><span class="p">,</span><span class="s2">&quot;Saturday&quot;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">days_of_the_week</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">day</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ez a kódrészlet a <code>days_of_the_week</code> listán megy végig és a meglátogatott elemet hozzárendeli a <code>day</code> változóhoz, amit <em>ciklusváltozónak</em> is neveznek. Ezekután mindent végrehajt amit a beljebb tabulált (angolul: <em>indented</em>) parancsblokkban írtunk (most csak egy <code>print</code> utasítás), amihez felhasználhatja a ciklusváltozót is. Miután vége a beljebb tabulált régiónak, kilép a ciklusból.
+Annak semmi jelentősége nincs, hogy a példában a <strong>day</strong> nevet adtuk az iterációban szereplő <em>ciklusváltozó</em>nak. A program semmit se tud az emberi időszámításról, például, hogy a hétben napok vannak és nem kiscicák:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">macska</span> <span class="ow">in</span> <span class="n">days_of_the_week</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">macska</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A ciklus utasításblokkja állhat több utasításból is:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">days_of_the_week</span><span class="p">:</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;Today is &quot;</span> <span class="o">+</span> <span class="n">day</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Today is Sunday
+Today is Monday
+Today is Tuesday
+Today is Wednesday
+Today is Thursday
+Today is Friday
+Today is Saturday
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <strong><code>range()</code></strong> parancs remekül használható, ha a <strong><code>for</code></strong> ciklusban adott számú műveletet szeretnénk elvégezni:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="s2">&quot; szer &quot;</span><span class="p">,</span><span class="n">i</span> <span class="p">,</span><span class="s2">&quot;az pontosan &quot;</span><span class="p">,</span><span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0  szer  0 az pontosan  0
+1  szer  1 az pontosan  1
+2  szer  2 az pontosan  4
+3  szer  3 az pontosan  9
+4  szer  4 az pontosan  16
+5  szer  5 az pontosan  25
+6  szer  6 az pontosan  36
+7  szer  7 az pontosan  49
+8  szer  8 az pontosan  64
+9  szer  9 az pontosan  81
+10  szer  10 az pontosan  100
+11  szer  11 az pontosan  121
+12  szer  12 az pontosan  144
+13  szer  13 az pontosan  169
+14  szer  14 az pontosan  196
+15  szer  15 az pontosan  225
+16  szer  16 az pontosan  256
+17  szer  17 az pontosan  289
+18  szer  18 az pontosan  324
+19  szer  19 az pontosan  361
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Akkor válik mindez még érdekesebbé, ha az eddig tanult iterációt és feltételvizsgálatot kombináljuk:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">days_of_the_week</span><span class="p">:</span>
+    <span class="n">statement</span> <span class="o">=</span> <span class="s2">&quot;Today is &quot;</span> <span class="o">+</span> <span class="n">day</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">statement</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">day</span> <span class="o">==</span> <span class="s2">&quot;Sunday&quot;</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;   Sleep in&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">day</span> <span class="o">==</span> <span class="s2">&quot;Saturday&quot;</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;   Do chores&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;   Go to work&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Today is Sunday
+   Sleep in
+Today is Monday
+   Go to work
+Today is Tuesday
+   Go to work
+Today is Wednesday
+   Go to work
+Today is Thursday
+   Go to work
+Today is Friday
+   Go to work
+Today is Saturday
+   Do chores
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Figyeljük meg, a fenti példában hogy ágyazódik egymás alá a <strong><code>for</code></strong> és az <strong><code>if</code></strong>!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Egy-p&#233;ldaprogram:-Fibbonacci-sorozat">Egy p&#233;ldaprogram: Fibbonacci-sorozat<a class="anchor-link" href="#Egy-p&#233;ldaprogram:-Fibbonacci-sorozat">&#182;</a></h2><p>A <a href="http://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci</a> sorozat első két eleme 0 és 1, majd a következő elemet mindig az előző kettő összegéből számoljuk ki: 0,1,1,2,3,5,8,13,21,34,55,89,...</p>
+<p>Ha nagyobb $n$ értékekre is ki akarjuk számolni a sorozatot, ez kiváló feladat lehet egy fáradhatatlan és gyors számítógépnek!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># ennyi elemet szeretnénk meghatározni</span>
+<span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># az első két elem</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">):</span> <span class="c1"># számok 2-től n-ig, Figyelni kell hogy n ne legyen kisebb mint 2!!</span>
+    <span class="n">sequence</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nézzük végig lépésről lépésre! Először $n$ értékét, azaz a kiszámolandó sorozat hosszát állítjuk be 10-re. A sorozatot majdan tároló listát <strong><code>sequence</code></strong>-nek neveztük el, és <em>inicializáltuk</em> az első két értékkel. A "kézi munka" után következhet a gép automatikus munkája, az iteráció.</p>
+<p>Az iterációt 2-vel kezdjük (ez ugye a 0-s indexelés miatt a 3. elem lesz, hisz az első kettőt már mi megadtuk) és $n$-ig, a megadott listaméretig számolunk.</p>
+<p>A ciklus törzsében az addig kiszámolt lista végére hozzátűzzük (<strong><code>append</code></strong> parancsról kicsit bővebben <a href="http://django.arek.uni-obuda.hu/python3-doc/html/tutorial/datastructures.html#a-listakrol-bovebben">itt</a>) az előző két tag összegét. A ciklus vége után kiíratjuk az eredményt.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="F&#252;ggv&#233;nyek">F&#252;ggv&#233;nyek<a class="anchor-link" href="#F&#252;ggv&#233;nyek">&#182;</a></h1><p>Számos programozási nyelvben szokás bonyolultabb, a felhasználó által megalkotott utasításokat, függvényekbe szervezni. Jól megírt függvények használata általában rövidebbé és jobban átláthatóvá teszi a programokat.</p>
+<h2 id="F&#252;ggv&#233;nyek-deklar&#225;l&#225;sa">F&#252;ggv&#233;nyek deklar&#225;l&#225;sa<a class="anchor-link" href="#F&#252;ggv&#233;nyek-deklar&#225;l&#225;sa">&#182;</a></h2><p>Ha más hosszúságú sorozatot szeretnénk, átmásolhatjuk a fenti kódot egy új cellába, és átírhatjuk az <strong><code>n=10</code></strong>-et pl. <strong><code>n=100</code></strong>-ra. Van azonban egy hatékonyabb módszer, új <em>függvény</em>-ként definiálhatjuk a <strong>def</strong> utasítás segítségével:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">sequence_length</span><span class="p">):</span>
+    <span class="s2">&quot;A Fibonacci sorozat elso *sequence_length* darab eleme&quot;</span> <span class="c1"># ez csak a &#39;help&#39;-hez kell</span>
+    <span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">sequence_length</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">sequence</span><span class="p">[:</span><span class="n">sequence_length</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">sequence_length</span><span class="p">):</span> 
+        <span class="n">sequence</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">sequence</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">sequence</span>
 </pre></div>
 
 </div>
@@ -11804,30 +12259,98 @@ A megoldasok kerüljenek a MEGOLDASOK mappába!</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-egyszer&#369;-sz&#225;mol&#225;s">02-egyszer&#369; sz&#225;mol&#225;s<a class="anchor-link" href="#02-egyszer&#369;-sz&#225;mol&#225;s">&#182;</a></h2><p>Hány <a href="https://www.google.hu/search?q=csillag%C3%A1szati+egys%C3%A9g&amp;oq=csillag%C3%A1szati+egys%C3%A9g&amp;aqs=chrome..69i57.5060j0j7&amp;sourceid=chrome&amp;ie=UTF-8">csillagászati egységet</a> tesz meg a fény egy <a href="https://www.google.hu/search?q=fert%C3%A1ly&amp;oq=fert%C3%A1ly+&amp;aqs=chrome..69i57j69i60.4819j0j7&amp;sourceid=chrome&amp;ie=UTF-8#safe=off&amp;q=fert%C3%A1ly+%C3%B3ra">fertályóra</a> alatt ? A számítás elvégzéséhez definiálj változókat, és végezd el a számítást!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-karakterlancok-&#233;s-indexel&#233;s">03-karakterlancok &#233;s indexel&#233;s<a class="anchor-link" href="#03-karakterlancok-&#233;s-indexel&#233;s">&#182;</a></h2><p>Az alább definiált három karakterlánc segítségével definiáljunk egy változót, ami a saját keresztnevünket tartalmazza!
-Az ékezetektől tekintsünk el, a vezetékneveket ne írjuk egybe! Használjunk indexelést elölről és hátulról is!</p>
+<p>Most már <em>meghívhatjuk</em> a <strong><code>fibonacci()</code></strong> függvényt különböző hosszakra:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kisbetuk</span><span class="o">=</span><span class="s1">&#39;qwertzuiopasdfghjklyxcvbnm&#39;</span>
-<span class="n">nagybetuk</span><span class="o">=</span><span class="s1">&#39;QWERTZUIOPASDFGHJKLYXCVBNM&#39;</span>
-<span class="n">extra</span><span class="o">=</span><span class="s1">&#39;+- %=.~&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 1, 2, 3]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Elemezzük a fenti kódot! A már megszokott módon a kettőspont és behúzás határozza meg a függvénydefinícióhoz tartozó kódblokkot. 
+A 2. sorban idézőjelek közt szerepel a <a href="http://django.arek.uni-obuda.hu/python3-doc/html/tutorial/controlflow.html#a-dokumentacios-karakterlancok">"<strong>docstring</strong>"</a>, ami a függvény működését magyarázza el röviden, és később a <strong>help</strong> paranccsal hívható elő:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on function fibonacci in module __main__:
+
+fibonacci(sequence_length)
+    A Fibonacci sorozat elso *sequence_length* darab eleme
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A notebookos környezetben a docstring a ? segítségével is elérhető:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">?</span>fibonacci
 </pre></div>
 
 </div>
@@ -11840,10 +12363,7 @@ Az ékezetektől tekintsünk el, a vezetékneveket ne írjuk egybe! Használjunk
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-lista-manipul&#225;l&#225;s">04-lista manipul&#225;l&#225;s<a class="anchor-link" href="#04-lista-manipul&#225;l&#225;s">&#182;</a></h2><ul>
-<li>az alábbi cellában definiált <code>kicsi</code> lista segítségével építs egy olyan listát ami háromszor egymás után fordított sorrendben tartalmazza a <code>kicsi</code> lista elemeit.</li>
-<li>építs egy olyan listát, ami 6 elemű, az első 5 eleme az eredeti <code>kicsi</code> lista elemei a 6. eleme pedig maga a <code>kicsi</code> lista.</li>
-</ul>
+<p>A <code>docstring</code>-et <code>jupyter</code> környezetben úgy is megtekinthetjük ha egyes függvények hasában, azaz a zárójelek között SHIFT+TAB-ot nyomunk. Próbáld ki ezt az alábbi cellán (annélkül hogy lefuttatnád azt)!</p>
 
 </div>
 </div>
@@ -11853,7 +12373,7 @@ Az ékezetektől tekintsünk el, a vezetékneveket ne írjuk egybe! Használjunk
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kicsi</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;al&#39;</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="mf">42.137</span><span class="p">,</span><span class="s1">&#39;szoveg&#39;</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">1</span><span class="n">j</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fibonacci</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11866,29 +12386,59 @@ Az ékezetektől tekintsünk el, a vezetékneveket ne írjuk egybe! Használjunk
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-sz&#243;t&#225;r-kezel&#233;s">05-sz&#243;t&#225;r kezel&#233;s<a class="anchor-link" href="#05-sz&#243;t&#225;r-kezel&#233;s">&#182;</a></h2><ul>
-<li>Add hozzá az alábbi telefonkönyvhöz 'Samwise Gamgie' (123) 000-1423 telefonszámát!</li>
-<li>Nézz utána az interneten, hogyan lehet az alábbi telefonkönyvből kinyerni az összes telefonszámot lista formájában!</li>
-</ul>
+<p>A függvény kimenetelét a <strong><code>return</code></strong> kulcsszó határozza meg. Ha a fügvény definiálása során nem használtunk <strong><code>return</code></strong> utasítást akkor a függvény <strong>None</strong> (semmi) értéket ad vissza. Ha egy függvény lefutott, és nem hajtott végre <strong><code>return</code></strong> utasítást, akkor is <strong>None</strong> értékkel tér vissza. A <strong>fibonacci</strong> fügvény például egy listát ad vissza:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">telefon_konyv</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Alonzo Hinton&#39;</span><span class="p">:</span> <span class="s1">&#39;(855) 278-2590&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Cleo Hennings&#39;</span><span class="p">:</span> <span class="s1">&#39;(844) 832-0585&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Daine Ventura&#39;</span><span class="p">:</span> <span class="s1">&#39;(833) 832-5081&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Esther Leeson&#39;</span><span class="p">:</span> <span class="s1">&#39;(855) 485-0624&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Gene Connell&#39;</span><span class="p">:</span> <span class="s1">&#39;(811) 973-2926&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Lashaun Bottorff&#39;</span><span class="p">:</span> <span class="s1">&#39;(822) 687-1735&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Marx Hermann&#39;</span><span class="p">:</span> <span class="s1">&#39;(844) 164-8116&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Nicky Duprey&#39;</span><span class="p">:</span> <span class="s1">&#39;(811) 032-6328&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Piper Subia&#39;</span><span class="p">:</span> <span class="s1">&#39;(844) 373-4228&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Zackary Palomares&#39;</span><span class="p">:</span> <span class="s1">&#39;(822) 647-3686&#39;</span><span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">x</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ez a függvény viszont nem tér vissza sehol:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ures_fuggveny</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Én egy ures fuggvény vagyok,</span><span class="se">\n</span><span class="s1">annak ellenére hogy beszélek,</span><span class="se">\n</span><span class="s1">nem térek vissza változóval!!&#39;</span><span class="p">)</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="p">;</span>
 </pre></div>
 
 </div>
@@ -11901,7 +12451,152 @@ Az ékezetektől tekintsünk el, a vezetékneveket ne írjuk egybe! Használjunk
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="06-logikai">06-logikai<a class="anchor-link" href="#06-logikai">&#182;</a></h2>
+<p>Így a <strong>z</strong> válltozóban nem tárolódik semmilyen érték!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">z</span><span class="o">=</span><span class="n">ures_fuggveny</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">z</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Én egy ures fuggvény vagyok,
+annak ellenére hogy beszélek,
+nem térek vissza változóval!!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Egy függvénynek lehet több bemeneti változója is:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">osszead</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Az is előfordulhat, hogy több értéket szeretnénk visszakapni egy függvényből. Ezt például az alábbiak alapján tehetjük meg:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plusminus</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="o">-</span><span class="n">b</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="p">,</span><span class="n">m</span><span class="o">=</span><span class="n">plusminus</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+-1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Param&#233;ter-lista-&#233;s-a-&quot;kicsomagol&#225;s&quot;">Param&#233;ter lista &#233;s a "kicsomagol&#225;s"<a class="anchor-link" href="#Param&#233;ter-lista-&#233;s-a-&quot;kicsomagol&#225;s&quot;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11910,30 +12605,991 @@ Az ékezetektől tekintsünk el, a vezetékneveket ne írjuk egybe! Használjunk
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Írd meg azokat a logikai kifejezéseket, amelyek a <code>tesztelendo</code> nevű listán leellenőrzik az alábbi kérdéseket:</p>
-<ul>
-<li>Van-e a számok között 0?</li>
-<li>Nagyobb-e a számok összege hatnál?</li>
-<li>Igaz-e, hogy az összes szám pozitív?</li>
-<li>Igaz-e, hogy van a számok között negatív?</li>
-<li>☠ Igaz-e, hogy van legalább 2 szám, ami nagyobb, mint 5? ☠</li>
-</ul>
+<p>Előfordulhat, hogy egy függvénynek sok bemenő paramétere van, vagy hogy egy függvény bemenő paramétereit egy másik függvény eleve egy listába rendezi. Egy tipikus ilyen példa, amint azt későb látni fogjuk, a függvényillesztés esete. Ilyenkor a paramétereket tartalmazó lista "kicsomagolásával", amit a *-jellel tehetünk meg, kompaktabb kódot érhetünk el. Vegyünk például egy olyan esetet amikor egy adatsorra egy ötödfokú polinomot illesztünk.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$f(x)=a_0+a_1x+a_2x^2+a_3x^3+a_4x^4+a_5x^5$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Definiáljunk egy függvényt ami egy "futó" $x$ változó és az ötödfokó polinomnak megfelelően hat darab "paraméter" $a_i$ változó segítségével kiértékeli a fenti polinomot:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tesztelendo</span><span class="o">=</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ez lesz az illesztendő függvény</span>
+<span class="k">def</span> <span class="nf">poly5</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">a0</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">,</span><span class="n">a4</span><span class="p">,</span><span class="n">a5</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a0</span><span class="o">+</span><span class="n">a1</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">a2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">a3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">+</span><span class="n">a4</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">4</span><span class="o">+</span><span class="n">a5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">5</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Az illesztés során hat darab illesztési paramétert határozunk meg: $a_0,a_1,a_2,a_3,a_4,a_5$ ám ezeket az illesztő program egy listába rendezve adja a kezünkbe:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ezek az illesztés során meghatározott paraméterek</span>
+<span class="c1"># az alábbi sorrendnek megfelelően</span>
+<span class="c1"># params=[a0,a1,a2,a3,a4,a5]</span>
+<span class="n">params</span><span class="o">=</span><span class="p">[</span> <span class="mf">2.27171539</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.1368942</span> <span class="p">,</span>  <span class="mf">0.65380304</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.25005187</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1751268</span> <span class="p">,</span> <span class="o">-</span><span class="mf">0.48828309</span><span class="p">];</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha ki szeretnénk értékelni az illesztett polinomot az $x=0.3$ helyen, akkor azt megtehetjük az alábbi módon:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">poly5</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">params</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">params</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="n">params</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span><span class="n">params</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.9801329481213</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>vagy az ennél sokkal kompaktabb módszerrel:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">poly5</span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="o">*</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.9801329481213</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ez a konstrukció lehetővé teszi, hogy a függvény definiálása során felkészísük a függvényt arra, hogy a bemenő
+paraméterek száma ne legyen rögzített. Ha a függvény deklaráció során egy paraméter elé <strong>*</strong>-t teszünk akkor az a paraméter tetszőleges hosszúságú lehet! Vizsgáljuk meg az alábbi példát:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">adok_mit_kapok</span><span class="p">(</span><span class="o">*</span><span class="n">argv</span><span class="p">):</span>                                            <span class="c1">#Így, a *-al, készítünk fel egy függvényt </span>
+                                                                      <span class="c1">#válltozó számú paraméter fogadására</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nekem &quot;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">argv</span><span class="p">),</span><span class="s2">&quot;db bemenő paraméterem jött&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">:</span>
+        <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Ez egy paraméter :&quot;</span><span class="p">,</span> <span class="n">arg</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">argv</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>                                                 <span class="c1">#a bemenő paraméterek elemeire mint </span>
+                                                                    <span class="c1">#szokványos lista elemekre hivatkozunk</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fenti blokkban definiált függvény tetszőleges számú bemenő paramétert elfogad! A futás során közli, hogy hány paraméter érkezett, kiírja azokat, illetve a paraméterlista utolsó tagját mint a függvény vissza térési értékét állítja be.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">adok_mit_kapok</span><span class="p">(</span><span class="s1">&#39;Gáspár&#39;</span><span class="p">,</span><span class="s1">&#39;Menyhért&#39;</span><span class="p">,</span><span class="s1">&#39;Boldizsár&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Nekem  3 db bemenő paraméterem jött
+Ez egy paraméter : Gáspár
+Ez egy paraméter : Menyhért
+Ez egy paraméter : Boldizsár
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Boldizsár&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Természetesen a tetszőleges paraméter helyett egy "kicsomagolt" tetszőleges hosszúságú listát is használhatunk!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">adok_mit_kapok</span><span class="p">(</span><span class="o">*</span><span class="n">params</span><span class="p">)</span> <span class="c1">#természetesen itt is működik a kicsomagolás..</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Nekem  6 db bemenő paraméterem jött
+Ez egy paraméter : 2.27171539
+Ez egy paraméter : -1.1368942
+Ez egy paraméter : 0.65380304
+Ez egy paraméter : -0.25005187
+Ez egy paraméter : -0.1751268
+Ez egy paraméter : -0.48828309
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-0.48828309</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="F&#252;ggv&#233;nyek-kulcsszavakkal">F&#252;ggv&#233;nyek kulcsszavakkal<a class="anchor-link" href="#F&#252;ggv&#233;nyek-kulcsszavakkal">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Azon kívül, hogy a szótárak már önmagukban is igen hasznos adatstruktúrák, később látni fogjuk, hogy sokszor függvények bizonyos paramétereit is szokás szótárakba szedni. Az ilyen paramétereket szokás kulcsszavas változóknak vagy kulcsszavas argumentumnak (angol nyelven keyword argument) hívni. Ezek használata olvashatóbbá és emberi szemmel is jóval értelmezhetőbbé teszi a programot, ezenfelül további flexibilitást is ad a programozó kezébe. 
+Nézzük ezt meg az alábbi példán:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Így adunk meg alapértelmezett értékeket</span>
+<span class="k">def</span> <span class="nf">students</span><span class="p">(</span><span class="n">ido</span><span class="p">,</span> <span class="n">allapot</span><span class="o">=</span><span class="s1">&#39;lelkesen figyelik a tanárt&#39;</span><span class="p">,</span> <span class="n">tevekenyseg</span><span class="o">=</span><span class="s1">&#39;kísérletezés&#39;</span><span class="p">,</span> <span class="n">ora</span><span class="o">=</span><span class="s1">&#39;fizika&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ezek a diákok &quot;</span><span class="o">+</span><span class="n">ora</span><span class="o">+</span><span class="s2">&quot;órán &quot;</span><span class="o">+</span><span class="n">tevekenyseg</span><span class="o">+</span><span class="s2">&quot; közben mindig &quot;</span><span class="o">+</span><span class="n">allapot</span><span class="o">+</span><span class="s2">&quot;!&quot;</span><span class="p">);</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Még akkor is, ha épp &quot;</span><span class="p">,</span><span class="n">ido</span><span class="p">,</span><span class="s2">&quot;-t mutat az óra!&quot;</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A függvény első paraméterét meg kell adnunk, ha nem adunk többet, akkor az alapértelmezett értékek ugranak be:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">students</span><span class="p">(</span><span class="s1">&#39;17:00&#39;</span><span class="p">)</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ezek a diákok fizikaórán kísérletezés közben mindig lelkesen figyelik a tanárt!
+Még akkor is, ha épp  17:00 -t mutat az óra!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha egy kulcsszavas argumentumot kap a függvény, akkor azt értelemszerűen használja:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">students</span><span class="p">(</span><span class="s1">&#39;8:00&#39;</span><span class="p">,</span><span class="n">allapot</span><span class="o">=</span><span class="s1">&#39;unott képet vágnak&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ezek a diákok fizikaórán kísérletezés közben mindig unott képet vágnak!
+Még akkor is, ha épp  8:00 -t mutat az óra!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A kulcsszavas argumentumok sorrendjére nem kell figyelni:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">students</span><span class="p">(</span><span class="s1">&#39;8:00&#39;</span><span class="p">,</span><span class="n">ora</span><span class="o">=</span><span class="s1">&#39;ógörög&#39;</span><span class="p">,</span><span class="n">allapot</span><span class="o">=</span><span class="s1">&#39;pánikolva izzadnak&#39;</span><span class="p">,</span><span class="n">tevekenyseg</span><span class="o">=</span><span class="s1">&#39;TÉMAZÁRÓ&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ezek a diákok ógörögórán TÉMAZÁRÓ közben mindig pánikolva izzadnak!
+Még akkor is, ha épp  8:00 -t mutat az óra!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha a deklaráció során nem használt kulcsszót adunk meg, akkor hibát kapunk:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">students</span><span class="p">(</span><span class="s1">&#39;17:00&#39;</span><span class="p">,</span><span class="n">tanar</span><span class="o">=</span><span class="s1">&#39;Mici néni&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-33-7769c15fcb73&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>students<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;17:00&#39;</span><span class="ansi-blue-fg">,</span>tanar<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;Mici néni&#39;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: students() got an unexpected keyword argument &#39;tanar&#39;</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Hasonlóan problémába ütközünk, ha egy kulcsszót kétszer is alkalmazunk:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">students</span><span class="p">(</span><span class="s1">&#39;8:00&#39;</span><span class="p">,</span><span class="n">ora</span><span class="o">=</span><span class="s1">&#39;ógörög&#39;</span><span class="p">,</span><span class="n">ora</span><span class="o">=</span><span class="s1">&#39;kémia&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-34-f0bd085991b6&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    students(&#39;8:00&#39;,ora=&#39;ógörög&#39;,ora=&#39;kémia&#39;)</span>
+                                   ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> keyword argument repeated
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Kulcsszavas argumentumok szótárának kicsomagolása **-jel segítségével történik:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diak_hozzaallas</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;ora&#39;</span><span class="p">:</span><span class="s1">&#39;ének&#39;</span><span class="p">,</span><span class="s1">&#39;allapot&#39;</span><span class="p">:</span><span class="s1">&#39;nyüszítenek&#39;</span><span class="p">};</span>
+<span class="n">students</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="o">**</span><span class="n">diak_hozzaallas</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ezek a diákok énekórán kísérletezés közben mindig nyüszítenek!
+Még akkor is, ha épp  12 -t mutat az óra!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Amint a sima paramétereknél is, itt is előfordulhat az, hogy tetszőleges hosszúságú dict-et szeretnénk feldolgozni. Erre példa, ha egy olyan függvényt írunk, amely esetleg több más fügvényt hív, melyeknek tovább akarjuk adni a bejövő paraméterek egy részét.</p>
+<p>Az alábbi függvény egy tetszőleges szótárat vár a bemenetre, megnézi hogy milyen hosszú, és ha a szótárban van 'hamburger' címkéjű kulcsszó, akkor annak az értékét adja vissza:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">kulcsot_adok_amit_kapok</span><span class="p">(</span><span class="o">**</span><span class="n">szotar</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A szotár hossza:&#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">szotar</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">kulcs</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">szotar</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
+        <span class="k">if</span> <span class="n">kulcs</span><span class="o">==</span><span class="s1">&#39;hamburger&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Van hamburger!&#39;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">szotar</span><span class="p">[</span><span class="n">kulcs</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kulcsot_adok_amit_kapok</span><span class="p">(</span><span class="n">makaróni</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">torta</span><span class="o">=</span><span class="s1">&#39;finom&#39;</span><span class="p">)</span> <span class="c1">#itt már nem jelent hibát ha előre meg nemhatározott kulcsszavaink vannak!</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A szotár hossza: 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kaja</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;makaróni&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;torta&#39;</span><span class="p">:</span><span class="s1">&#39;finom&#39;</span><span class="p">,</span><span class="s1">&#39;hamburger&#39;</span><span class="p">:</span><span class="mi">137</span><span class="p">,</span><span class="s1">&#39;saláta&#39;</span><span class="p">:</span><span class="s1">&#39;nincs&#39;</span><span class="p">}</span>
+<span class="n">kulcsot_adok_amit_kapok</span><span class="p">(</span><span class="o">**</span><span class="n">kaja</span><span class="p">)</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A szotár hossza: 4
+Van hamburger!
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[38]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>137</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#193;ltal&#225;nos-f&#252;ggv&#233;nydeklar&#225;ci&#243;s-szok&#225;sok">&#193;ltal&#225;nos f&#252;ggv&#233;nydeklar&#225;ci&#243;s szok&#225;sok<a class="anchor-link" href="#&#193;ltal&#225;nos-f&#252;ggv&#233;nydeklar&#225;ci&#243;s-szok&#225;sok">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Amint azt a fentiekben láttuk, függvényeknek többféleképpen is adhatunk paramétereket,</p>
+<ol>
+<li>változók (ezek lehetnek sima változók, meghatározott hosszúságú listák, vagy akár kulcsszavas változók is)</li>
+<li>előre meg nem határozott hosszúságú változó lista</li>
+<li>kulcsszavas változók tetszőleges hosszú listája</li>
+</ol>
+<p>Sokszor előfordul, hogy egy függvénynek mind a négy fajta bemenete is lehet. Illetve hogy néhány változónak alapértelmezett értéket is adunk. Függvények definiálásánál használjuk a fenti sorrendet!</p>
+<p>Például:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">bonyolult_fuggveny</span><span class="p">(</span><span class="n">valtozo1</span><span class="p">,</span><span class="n">valtozo2</span><span class="p">,</span><span class="n">valtozo3</span><span class="o">=</span><span class="s1">&#39;ELZETT&#39;</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">if</span> <span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="n">valtozo3</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">valtozo2</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">valtozo1</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Van valami az args-ban!&#39;</span>
+    <span class="k">elif</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="o">==</span><span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span><span class="o">!=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Van valami az kwargs-ban!&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;Mindenféle változónk van:&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">valtozo1</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">valtozo2</span><span class="p">)</span><span class="o">+</span><span class="n">valtozo3</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fenti függvény első két változója "sima" változó, a harmadik egy kulcsszavas változó az alapértelmezett 'ELZETT' értékkel, és ezen kívül megendgedünk még egyéb tetszőleges hosszú "sima" változók listáját (args), illetve tetszőleges hosszú kulcsszavas változók listáját (kwargs). Nézzük meg hogy a notebook során korábban definiált változókat felhasználva milyen viselkedést mutat a fent deklarált függvény:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bonyolult_fuggveny</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[40]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;ELZETT21&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bonyolult_fuggveny</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">valtozo3</span><span class="o">=</span><span class="s1">&#39;MULTLOCK&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[41]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;MULTLOCK21&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bonyolult_fuggveny</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">*</span><span class="n">days_of_the_week</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[42]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Van valami az args-ban!&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bonyolult_fuggveny</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">**</span><span class="n">kaja</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[43]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Van valami az kwargs-ban!&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bonyolult_fuggveny</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">*</span><span class="n">days_of_the_week</span><span class="p">,</span><span class="o">**</span><span class="n">kaja</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[44]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;Mindenféle változónk van:12Sunday(&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;, &#39;Saturday&#39;){&#39;torta&#39;: &#39;finom&#39;, &#39;hamburger&#39;: 137, &#39;makaróni&#39;: 1, &#39;saláta&#39;: &#39;nincs&#39;}&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="A-Lambda-form&#225;k-&#9760;">A <a href="http://www.secnetix.de/olli/Python/lambda_functions.hawk">Lambda</a>-form&#225;k &#9760;<a class="anchor-link" href="#A-Lambda-form&#225;k-&#9760;">&#182;</a></h2><p>Egy függvénynek nem csak változókat hanem más függvényeket is megadhatunk bemenetként. Például gondolhatunk egy olyan függvényre ami egy matematikai függvényt ábrázol! 
+Ilyen esetekben, amikor egy függvény bemenetére másik függvényt vár, sokszor előfordul hogy hosszadalmas külön definiálni a bemeneti függvényt. Ekkor tömörebb használnia az úgynevezett <code>lambda</code>-formák.
+Nézzünk erre egy példát! Definiáljunk egy függvényt ami egy másik függvényt értékel ki egy adott helyen kiírja a kiértékelési helyet és visszatér a kiértékelt függvényértékkel:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">funfun</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ez volt az x változó: &#39;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fx</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">;</span>
+<span class="n">funfun</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ez volt az x változó:  0.1
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[46]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-9.99</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ekkor egy úgynevezett <code>lambda</code>-forma segítségével alkalmazhatjuk az ennél kicsivel kompaktabb kifejezést megúszva egy függvény deklarációt:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">funfun</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Ez volt az x változó:  0.1
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[47]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-9.99</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fenti kifelyezésben a</p>
+<blockquote><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">x</span>
+</pre></div>
+</blockquote>
+<p>kódrészlet egy "anonim" függvényt definiál mely az $x$ változóhoz hozzárendeli az $x^2-1/x$-et.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>lambda</code> kifejezésekkel lehet több változós függvényeket is definiálni. Például az alábbi</p>
+<blockquote><div class="highlight"><pre><span></span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">y</span>
+</pre></div>
+</blockquote>
+<p>kifejezés a</p>
+<blockquote><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fxy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">y</span>
+</pre></div>
+</blockquote>
+<p>függvényyel ekvivalens.</p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
