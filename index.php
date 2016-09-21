@@ -49,7 +49,7 @@
 <a href="https://jupyter.org/">Jupyter</a> / <a href="http://ipython.org/">IPython</a> <br>
 <a href="http://www.scipy.org/">Scipy</a> / <a href="http://matplotlib.org/">Matplotlib</a>  <br>
 <a href="http://python.hu/">Magyar python oldalak </a><br>
-<a href="http://django.arek.uni-obuda.hu/python3-doc/html/tutorial/index.html"> Magyar python dokumentáció </a><br>
+<a href="http://pythontutorial.pergamen.hu/downloads/html/tut/tut.html"> Magyar python dokumentáció </a><br>
 <a href="http://nyelvek.inf.elte.hu/leirasok/Python/index.php">ELTE python dokumentáció </a><br>
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf">Python 3 Cheat Sheat</a><br>
 <a href="http://www.ntg.nl/doc/nemeth/lrovid.pdf">Latex-ről magyarul</a><br>
