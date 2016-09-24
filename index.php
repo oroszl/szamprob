@@ -93,8 +93,8 @@
                                                           <a href='notebooks/Package00/feladat00.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/feladat01.html'>Feladat-01</a><br>  
                                                           <a href='notebooks/Package01/feladat01.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href=''>Feladat-02</a><br>  
-                                                          <a href='' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/feladat02.html'>Feladat-02</a><br>  
+                                                          <a href='notebooks/Package02/feladat02.ipynb' download>(forrás)</a></td>
 
 </tr>
 <tr>
