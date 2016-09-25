@@ -57,7 +57,7 @@
 </td>
 <td style="border: 0px solid #ffffff ">
 <h2 id="linkek"  style="text-align: right">HF montázs</h3>
-<img src="wc.png" width=300></img>
+<img src="figs/home_work_cluster.png" width=300></img>
 </td>
 
 </tbody>
