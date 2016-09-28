@@ -84,6 +84,8 @@
                                                           <a href='notebooks/Package01/mintapelda01.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/mintapelda02.html'>Mintapelda-02</a><br>  
                                                           <a href='notebooks/Package02/mintapelda02.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/mintapelda03.html'>Mintapelda-03</a><br>  
+                                                          <a href='notebooks/Package03/mintapelda03.ipynb' download>(forrás)</a></td>
 
     
 </tr>
@@ -95,6 +97,8 @@
                                                           <a href='notebooks/Package01/feladat01.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/feladat02.html'>Feladat-02</a><br>  
                                                           <a href='notebooks/Package02/feladat02.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/feladat03.html'>Feladat-03</a><br>  
+                                                          <a href='notebooks/Package03/feladat03.ipynb' download>(forrás)</a></td>
 
 </tr>
 <tr>
@@ -102,6 +106,7 @@
 <td style="text-align:center; border: 1px solid #dddddd "></td> 
 <td style="text-align:center; border: 1px solid #dddddd "></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheat02.html'>Vezérő utasítások<br>függvények</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/Cheat_sheat03.html'>Modulok <br>ábrák</a></td>
     
 </tr>
 </tbody>

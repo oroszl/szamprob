@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat01</title>
+<title>feladat03</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11768,7 +11768,57 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-komment">01-komment<a class="anchor-link" href="#01-komment">&#182;</a></h2>
+<h2 id="01-feladat-import-szintaxis">01-feladat <code>import</code> szintaxis<a class="anchor-link" href="#01-feladat-import-szintaxis">&#182;</a></h2><p>A mintapéldában láttunk néhány pédát az <code>import</code> utasítás működésére.</p>
+<ul>
+<li>Nézz utána az interneten hogy az</li>
+</ul>
+<blockquote><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kifejezésnek milyen hatása van.</p>
+<ul>
+<li>Két mondatban fogalmazd meg, hogy a fenti kód sor lefuttatása milyen következményeket von maga után.<br> Következtetéseidet illusztráld is rövid pédákkal. </li>
+<li>A használt internetes forrásokat jelöld meg linkekkel!</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="02-Ismerked&#233;s-az-array-adatstrukt&#250;r&#225;k-indexel&#233;s&#233;vel">02-Ismerked&#233;s az array adatstrukt&#250;r&#225;k indexel&#233;s&#233;vel<a class="anchor-link" href="#02-Ismerked&#233;s-az-array-adatstrukt&#250;r&#225;k-indexel&#233;s&#233;vel">&#182;</a></h2><p>Az array struktúrák indexelését kihasználva vizsgáljuk meg a következő problémákat:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">A</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Menny az A array 3-nál nagyobb elemeinek összege ?</li>
+<li>Mennyi az A array páros értékű elemeinek átlaga ?</li>
+<li>Mennyi az A array elemeinek négyzetösszege ( Euklédeszi-normája ) ?</li>
+</ol>
+
 </div>
 </div>
 </div>
@@ -11778,25 +11828,30 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Tegyél kommentjeleket az alábbi kódcellába úgy, hogy a futtatás végeredményben azt írja ki, hogy <strong><code>A bárányok hallgatnak</code></strong>. </li>
-<li>Mit jelent a <code>+=</code> jel? Fogalmazd meg szavakkal !</li>
+<li>Kezdjük ebben a példában a notebookot a <code>%pylab inline</code> utasítással!</li>
+<li><strong>NE HASZNLJUNK <code>for</code> és <code>if</code> parancsokat!!</strong> <br>
+He a megoldás file kód cellájában <code>for</code> vagy <code>if</code> konstrukció van a feladat automatikusan nem teljesítettnek minősül!</li>
 </ul>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="03-K&#233;t-indexes-array">03-K&#233;t indexes array<a class="anchor-link" href="#03-K&#233;t-indexes-array">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mondat</span><span class="o">=</span><span class="s2">&quot;A &quot;</span>
-<span class="n">mondat</span><span class="o">+=</span><span class="s2">&quot;mezőn legelésző &quot;</span>
-<span class="n">mondat</span><span class="o">+=</span><span class="s2">&quot;bárányok &quot;</span>
-<span class="n">mondat</span><span class="o">+=</span><span class="s2">&quot;mélyen &quot;</span>
-<span class="n">mondat</span><span class="o">+=</span><span class="s2">&quot;hallgatnak.&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">mondat</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">B</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">,(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">B</span>
 </pre></div>
 
 </div>
@@ -11809,7 +11864,12 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-egyszer&#369;-sz&#225;mol&#225;s">02-egyszer&#369; sz&#225;mol&#225;s<a class="anchor-link" href="#02-egyszer&#369;-sz&#225;mol&#225;s">&#182;</a></h2><p>Hány <a href="https://www.google.hu/search?q=csillag%C3%A1szati+egys%C3%A9g&amp;oq=csillag%C3%A1szati+egys%C3%A9g&amp;aqs=chrome..69i57.5060j0j7&amp;sourceid=chrome&amp;ie=UTF-8">csillagászati egységet</a> tesz meg a fény egy <a href="https://www.google.hu/search?q=fert%C3%A1ly&amp;oq=fert%C3%A1ly+&amp;aqs=chrome..69i57j69i60.4819j0j7&amp;sourceid=chrome&amp;ie=UTF-8#safe=off&amp;q=fert%C3%A1ly+%C3%B3ra">fertályóra</a> alatt ? A számítás elvégzéséhez definiálj változókat, és végezd el a számítást!</p>
+<ol>
+<li>Írasd ki a B array bal alsó 5x7-es almátrixát!</li>
+<li>Írasd ki minden második elemet a B array második sorából.</li>
+<li>Írasd ki minden három nál nagyobb elemet a B array 7. oszlopábol!</li>
+<li>Írasd ki azokat az elemeket a B array 3. oszlopából amelyeknek a sorában a 4. oszlopban 5-nél kisebb elem áll!</li>
+</ol>
 
 </div>
 </div>
@@ -11819,126 +11879,54 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-karakterlancok-&#233;s-indexel&#233;s">03-karakterlancok &#233;s indexel&#233;s<a class="anchor-link" href="#03-karakterlancok-&#233;s-indexel&#233;s">&#182;</a></h2><p>Az alább definiált három karakterlánc segítségével definiáljunk egy változót, ami a saját keresztnevünket tartalmazza!
-Az ékezetektől tekintsünk el, a vezetékneveket ne írjuk egybe! Használjunk indexelést elölről és hátulról is!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kisbetuk</span><span class="o">=</span><span class="s1">&#39;qwertzuiopasdfghjklyxcvbnm&#39;</span>
-<span class="n">nagybetuk</span><span class="o">=</span><span class="s1">&#39;QWERTZUIOPASDFGHJKLYXCVBNM&#39;</span>
-<span class="n">extra</span><span class="o">=</span><span class="s1">&#39;+- %=.~&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-lista-manipul&#225;l&#225;s">04-lista manipul&#225;l&#225;s<a class="anchor-link" href="#04-lista-manipul&#225;l&#225;s">&#182;</a></h2><ul>
-<li>az alábbi cellában definiált <code>kicsi</code> lista segítségével építs egy olyan listát ami háromszor egymás után fordított sorrendben tartalmazza a <code>kicsi</code> lista elemeit.</li>
-<li>építs egy olyan listát, ami 6 elemű, az első 5 eleme az eredeti <code>kicsi</code> lista elemei a 6. eleme pedig maga a <code>kicsi</code> lista.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kicsi</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;al&#39;</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="s1">&#39;+&#39;</span><span class="p">,</span><span class="mf">42.137</span><span class="p">,</span><span class="s1">&#39;szoveg&#39;</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">1</span><span class="n">j</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-sz&#243;t&#225;r-kezel&#233;s">05-sz&#243;t&#225;r kezel&#233;s<a class="anchor-link" href="#05-sz&#243;t&#225;r-kezel&#233;s">&#182;</a></h2><ul>
-<li>Add hozzá az alábbi telefonkönyvhöz 'Samwise Gamgie' (123) 000-1423 telefonszámát!</li>
-<li>Nézz utána az interneten, hogyan lehet az alábbi telefonkönyvből kinyerni az összes telefonszámot lista formájában!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">telefon_konyv</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Alonzo Hinton&#39;</span><span class="p">:</span> <span class="s1">&#39;(855) 278-2590&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Cleo Hennings&#39;</span><span class="p">:</span> <span class="s1">&#39;(844) 832-0585&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Daine Ventura&#39;</span><span class="p">:</span> <span class="s1">&#39;(833) 832-5081&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Esther Leeson&#39;</span><span class="p">:</span> <span class="s1">&#39;(855) 485-0624&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Gene Connell&#39;</span><span class="p">:</span> <span class="s1">&#39;(811) 973-2926&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Lashaun Bottorff&#39;</span><span class="p">:</span> <span class="s1">&#39;(822) 687-1735&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Marx Hermann&#39;</span><span class="p">:</span> <span class="s1">&#39;(844) 164-8116&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Nicky Duprey&#39;</span><span class="p">:</span> <span class="s1">&#39;(811) 032-6328&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Piper Subia&#39;</span><span class="p">:</span> <span class="s1">&#39;(844) 373-4228&#39;</span><span class="p">,</span>
- <span class="s1">&#39;Zackary Palomares&#39;</span><span class="p">:</span> <span class="s1">&#39;(822) 647-3686&#39;</span><span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="06-logikai">06-logikai<a class="anchor-link" href="#06-logikai">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Írd meg azokat a logikai kifejezéseket, amelyek a <code>tesztelendo</code> nevű listán leellenőrzik az alábbi kérdéseket:</p>
 <ul>
-<li>Van-e a számok között 0?</li>
-<li>Nagyobb-e a számok összege hatnál?</li>
-<li>Igaz-e, hogy az összes szám pozitív?</li>
-<li>Igaz-e, hogy van a számok között negatív?</li>
-<li>☠ Igaz-e, hogy van legalább 2 szám, ami nagyobb, mint 5? ☠</li>
+<li>Kezdjük ebben a példában a notebookot a <code>%pylab inline</code> utasítással!</li>
+<li><strong>NE HASZNLJUNK <code>for</code> és <code>if</code> parancsokat!!</strong> <br>
+He a megoldás file kód cellájában <code>for</code> vagy <code>if</code> konstrukció van a feladat automatikusan nem teljesítettnek minősül!</li>
 </ul>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tesztelendo</span><span class="o">=</span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="04-Egyszer&#369;-&#225;br&#225;zol&#225;s">04-Egyszer&#369; &#225;br&#225;zol&#225;s<a class="anchor-link" href="#04-Egyszer&#369;-&#225;br&#225;zol&#225;s">&#182;</a></h2><p>Ábrázoljuk a $$ f(x)=\mathrm{e}^{-x^2/\sigma^2} $$ függvényt $\sigma=1,2,5$ esetére egy ábrán!</p>
+<p>Kezdjük ebben a példában a notebookot a <code>%pylab inline</code> utasítással!</p>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="05-Hisztogram">05-Hisztogram<a class="anchor-link" href="#05-Hisztogram">&#182;</a></h2><p>Generálj 10000 darab egyenletes eloszlású véletlen számot a $[0,1]$ intervallumon és gyártsd le ezen véletlen számok hisztogrammját! Az hisztogram készítése során a $[0,1]$ intervallumot osszuk 25 alintervallumra! Az alintervallumok számának meghatározásához szükséges kulcsszónak nézz utána!</p>
+<p>Kezdjük ebben a példában a notebookot a <code>%pylab inline</code> utasítással!</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="06--&#9760;">06  &#9760;<a class="anchor-link" href="#06--&#9760;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="07--&#9760;">07  &#9760;<a class="anchor-link" href="#07--&#9760;">&#182;</a></h2>
+</div>
+</div>
 </div>
     </div>
   </div>
