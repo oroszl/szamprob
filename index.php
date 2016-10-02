@@ -45,19 +45,19 @@
 <h2 id="linkek">Hasznos linkek </h3>
 <?php include 'vars.php'; echo "<a href=$bevezeto_foliak>Bevezető fóliák</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$hub_link_fix>Jupyterhub@ELTE</a><br>"; ?>
-<a href="https://cloud.sagemath.com/">Sage Math Cloud</a> <br>
+<a href="https://cloud.sagemath.com/">Sage Math Cloud</a> / <a href="http://tmpnb.org/">Tmpnb</a> <br>
 <a href="https://jupyter.org/">Jupyter</a> / <a href="http://ipython.org/">IPython</a> <br>
 <a href="http://www.scipy.org/">Scipy</a> / <a href="http://matplotlib.org/">Matplotlib</a>  <br>
 <a href="http://python.hu/">Magyar python oldalak </a><br>
-<a href="http://django.arek.uni-obuda.hu/python3-doc/html/tutorial/index.html"> Magyar python dokumentáció </a><br>
+<a href="http://pythontutorial.pergamen.hu/downloads/html/tut/tut.html"> Magyar python dokumentáció </a><br>
 <a href="http://nyelvek.inf.elte.hu/leirasok/Python/index.php">ELTE python dokumentáció </a><br>
 <a href="https://perso.limsi.fr/pointal/_media/python:cours:mementopython3-english.pdf">Python 3 Cheat Sheat</a><br>
 <a href="http://www.ntg.nl/doc/nemeth/lrovid.pdf">Latex-ről magyarul</a><br>
 <a href="./old_2015">Régi honlap</a>
 </td>
 <td style="border: 0px solid #ffffff ">
-<h2 id="linkek"  style="text-align: right">HF montázs</h3>
-<img src="wc.png" width=300></img>
+<h2 id="linkek"  style="text-align: right"><a href="hf_montage">HF montázs</a></h3>
+<img src="hf_montage/ifelifelse.png" width=300></img>
 </td>
 
 </tbody>
@@ -84,6 +84,8 @@
                                                           <a href='notebooks/Package01/mintapelda01.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/mintapelda02.html'>Mintapelda-02</a><br>  
                                                           <a href='notebooks/Package02/mintapelda02.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/mintapelda03.html'>Mintapelda-03</a><br>  
+                                                          <a href='notebooks/Package03/mintapelda03.ipynb' download>(forrás)</a></td>
 
     
 </tr>
@@ -93,15 +95,18 @@
                                                           <a href='notebooks/Package00/feladat00.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/feladat01.html'>Feladat-01</a><br>  
                                                           <a href='notebooks/Package01/feladat01.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href=''>Feladat-02</a><br>  
-                                                          <a href='' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/feladat02.html'>Feladat-02</a><br>  
+                                                          <a href='notebooks/Package02/feladat02.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/feladat03.html'>Feladat-03</a><br>  
+                                                          <a href='notebooks/Package03/feladat03.ipynb' download>(forrás)</a></td>
 
 </tr>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
 <td style="text-align:center; border: 1px solid #dddddd "></td> 
 <td style="text-align:center; border: 1px solid #dddddd "></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheat02.html'>Vezérő utasítások<br>függvények</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheet02.html'>Vezérő utasítások<br>függvények</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/Cheat_sheet03.html'>Modulok <br>ábrák</a></td>
     
 </tr>
 </tbody>

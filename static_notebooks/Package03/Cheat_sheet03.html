@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat00</title>
+<title>Cheat_sheat03</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,79 +11751,22 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><p>Minden feladatot külön notebookba írj!</p>
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-Sz&#246;veg-szerkezt&#233;s">01-Sz&#246;veg szerkezt&#233;s<a class="anchor-link" href="#01-Sz&#246;veg-szerkezt&#233;s">&#182;</a></h2><ul>
-<li>Foglald össze három rövid mondatban, hogy mit csináltál nyáron. Használj dőlt betűt és vastag betűt is!</li>
-<li>Csinálj egy táblázatot, amely összefoglalja, hogy a június, a július és az augusztus hónapban átlagosan sokat vagy keveset aludtál. </li>
-<li>Linkelj be egy képet egy Wikipedia-szócikkből!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-Barometrikus-magass&#225;gformula">02-Barometrikus magass&#225;gformula<a class="anchor-link" href="#02-Barometrikus-magass&#225;gformula">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Írd le a barometrikus magasságformulát! Ha esetleg nem emlékeznél rá, akkor <a href="http://www.google.com">itt</a> meglelheted a megoldást!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-M&#225;sodfok&#250;-egyenlet">03-M&#225;sodfok&#250; egyenlet<a class="anchor-link" href="#03-M&#225;sodfok&#250;-egyenlet">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Mi a másodfokú egyenlet megoldóképlete?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-Saj&#225;t-k&#233;plet">04-Saj&#225;t k&#233;plet<a class="anchor-link" href="#04-Saj&#225;t-k&#233;plet">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Az <a href="http://people.math.sfu.ca/~cbm/aands/">Abramowitz and Stegun</a> könyvből keresd ki azt a képletet, amelynek a száma a születési dátumod!</p>
+<h1 id="Modulok,-numpy-array-k,-egyszer&#369;-&#225;br&#225;zol&#225;s">Modulok, numpy array-k, egyszer&#369; &#225;br&#225;zol&#225;s<a class="anchor-link" href="#Modulok,-numpy-array-k,-egyszer&#369;-&#225;br&#225;zol&#225;s">&#182;</a></h1><h3 style='color: darkcyan '> Pylab környezet </h3><p>Az alábbi paranccsal alapvető <code>matplotlib</code> és <code>numpy</code> függvényeket töltünk be.</p>
+<blockquote><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">pylab</span> <span class="n">inline</span>
+</pre></div>
+</blockquote>
+<h3 style='color: darkcyan'> A `numpy` array-k indexelései </h3><table style="width:100%;border: 0px solid #ffffff">
+  <tr style="border: 0px solid #ffffff">
+    <td style="border: 0px solid #ffffff"><img src="http://www.scipy-lectures.org/_images/numpy_indexing.png" height=400></img></td>
+    <td style="border: 0px solid #ffffff"><img src="http://www.scipy-lectures.org/_images/numpy_fancy_indexing.png" height=400></img></td>
+  </tr>
+</table><p><h3 style='color: darkcyan'> Egyszerű plot </h3></p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="c1">#mintavételezési pontok legyártása</span>
+<span class="n">y</span><span class="o">=</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span>              <span class="c1">#függvény kiértékelése a mintavételezési pontokban</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>           <span class="c1">#ábrázolás</span>
+</pre></div>
+</blockquote>
+<p><img src="http://oroszl.web.elte.hu/szamprob/old_2015/static_notebooks/minta_2d.png" alt=""></p>
 
 </div>
 </div>

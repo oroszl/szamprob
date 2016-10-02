@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat00</title>
+<title>mintapelda03</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,8 +11751,367 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><p>Minden feladatot külön notebookba írj!</p>
-<hr>
+<h1 id="Modulok:-amikor-egy-h&#233;tk&#246;znapi-felhaszn&#225;l&#243;-&#243;ri&#225;sok-v&#225;ll&#225;n-&#225;ll"><a href="http://django.arek.uni-obuda.hu/python3-doc/html/tutorial/modules.html">Modulok</a>: amikor egy h&#233;tk&#246;znapi felhaszn&#225;l&#243; &#243;ri&#225;sok v&#225;ll&#225;n &#225;ll<a class="anchor-link" href="#Modulok:-amikor-egy-h&#233;tk&#246;znapi-felhaszn&#225;l&#243;-&#243;ri&#225;sok-v&#225;ll&#225;n-&#225;ll">&#182;</a></h1><p><img src="http://thecripplegate.com/wp-content/uploads/2015/01/Shoulders-of-Giants.jpg"></p>
+<p>A <code>python</code>-ban, mint minden más modern nyelvben, szokás előre megírt, hasznos függvényeket és függvény csomagokat használni. A python szntaxisában az <code>import</code> parancs segítségével tudunk külső függvényeket, csomagokat vagy modulokat betölteni. 
+Modulnak nevezünk egy <code>python</code> nyelven írt filet ami <code>python</code> függvények, esetleg <a href="http://django.arek.uni-obuda.hu/python3-doc/html/tutorial/classes.html">osztályok</a> definícióit tartalmazza. Rendszerint ez egy <code>.py</code> kiterjeszésű file. Több ilyen definíciót tartalmazó fileok összességét hívjuk csomagnak. Nagy, sok függvénydefiníciót tartalmazó, csomagokat szokás alcsomagokra osztani. Ebben a notebookban a <code>numpy</code> a <code>matplotlib</code> és a <code>csv</code> csomagok néhány hasznos függvényével és adatstruktúrájával fogunk megismerkedni.<br>
+Mielőtt ezeket használni tudnánk be kell őket tölteni. 
+Lássunk erre egy példát!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fenti parancs betöltötte a <code>numpy</code> modult és ezzel a modulban definiált függvények és adatstruktúrák rendelkezésünkre állnak! A <code>numpy</code> csomag sok gyakran használt matematikai függvény implementációját is tartalmazza Határozzuk meg például hogy mennyi $\sin(3)$ :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.14112000805986721</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Amint a fenti példa is illusztrálja egy betöltött modul függvényeit az alábbi szintaxis szerint kell használni</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">modul_neve</span><span class="o">.</span><span class="n">fuggveny_neve</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</blockquote>
+<p>Egy modul nem csak függvényeket hanem előre definiált változókat is tartalmazhat. Például a <code>numpy</code> modul definiálja a matematikában és a fizikában is gyakran használt $e$ és $\pi$ számokat. Ezekre, talán nem túl meglepő módon így hivatkozunk:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">e</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.718281828459045</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">pi</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.141592653589793</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Nagy moduloknak sok almodulja is van. Az almodulokra az alábbi szintakszis alapján hivatkozunk:</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">modul_neve</span><span class="o">.</span><span class="n">almodul_neve</span><span class="o">.</span><span class="n">fuggveny_neve</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</blockquote>
+<p>Például a <code>numpy</code> véletlenszámokat generáló függvényei a <code>random</code> almodul függvényeiként vannak definiálva. Az alábbi kódcella $0$ és $99$ között generál egy véletlen számot, ehhez a <code>numpy</code> modul  <code>random</code> almoduljának a <code>randint</code> fügvényét használja.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>82</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Előfordulhat hogy egy modulból csak bizonyos függvényeket szeretnénk betölteni. Erre ad lehetőséget a</p>
+<blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">modul_neve</span> <span class="kn">import</span> <span class="n">egyik_fuggveny_neve</span><span class="p">,</span> <span class="n">masik_fuggveny_neve</span>
+</pre></div>
+</blockquote>
+<p>konstrukció. Például ha a numpy csomagból csak a $\sin$ és $\cos$ függvényeket szeretnénk használni akkor ezt az alábbi módon tehetjük meg:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">sin</span><span class="p">,</span><span class="n">cos</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ezután a modul név használata nélkül rendelkezésünkre áll a $\sin()$ és $\cos()$ függvények!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sin</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">cos</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Egy modulból akár betölthetjük az összes függvényt és változót is:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ekkor már például hivatkozhatunk a $\pi$ értékét tároló <code>pi</code> változóra a <code>numpy</code> kiírása nélkül.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pi</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3.141592653589793</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A kurzus további részében, eltekintve néhány speciális esettől célszerű lesz minden notebookot néhány sokszor használt modul betöltésével. Ezt a <code>jupyter</code> notebook-okban az alábbi parnccsal ( cell magic-el ) tehetjük meg:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pylab</span> inline
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Populating the interactive namespace from numpy and matplotlib
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fenti utasítás a következő importálásokat tartalmazza:</p>
+<blockquote><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pylab</span><span class="p">,</span> <span class="n">mlab</span><span class="p">,</span> <span class="n">pyplot</span>
+<span class="n">np</span> <span class="o">=</span> <span class="n">numpy</span>
+<span class="n">plt</span> <span class="o">=</span> <span class="n">pyplot</span>
+
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span> <span class="nn">IPython.core.pylabtools</span> <span class="kn">import</span> <span class="n">figsize</span><span class="p">,</span> <span class="n">getfigs</span>
+
+<span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</blockquote>
+<p>Azaz a <code>numpy</code> numerikus csomagon túl többek közt betölti a <code>matplotlib</code> ábra készítő modult is.</p>
 
 </div>
 </div>
@@ -11762,11 +12121,183 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-Sz&#246;veg-szerkezt&#233;s">01-Sz&#246;veg szerkezt&#233;s<a class="anchor-link" href="#01-Sz&#246;veg-szerkezt&#233;s">&#182;</a></h2><ul>
-<li>Foglald össze három rövid mondatban, hogy mit csináltál nyáron. Használj dőlt betűt és vastag betűt is!</li>
-<li>Csinálj egy táblázatot, amely összefoglalja, hogy a június, a július és az augusztus hónapban átlagosan sokat vagy keveset aludtál. </li>
-<li>Linkelj be egy képet egy Wikipedia-szócikkből!</li>
-</ul>
+<h1 id="M&#233;g-egy-adatstrukt&#250;ra:-array">M&#233;g egy adatstrukt&#250;ra: <code>array</code><a class="anchor-link" href="#M&#233;g-egy-adatstrukt&#250;ra:-array">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A numpy csomag egy a list-ekhez hasonló adatstruktúrával gazdagítja a repertoárunkat. Ennek az új adatstruktúrának a neve: array. Tekintsük át az array-ek viselkedésének  néhány alapvető tulajdonságait! (Részletesebb leírások <a href="https://scipy-lectures.github.io/intro/numpy/array_object.html">angol</a> és 
+<a href="http://blog.molnardenes.hu/tudomanyos-szamitasok-pythonban-numpy-scipy-alapok/">magyar</a> nyelven. )</p>
+<p>A List-ek hez hasonlóan számok vagy más objektumok listáinak segítségével tudjuk őket definiálni:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec</span><span class="o">=</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">vec</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1, 2, 3])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matr</span><span class="o">=</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">matr</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[1, 1, 3],
+       [4, 3, 5],
+       [6, 2, 3]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span><span class="o">=</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;cd&#39;</span><span class="p">])</span>
+<span class="n">b</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;a&#39;, &#39;b&#39;, &#39;cd&#39;], 
+      dtype=&#39;&lt;U2&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span><span class="o">=</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;sd&#39;</span><span class="p">,])</span>
+<span class="n">c</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;sd&#39;], 
+      dtype=&#39;&lt;U21&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="o">=</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="mi">23</span><span class="p">])</span>
+<span class="n">d</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[1, 2], [1, 3, 4], 23], dtype=object)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Az utolsó pár példában a kiírásban megjelent <code>dtype=</code> azt jelzi hogy az adott array-ben milyen jellegő dolgok vannak csoportosítva. Egy <code>array</code>-ban mindíg a legáltalánosabb adat típus érvényesül. A <code>vec</code> és <code>matr</code> változókban skalárok vannak a <code>b</code> és a <code>c</code> válltozóban karkakterláncok. 
+A <code>d</code> válltozóban pedig, mivel skalár (az utolsó szám) is van benne meg listák is (az első két vektor) ezért általános "objektumok" halmazának csoportjaként jelenik meg.</p>
 
 </div>
 </div>
@@ -11776,7 +12307,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-Barometrikus-magass&#225;gformula">02-Barometrikus magass&#225;gformula<a class="anchor-link" href="#02-Barometrikus-magass&#225;gformula">&#182;</a></h2>
+<h2 id="Egy-p&#225;r-hasznos-array-m&#369;velet:">Egy p&#225;r hasznos array m&#369;velet:<a class="anchor-link" href="#Egy-p&#225;r-hasznos-array-m&#369;velet:">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11785,7 +12316,1239 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Írd le a barometrikus magasságformulát! Ha esetleg nem emlékeznél rá, akkor <a href="http://www.google.com">itt</a> meglelheted a megoldást!</p>
+<p>Egy array alakjáról a <code>shape</code> attribútum segítségével érdeklődhetünk:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(3,)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matr</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(3, 3)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(3,)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>size</code> attribútum az elemek összes számáról ad tájékoztatást:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matr</span><span class="o">.</span><span class="n">size</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Számosrok statisztikai vizsgálatában segít a <code>min</code> és a <code>max</code> (leg kisebb és legnagyobb elem értéke) illetve a <code>mean</code> (átlag) és az <code>std</code> (szórás) függvények</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[21]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[22]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.81649658092772603</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha az array alakja nem egydimenziós mint például a <code>matr</code> változó esetében akkor a fenti függvényeket soronként vagy oszloponként is hattathatjuk a változóra:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#oszlop szerinti átlag</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[24]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 3.66666667,  2.        ,  3.66666667])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matr</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#sor szerint</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[25]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 1.66666667,  4.        ,  3.66666667])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>matr</code> mátrix transzponáltját a <code>T</code> attribútum segítségével kapjuk.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matr</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[1, 4, 6],
+       [1, 3, 2],
+       [3, 5, 3]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Egy array-ban jelen lévő elemek szorzata s összege a <code>sum</code> illetve a <code>prod</code> segítségével kapható:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="c1"># A vec változó összes elemének az összege</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[27]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matr</span><span class="o">.</span><span class="n">prod</span><span class="p">()</span> <span class="c1"># A matr változó összes elemének szorzata</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6480</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Azonban vigyázni kell mert nem minden array függvény alkalmazható minden array-ra! Ha karaktereket tartalmazó mátrix produktumára vagyunk kíváncsiak akkro hibát fogunk kapni!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrS</span><span class="o">=</span><span class="n">array</span><span class="p">([[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">],[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">]])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matrS</span><span class="o">.</span><span class="n">prod</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-30-9768fae74e07&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>matrS<span class="ansi-blue-fg">.</span>prod<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">/opt/conda/lib/python3.5/site-packages/numpy/core/_methods.py</span> in <span class="ansi-cyan-fg">_prod</span><span class="ansi-blue-fg">(a, axis, dtype, out, keepdims)</span>
+<span class="ansi-green-intense-fg ansi-bold">     33</span> 
+<span class="ansi-green-intense-fg ansi-bold">     34</span> <span class="ansi-green-fg">def</span> _prod<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> axis<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> dtype<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> out<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> keepdims<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">---&gt; 35</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> umr_prod<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> axis<span class="ansi-blue-fg">,</span> dtype<span class="ansi-blue-fg">,</span> out<span class="ansi-blue-fg">,</span> keepdims<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     36</span> 
+<span class="ansi-green-intense-fg ansi-bold">     37</span> <span class="ansi-green-fg">def</span> _any<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span> axis<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> dtype<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> out<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">None</span><span class="ansi-blue-fg">,</span> keepdims<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+
+<span class="ansi-red-fg">TypeError</span>: cannot perform reduce with flexible type</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Néhány függvény segíti hogy valamilyen előre megadott struktúrával rendelkező array-ek generálását. Lássunk erre néhány példát!
+A <code>linspace()</code> függvény egy megadott kezdő és vég érték között megadott számú egyenletesen mintavételezett számot ad:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">pi</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#10 szám 0 és pi között.. </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.        ,  0.34906585,  0.6981317 ,  1.04719755,  1.3962634 ,
+        1.74532925,  2.0943951 ,  2.44346095,  2.7925268 ,  3.14159265])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>rand()</code> függvény és a hozzá hasonló <code>randn()</code> <code>randint()</code> véletlen számokat tartalmazó array-ket adnak</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rand</span><span class="p">()</span> <span class="c1">#0 és 1 között egy véletlen szám</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[32]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.1262308349286887</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#3 darab véletlen Normális elpszlású szám </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[33]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.41822238, -0.74672338, -0.76571842])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">,(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span> <span class="c1"># egy 2x3 as véletlen mátrix amely 0 és 9 közötti egész számokat tartalmaz</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[34]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[5, 1, 0],
+       [7, 3, 1]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Fontos megjegyezni hogy bizonyos alapműveletek (összeadás, kivonás, szorzás és osztás ) és alapvető matematikai függvények (például a sin, cos és exp függvények) array típusú változókra elemenként hatnak!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">v1</span><span class="o">=</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">v2</span><span class="o">=</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">v1</span><span class="o">*</span><span class="n">v2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[35]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([2, 6, 9])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sin</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[36]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.84147098,  0.90929743,  0.14112001])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Bool típusú változók array-ának összege elemenkénti <code>or</code>  szorzata elemenkénti <code>and</code> műveletnek felel meg:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b1</span><span class="o">=</span><span class="n">array</span><span class="p">([</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span><span class="kc">False</span><span class="p">])</span>
+<span class="n">b2</span><span class="o">=</span><span class="n">array</span><span class="p">([</span><span class="kc">False</span><span class="p">,</span><span class="kc">False</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span><span class="kc">True</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b1</span><span class="o">+</span><span class="n">b2</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[38]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ True, False,  True,  True], dtype=bool)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b1</span><span class="o">*</span><span class="n">b2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[39]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([False, False,  True, False], dtype=bool)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Array-t&#237;pus&#250;-v&#225;ltoz&#243;k-indexel&#233;sei">Array t&#237;pus&#250; v&#225;ltoz&#243;k indexel&#233;sei<a class="anchor-link" href="#Array-t&#237;pus&#250;-v&#225;ltoz&#243;k-indexel&#233;sei">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Az array típusú változók legfontosabb tulajdonsága hogy a list-eknél jóval gazdagabb indexelési módszerekkel rendelkeznek. Nézzünk ezekre néhány példát! Előszöris definiáljunk néhány változót:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">proba1</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#1-től 10-ig 10 db egyenletes szám</span>
+<span class="n">proba2</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#10 véleteln szám</span>
+<span class="n">proba3</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span> <span class="c1">#5x5 ös véletlen mátrix</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A list-eknél megszokott szeletelések itt is működnek:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">proba1</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[41]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.        ,  1.11111111,  2.22222222])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">proba1</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[42]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 6.66666667,  7.77777778,  8.88888889])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A list-ekkel ellentétben itt egy tetszőleges index listát is megadhatunk indexelés ként:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">proba1</span><span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[43]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 3.33333333,  5.55555556,  2.22222222])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Egy másik hasznos dolog hogy egy array-ból Bool típusú array segítségével valamilyen kritériumokat teljesítő elemeket választhatunk ki egy array-ból:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">proba1</span><span class="o">&gt;</span><span class="mi">5</span> <span class="c1"># Ez a kifejezés egy bool típusú array-t ad vissza</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[44]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([False, False, False, False, False,  True,  True,  True,  True,  True], dtype=bool)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>ha a fenti Bool típusú array-t mint indexet használjuk a proba1 hasában akkor egy olyan array-t kapunk amely a <code>proba1</code> nek csak azon elemeit tartalmazza ahol a Bool érték <code>True</code> volt azaz az utolsó 5 elemet!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">proba1</span><span class="p">[</span><span class="n">proba1</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[45]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([  5.55555556,   6.66666667,   7.77777778,   8.88888889,  10.        ])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Adatbázisok elemzésénél egy igen hasznos művelet valamilyen tulajdonsá szerint válogatni az adatbázisban. Ezen feladatok  sokszor megfogalmazhatóak úgy mint egy array elemeinek egy másik array elemei szerinti szelektálása! Vizsgáljuk meg például a <code>proba1</code> azon elemeit amelyeknek megfelelő elemek a <code>proba2</code>-ben 0.25-nél nagyobbak:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">proba1</span><span class="p">[</span><span class="n">proba2</span><span class="o">&gt;</span><span class="mf">0.25</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[46]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([ 0.        ,  1.11111111,  2.22222222,  4.44444444,  5.55555556,
+        6.66666667,  7.77777778,  8.88888889])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Végül áljon itt egy pár grafikus példa magasabb dimmenziójú array változók indexeléseire:</p>
+<table style="width:100%;border: 0px solid #ffffff">
+<tr style="border: 0px solid #ffffff">
+<td style="border: 0px solid #ffffff">
+<img src="https://scipy-lectures.github.io/_images/numpy_indexing.png" width=400> 
+</td>
+<td style="border: 0px solid #ffffff">
+<img src="http://scipy-lectures.github.io/_images/numpy_fancy_indexing.png" width=400>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#193;br&#225;kr&#243;l-di&#243;h&#233;jban">&#193;br&#225;kr&#243;l di&#243;h&#233;jban<a class="anchor-link" href="#&#193;br&#225;kr&#243;l-di&#243;h&#233;jban">&#182;</a></h1><p>Igen sokszor egy program futása végén a kiszámolt eredményeket ábrákban foglaljuk össze. A <code>python</code> nyelvben sok modul van ami ábra készítésére alkalmas, ezek közzül talán a legelterjedtebb a <code>matplotlib</code>. Az alábbiakban néhány egyszerűbb ábrakészítési feladatot tekintünk át. 
+A <code>plot()</code> függvény, amit a későbbiekben is igen gyakran fogunk használni, a legalapvetőbb ábrakészítő függvény.
+Ezt a függvény a <code>matplotlib</code> modul <code>pyplot</code> almoduljában található. Tehát ha a <code>matplotlib</code> modult betöltöttük akkor az alábbi módon használható:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">25</span><span class="p">]</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[47]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f8d21942828&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXUAAAEACAYAAABMEua6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAF9RJREFUeJzt3X2sXPV95/H31xiaBQKC8BQZahqFKLsEatquwxYSplDC
+Q8BgNyLQikIkEgqBRqCQB0jlKzUtclSyhEZQFpMIEgMFfAEHiBdTc3lSeUri2EkwG2RBTGWbEGoW
+1hEyvr/94zeGy825vvN8zsy8X9LIc2fmzvnqB/76zPd85pxIKSFJGgwzyi5AktQ5NnVJGiA2dUka
+IDZ1SRogNnVJGiA2dUkaINM29Yg4MCJWRsTPI2JNRFxcf3xhRLwUET+u307sfrmSpB2J6XLqEXEA
+cEBKaVVE7A78CDgN+DTwekrpm90vU5LUiJnTvSCltBHYWL//RkQ8C8yqPx1drE2S1KSmZuoRcTAw
+B3iy/tBFEbEqIhZHxJ4drk2S1KSGm3p99HIn8IWU0hvAtcAHUkpzyHvyjmEkqWTTztQBImImcC/w
+w5TStwqenw38IKV0eMFznlxGklqQUmp6xN3onvp3gF9MbOj1A6jbLQB+toPCKn9buHBh6TVYpzVa
+53DXuWFDYp99EqtXt74vPO2B0og4CvgrYE1E/ARIwOXAX0bEHGAceAE4v+UqJElccgmcdx4cdljr
+79FI+uVxYKeCp5a3vllJ0kTLl8OTT8KNN7b3Pn6jtK5Wq5VdQkOss3P6oUawzk6rYp1btsCFF8K1
+18Kuu7b3Xg0dKG1rAxGp29uQpH721a/CCy/Arbe+81hEkFo4UGpTl6QSrVkDxx6b/zxgQvyk1abu
++EWSSjI+DuefD1//+rsbejts6pJUkhtuyH9+9rOde0/HL5JUgo0bc3Rx5criCKMzdUnqI2edBQcf
+DFdeWfx8q0192py6JKmzOpVJL+JMXZJ6qJOZ9CKOXySph4oy6UWcqUtSxU2VSS9iTl2SKqwbmfQi
+NnVJ6oFuZNKLOH6RpC6bLpNexJm6JFXUdJn0IubUJamCuplJL+JMXZK6pNuZ9CKOXySpSxrNpBdx
+pi5JFdJMJr2IOXVJqoheZdKL2NQlqcN6lUkv4vhFkjqolUx6EWfqklQBrWTSi5hTl6SS9TqTXsSZ
+uiR1QBmZ9CKOXySpA9rJpBdxpi5JJWk3k17EnLoklaDMTHoRm7oktaHMTHoRxy+S1KKNG+Hww3Mm
+/SMf6ex7O1OXpB476yz4gz+Af/zHzr+3OXVJ6qHly+Gpp8rNpBexqUtSk7Zn0q+7rtxMehHHL5LU
+pK9+FV58EW65pXvbcPwiST2wZk0euaxeXXYlxYw0SlKDqpZJLzJtU4+IAyNiZUT8PCLWRMTf1h/f
+KyIeiIjnIuJ/R8Se3S9Xkspzww0QAeedV3YlU5t2ph4RBwAHpJRWRcTuwI+A04DPAL9JKX0jIr4M
+7JVS+krB7ztTl9T3uplJL9K10wSklDamlFbV778BPAscSG7sN9VfdhNwerMbl6R+cckleQ+9Fw29
+HU0dKI2Ig4E5wBPA/imlTZAbf0Ts1/HqJKkCqppJL9JwU6+PXu4EvpBSeiMiJs9UppyxjIyMvH2/
+VqtRq9Waq1KSStKrTPrY2BhjY2Ntv09DOfWImAncC/wwpfSt+mPPArWU0qb63P2hlNJ/LfhdZ+qS
++lYvMulFup1T/w7wi+0NvW4ZcC6wCDgHuKfZjUtSlVU9k16kkfTLUcAjwBryiCUBlwNPAbcDBwEv
+AmeklDYX/L576pL6zvg4HH00nHsufO5zvd++Z2mUpA66/nq4+WZ49FGYUcLXNG3qktQhvc6kF7Gp
+S1KHdPM86Y3yhF6S1AH9lEkvYlOXpLoqnye9UY5fJKmurEx6EccvktSGfsykF/F86pKGXj+cJ71R
+NnVJQ68fzpPeKGfqkoZaFTLpRcypS1ILqpBJL+KBUklqUr9n0ovY1CUNpUHIpBdx/CJpKFUpk17E
+8YskNWhQMulFjDRKGiqDlEkvYlOXNFQGKZNexJm6pKFR1Ux6EXPqkjSNqmbSi3igVJJ2YBAz6UVs
+6pIG3qBm0os4fpE08KqeSS/i+EWSCgxyJr2IkUZJA2vQM+lFbOqSBtagZ9KLOFOXNJD6KZNexJy6
+JE3QT5n0Ih4olaS6YcmkF7GpSxoow5RJL+L4RdJA6cdMehHHL5KG3rBl0osYaZQ0EIYxk17Epi5p
+IAxjJr2IM3VJfa/fM+lFzKlLGlr9nkkv4oFSSUNpmDPpRaadqUfEjRGxKSJWT3hsYUS8FBE/rt9O
+7G6ZkvS7tmfSr712ODPpRRo5UPpd4ISCx7+ZUvqj+m15h+uSpGn9/d/DkUfCCUUdakhNO35JKT0W
+EbMLnmp61iNJnWImvVg7kcaLImJVRCyOiD07VpEkTcNM+tRaberXAh9IKc0BNgLf7FxJkrRjZtKn
+1lL6JaX06wk/3gD8YEevHxkZeft+rVajVqu1sllJYuNG+Lu/y5n0GQP09cmxsTHGxsbafp+GcuoR
+cTDwg5TSYfWfD0gpbazfvwT47ymlv5zid82pS+qYQcykF+laTj0ibgFqwPsi4lfAQuDPImIOMA68
+AJzf7IYlqVlm0qfnN0ol9YUtW/IpAK67bjgijJ4mQNJAG5TzpDfK0wRIGlhm0hs3QMeOJQ0iM+nN
+salLqjQz6c1xpi6psgbxPOmN8kCppIEzLJn0Ih4olTRQzKS3xqYuqXK2nyf9uus8T3qzHL9Iqpxh
+y6QXcfwiaSCYSW+PkUZJlWEmvX02dUmVYSa9fc7UJVXCMGfSi7Q6U3dPXUPpmWfgU5+Cb38bXnqp
+7GoEcMkleQ/dht4em7qGzuOPw8knw9y58PTT8Id/mK9I/41vwPPPl13dcNqeSf/a18qupP+ZftFQ
+WbkSPv1pWLIEPvGJ/NjWrTA2BqOj8LGPwb77woIF+XbYYXnGq+4xk95ZztQ1NO6/H849F+64A445
+pvg127bBE0/kBj86CjvtlJv7/Pnw0Y8O1jUxq8JMejHP/SLtwNKleW/wnnvyqKURKcGqVXDXXbnB
+v/pqbu4LFsDHPw4779zdmofBmjVw3HE5k26E8d1s6tIUliyBL34x76kfcUTr7/Pcc+80+HXr4NRT
+c4M//nh4z3s6V++wGB+Ho4/On54+97myq6kem7pUYPFiWLgQHngADj20c+/7q1/B3XfnBr9qVb5m
+5oIF+QDse9/bue0Msuuvh5tvhkcfdaxVxKYuTXLNNXDVVfDgg3DIId3bzssvw7JlucE/9lie1y9Y
+kPfk99mne9vtZ2bSp2dTlyZYtCh/O/Hf/g1mz+7ddl97LY95Rkfzp4M//uPc4E8/HQ48sHd1VN0w
+nye9UTZ1iXxwc2QEbr8976HPmlVeLb/9bW7so6Nw773508L2qOQHP1heXWVbvhw+//l8kNQI49Rs
+6hp6KcFll8GKFfm2335lV/SOiVn4u+8e3iz8li153HLddfk4hKZmU9dQGx+Hiy/O3xBdvhz23rvs
+iqY2zFl4M+mNs6lraG3bls8Z8vzzcN99sMceZVfUuJTgpz99p8EPchbeTHpzbOoaSlu3wtlnwyuv
+5C8W7bZb2RW1Z1Cz8GbSm2dT19B58818Hpe33oI77+zvplekKAs/f37OwvfTpxEwk94Km7qGypYt
+eQ92993zfHaXXcquqLt+/et3svCPPppHMwsWwLx51c/Cm0lvjU1dQ+P11/NY4qCD4LvfhZlDdq7R
+fsvCm0lvjU1dQ2HzZjjppBwD/Jd/8aP8VFn4+fO7+y3aRplJb51NXQPvlVfyOdA/9jG4+urhyXY3
+qigLvz1Jc/jhvV8vM+ntsalroG3YkBMg8+bBP/yDDX064+PvZOGXLs2faLZ/2alXWXgz6e2xqWtg
+rV+f883nnANXXFF2Nf2njCy8mfT22dQ1kNaty83h4ovh0kvLrmYwdDsLbya9M2zqGjhr1+ZGc/nl
+cMEFZVczmLqRhTeT3hlda+oRcSNwCrAppXR4/bG9gH8FZgMvAGeklF6b4vdt6mra6tVw4olw5ZV5
+7KLu60QW3kx653SzqR8NvAHcPKGpLwJ+k1L6RkR8GdgrpfSVKX7fpq6mPPMMnHJKvsjFGWeUXc1w
+ajULbya9c7o6fomI2cAPJjT1tcAxKaVNEXEAMJZS+vAUv2tTV8Mefzx//F+8OO8hqnyNZuHNpHdW
+r5v6qymlvSc8/66fJ/2uTV0NWbkyn8tlyZKcR1f1bM/C33VXvu2zT27wn/wknHmmmfROKrup/yal
+9L4pftemrmndf39OS9xxR77Gp6pvYhZ+dBSOOgq+972yqxocrTb1Vs+asSki9p8wfnl5Ry8eGRl5
++36tVqNWq7W4WQ2ipUvhwgvzQbojjyy7GjVqxgz40z/Nt3/6p7Kr6X9jY2OMjY21/T6N7qkfTN5T
+P6z+8yLg1ZTSIg+Uqh1LlsAXv5j31I84ouxqpOroZvrlFqAGvA/YBCwE7gbuAA4CXiRHGjdP8fs2
+dRVavBgWLswH4Q49tOxqpGrxy0fqK9dcA1ddBQ8+WI2zCUpV0+uZutSyRYvghhvgkUdg9uyyq5EG
+i01dPZMSjIzA7bfDww/DrFllVyQNHpu6eiIluOwyWLEiN/T99iu7Imkw2dTVdePj+SyLTz8NDz0E
+exd+TU1SJ9jU1VXbtsF558Hzz+eDoq2e+U9SY2zq6pqtW+Hss/Nl6JYvh912K7siafDZ1NUVb76Z
+z+Py1lv5JFCduPiCpOl5Cnt13JYtcNppMHNmPieIDV3qHZu6Our11/NVc/bdF267DXbZpeyKpOFi
+U1fHbN6cT5n7oQ/BTTflPXVJvWVTV0e88goceyzMnZuvUem1KaVy+FdPbduwAWq1fE3Rq6+GaPps
+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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fenti parancs tehát az <code>y</code> tömböt ábrázolja az <code>x</code> függvényében.</p>
 
 </div>
 </div>
@@ -11795,16 +13558,1274 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-M&#225;sodfok&#250;-egyenlet">03-M&#225;sodfok&#250; egyenlet<a class="anchor-link" href="#03-M&#225;sodfok&#250;-egyenlet">&#182;</a></h2>
+<p>Mivel a notebook elején lefuttatuk a  <code>%pylab inline</code> parancsot, ami többek között a <code>matplotlib.pyplot</code> modulból is betöltötte az összes függvényt, ezért elegendő a <code>plot()</code> függvényt magában hívni!</p>
+
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[48]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f8d20eb8828&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+eQ92993zfHaXXcquqLt+/et3svCPPppHMwsWwLx51c/Cm0lvjU1dQ+P11/NY4qCD4LvfhZlDdq7R
+fsvCm0lvjU1dQ2HzZjjppBwD/Jd/8aP8VFn4+fO7+y3aRplJb51NXQPvlVfyOdA/9jG4+urhyXY3
+qigLvz1Jc/jhvV8vM+ntsalroG3YkBMg8+bBP/yDDX064+PvZOGXLs2faLZ/2alXWXgz6e2xqWtg
+rV+f883nnANXXFF2Nf2njCy8mfT22dQ1kNaty83h4ovh0kvLrmYwdDsLbya9M2zqGjhr1+ZGc/nl
+cMEFZVczmLqRhTeT3hlda+oRcSNwCrAppXR4/bG9gH8FZgMvAGeklF6b4vdt6mra6tVw4olw5ZV5
+7KLu60QW3kx653SzqR8NvAHcPKGpLwJ+k1L6RkR8GdgrpfSVKX7fpq6mPPMMnHJKvsjFGWeUXc1w
+ajULbya9c7o6fomI2cAPJjT1tcAxKaVNEXEAMJZS+vAUv2tTV8Mefzx//F+8OO8hqnyNZuHNpHdW
+r5v6qymlvSc8/66fJ/2uTV0NWbkyn8tlyZKcR1f1bM/C33VXvu2zT27wn/wknHmmmfROKrup/yal
+9L4pftemrmndf39OS9xxR77Gp6pvYhZ+dBSOOgq+972yqxocrTb1Vs+asSki9p8wfnl5Ry8eGRl5
++36tVqNWq7W4WQ2ipUvhwgvzQbojjyy7GjVqxgz40z/Nt3/6p7Kr6X9jY2OMjY21/T6N7qkfTN5T
+P6z+8yLg1ZTSIg+Uqh1LlsAXv5j31I84ouxqpOroZvrlFqAGvA/YBCwE7gbuAA4CXiRHGjdP8fs2
+dRVavBgWLswH4Q49tOxqpGrxy0fqK9dcA1ddBQ8+WI2zCUpV0+uZutSyRYvghhvgkUdg9uyyq5EG
+i01dPZMSjIzA7bfDww/DrFllVyQNHpu6eiIluOwyWLEiN/T99iu7Imkw2dTVdePj+SyLTz8NDz0E
+exd+TU1SJ9jU1VXbtsF558Hzz+eDoq2e+U9SY2zq6pqtW+Hss/Nl6JYvh912K7siafDZ1NUVb76Z
+z+Py1lv5JFCduPiCpOl5Cnt13JYtcNppMHNmPieIDV3qHZu6Our11/NVc/bdF267DXbZpeyKpOFi
+U1fHbN6cT5n7oQ/BTTflPXVJvWVTV0e88goceyzMnZuvUem1KaVy+FdPbduwAWq1fE3Rq6+GaPps
+FZI6xaautqxfny9qcdZZ+bqUNnSpXDZ1tWzdunzF+b/5G7jiirKrkQQ2dbVo7dq8h/6lL8Gll5Zd
+jaTtzCeoaatX5/n5lVfCOeeUXY2kiWzqasozz8App+SLXJxxRtnVSJrMpq6GPf44zJ+fL0M3b17Z
+1UgqYlNXQ1auzOdyWbIkf8FIUjV5oFTTuv9+OPNMuPNOG7pUdTZ17dDSpfCZz8CyZTntIqnabOqa
+0pIlcNFF+VzoRx5ZdjWSGmFTV6HFi3MG/cEH4Ygjyq5GUqM8UKrfcc01cNVVMDYGhxxSdjWSmmFT
+17ssWgQ33ACPPAKzZ5ddjaRm2dQFQEowMgK33w4PPwyzZpVdkaRW2NRFSnDZZbBiRW7o++1XdkWS
+WmVTH3Lj43DxxfD00/DQQ7D33mVXJKkdNvUhtm0bnHcePP98TrnssUfZFUlql019SG3dCmefnS9D
+t3w57LZb2RVJ6gSb+hB68818Hpe33oJ774X3vKfsiiR1il8+GjJbtsBpp8HMmTA6akOXBo1NfYi8
+/jqcfDLsuy/cdhvsskvZFUnqNJv6kNi8OZ9h8UMfgptuynvqkgaPTX0IvPIKHHsszJ0L118PM/yv
+Lg0s/3oPuA0boFbL1xS9+mqIKLsiSd3U1ofwiHgBeA0YB7amlOZ2oih1xvr1cNxx+eLQV1xRdjWS
+eqHdyeo4UEsp/WcnilHnrFuXG/rFF8Oll5ZdjaReaXf8Eh14D3XY2rX5KkVf+pINXRo27TbkBKyI
+iKcj4rOdKEjtWb06HxT9+tfhggvKrkZSr7U7fjkqpbQhIvYlN/dnU0qPTX7RyMjI2/drtRq1Wq3N
+zarIM8/AKafki1yccUbZ1UhqxtjYGGNjY22/T6SU2q8GiIiFwOsppW9Oejx1ahua2uOPw/z5+TJ0
+8+aVXY2kdkUEKaWm82otj18iYteI2L1+fzfgE8DPWn0/tW7lSjj9dPj+923o0rBrZ/yyP3BXRKT6
++yxJKT3QmbLUqPvvh3PPhTvvzAdHJQ23jo1fptyA45euWboULrwQ7rkHjjyy7GokdVLPxy8q15Il
+cNFF+VzoNnRJ29nU+9DixTmD/uCDcMQRZVcjqUo8V1+fueYauOoqGBuDQw4puxpJVWNT7xMvvwz/
+/M9w663wyCMwe3bZFUmqIscvFbZ+fd4zr9XyedB/+Ut4+GEbuqSpmX6pmOeey5eZu+uufFKuefNg
+wQL48z/30nPSMGk1/WJTL1lKsGpVbuSjo/kKRfPn50b+8Y97hSJpWNnU+8j4OPz7v7/TyHfaCf7i
+L3IznzvXKxNJar2pux/YI1u35sTK6CjcfTfst1/eG1+2DD7yEa9IJKkzbOpdtGULPPBAno/fe28+
+2LlgATz6KHzwg2VXJ2kQOX7psNdeg/vuy3vkK1bAn/xJbuSnnw6zZpVdnaR+4Uy9RC+/nMcoo6Pw
+2GM5gjh/Ppx6KuyzT9nVSepHNvUeW78+j1VGR3N65cQT8x75SSfBe99bdnWS+p1NvQfMkEvqFZt6
+F5ghl1QWm3qHFGXIFyzINzPkknrFnHobijLk8+fni08cdpgZckn9Y2ibuhlySYNoqMYvZsgl9Qtn
+6lOYnCE/5pjcyM2QS6oym/oEkzPkJ5yQG/nJJ5shl9Qfhr6pmyGXNEiGrqmbIZc0yIaiqU/OkM+Y
+kc9DboZc0qAZ2Jz65Az5vvvmJm6GXJJ+VyWb+uQM+SGH5Eb+yCP5viSpWGXGL2bIJekdfTlTN0Mu
+ScX6pqlPlSE/6STYY4+uliJJfaPSTX3t2vSuDPmpp+ZGfvzxZsglqUilm/r735/elSHfeeeublKS
++l6lm/q2bckMuSQ1odWm3pNWa0OXpN6w3UrSALGpS9IAaaupR8SJEbE2Iv5PRHy5U0VJklrTclOP
+iBnAt4ETgEOBsyLiw50qrNfGxsbKLqEh1tk5/VAjWGen9UudrWpnT30u8MuU0osppa3AbcBpnSmr
+9/rlP7R1dk4/1AjW2Wn9Umer2mnqs4D1E35+qf6YJKkkHiiVpAHS8pePIuJIYCSldGL9568AKaW0
+aNLryrvqtCT1sZ5+ozQidgKeA44DNgBPAWellJ5t6Q0lSW1r+SIZKaVtEXER8AB5jHOjDV2SytX1
+c79IknqnIwdKI+LGiNgUEat38JprIuKXEbEqIuZ0YrvNmq7OiDgmIjZHxI/rt6+VUOOBEbEyIn4e
+EWsi4m+neF2p69lInRVZz9+LiCcj4if1OhdO8bqy13PaOquwnvU6ZtS3v2yK50v/u16vY8o6q7KW
+9VpeiIif1v/bPzXFaxpf05RS2zfgaGAOsHqK508C7qvf/yjwRCe224U6jwGWlVHbhBoOAObU7+9O
+Pm7x4aqtZ4N1lr6e9Tp2rf+5E/AEMLdq69lgnVVZz0uA7xfVUpW1bKDOSqxlvZZ1wF47eL6pNe3I
+nnpK6THgP3fwktOAm+uvfRLYMyL278S2m9FAnQBNH23upJTSxpTSqvr9N4Bn+d38f+nr2WCdUPJ6
+AqSUttTv/h75ONLkmWPp61nf9nR1QsnrGREHAicDi6d4SSXWsoE6oQL/b9YFO56aNLWmvcqpT/6i
+0n9Q3S8q/Y/6R5z7IuK/lVlIRBxM/mTx5KSnKrWeO6gTKrCe9Y/hPwE2AitSSk9Pekkl1rOBOqH8
+9fyfwGUU/4MDFVlLpq8Tyl/L7RKwIiKejojPFjzf1Jr65aN3+xHw+ymlOeTz2txdViERsTtwJ/CF
++p5wJU1TZyXWM6U0nlI6AjgQ+GjZ/1hPpYE6S13PiPgksKn+CS2ozp7uuzRYZyX+36w7KqX0R+RP
+Fp+PiKPbebNeNfX/AA6a8POB9ccqJaX0xvaPwCmlHwI7R8Teva4jImaSG+X3Ukr3FLykEus5XZ1V
+Wc8J9fxf4CHgxElPVWI9t5uqzgqs51HAvIhYB9wK/FlE3DzpNVVYy2nrrMBaTqxlQ/3PXwN3kc+r
+NVFTa9rJpr6jf7mXAX8Nb38TdXNKaVMHt92MKeucOKeKiLnkyOervSpsgu8Av0gpfWuK56uynjus
+swrrGRH7RMSe9fv/BTgeWDvpZaWvZyN1lr2eKaXLU0q/n1L6AHAmsDKl9NeTXlb6WjZSZ9lrOWHb
+u9Y/7RIRuwGfAH426WVNrWnLXz6aVNgtQA14X0T8ClgI7EI+bcD/SindHxEnR8TzwP8DPtOJ7Xa6
+TuBTEXEBsBX4LfDpEmo8CvgrYE19vpqAy4HZVGg9G6mTCqwn8H7gpsinip4B/Gt9/c6nQuvZSJ1U
+Yz1/RwXXslBF13J/4K7Ip1OZCSxJKT3Qzpr65SNJGiAeKJWkAWJTl6QBYlOXpAFiU5ekAWJTl6QB
+YlOXpAFiU5ekAWJTl6QB8v8BDxgIIoGJlhkAAAAASUVORK5CYII=
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mi a másodfokú egyenlet megoldóképlete?</p>
+<p>A <code>python</code>-ban konkrét matematikai függvények ábrázolásának az a legegyszerűbb módja ha két tömböt generálunk, egyet amely azokat a pontokat tartalmazza ahol a függvényt ki szeretnénk értékelni illetve egyet amelyek a függvény értékét tartalmazzák a kiértékelendő pontokban, majd ezeket a <code>plot()</code> függvény segítségével ábrázoljuk.
+Az alábbi példán a $\sin(t)$ függvényt ábrázoljuk a $[0,2\pi]$ intervallumon tíz darab mintavételezési pontot használva.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[49]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f8d2175ccf8&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+4AAAAABJRU5ErkJggg==
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha több mintavételezési pontot használunk akkor simább függvényt kapunk. Ezt úgy érhetjük el ha a <code>linspace()</code> függvény harmadik változójának segítségével megnöveljük a legenerált értékek számát.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> 
+<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f8d200f0860&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+IiJ54v8A42wJvv9FA/kAAAAASUVORK5CYII=
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha egyszerre több függvényt szeretnénk ábrázolni akkor egy kódcellán belül több <code>plot()</code> parancsot is kiadhatunk:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">sin</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[51]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f8d200feba8&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha kétváltozós függvényt szeretnénk ábrázolni akkor ahoz a mintavételezést a <code>numpy</code> csomag <code>meshgrid()</code> függvényével tehetjük meg az alábbi szintaxis szerint:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xrange</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># határok és pontok száma az x irányba</span>
+<span class="n">yrange</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="c1"># határok és pontok száma az y irányba</span>
+<span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">xrange</span><span class="p">,</span><span class="n">yrange</span><span class="p">)</span> <span class="c1"># mintavételezés az x és y síkban</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Két változós függvényt a <code>pcolor()</code> <code>matplotlib</code> függvény segítségével tudunk ábrázolni. A fent definiált <code>x</code> és <code>y</code> tömbök segítségével például az $$f(x,y)=\mathrm{e}^{-(x^2+y^2)}$$ két dimenziós Gauss-görbét az alábbi módon ábrázolhatjuk:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pcolor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[53]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.collections.PolyCollection at 0x7f8d21475f60&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXMAAAEACAYAAABBDJb9AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAALEgAACxIB0t1+/AAAIABJREFUeJztnW2MXsd13/+Hu9rlUrt8lbmSTdKk4Daoi6ROgCYfUhSR
+U6FK0NYumg9uChRBPrVF4wBFgyB1UbtFChj+5rooUBSOkQQVEsAB4qZxDCuIoCAG7Aix1ai1FKuo
+aEuxRJo0X3bFJaldnn7YFe+Zw52z89w7z8vO/n+A4bk788yd+8LR/54554yoKgghhOxvDk17AIQQ
+QobDyZwQQhqAkzkhhDQAJ3NCCGkATuaEENIAnMwJIaQB5od2ICKLAP4YwMJOf59X1X8/tF9CCCHl
+SA0/cxE5oqq3RGQOwFcAfFRV/3Rwx4QQQoqoYmZR1Vs7xUVsq3NGIhFCyASpMpmLyCER+QaANwE8
+o6rP1+iXEEJIGbWU+T1V/WEAZwD8mIi8v0a/hBBCyhi8AGpR1Zsi8iyApwB809aJCE0vhBDSA1WV
+vdrU8GZ5BMDbqnpDRJYAPAngk7u3/sTQ080wzwJ4YtqDGCMtX1/L1wbw+vY7nyhqVUOZPwbg10Xk
+ELbNNr+tql+s0C8hhJBCBk/mqvoigB+pMBZCCCE9YQRoNc5PewBj5vy0BzBGzk97AGPm/LQHMGbO
+T3sAMwEn82pcmPYAxkzL19fytQG8voMBJ3NCCGkATuaEENIAnMwJIaQBOJkTQkgDcDInhJAG4GRO
+CCENwMmcEEIagJM5IYQ0ACdzQghpAE7mhBDSAJzMCSGkATiZE0JIA3AyJ4SQBuBkTgghDcDJnBBC
+GoCTOSGENAAnc0IIaYAaGzoTMgPMwqu8Oe0BkAMMlTkhhDTALMgZcuBp5TWscR1U96QfVOaEENIA
+rUgiMpPw9RqdUe4ZVTzpoDInhJAGoHQiIzLJV+ahCZ5r0rxdoY/SZ0EFfxCgMieEkAbgZE4IIQ0w
++JtZRM4A+A0AqwDuAfhvqvqfhvZLps04zSnjMJ/MgsVwFHNG6T0YpzmG5peWqOUY+69U9QURWQbw
+ZyLyZVV9uULfhBBCChg8mavqmwDe3Cmvi8hLAN4DgJP5zFNbzdZQ3LM4Jk9OLfcde6SQx6ngo/FS
+te83qtrMReQ8gA8A+FrNfgkhhMRUk0E7JpbPA/hFVV2v1S+pzdBH3lfplp53FtV91P8kFWxfBV9D
+tVOpzzpV3noRmcf2RP6bqvqFfMtnTfk8gAs1Tk8IIQ3xKoCLI/+qloT5NQDfVNVPx82eqHQ6ElPj
+sZYq5NqKu+/YpxVgZM9bw/OkBl5F5+7NKOOlR8zkuIBU6D5X9KvBNnMR+XEA/wTAB0XkGyLydRF5
+ami/hBBCyqnhzfIVAHMVxkIIIaQnsxBpQQYzbtNEDVNK1Me0TDo1sKaKvq5+NUw1fcZRY9GUC6Wz
+AsP5CSGkAajM9y3TUuPjUN/2dzVU+iSV+SRVcF9yqn0UV8c+Sp0qfZJQmRNCSANQme8rJukGmOtj
+lN+UqvvSdn2/CsbJkilHStQr21K1HNnCx6l8a7g3UqVPEipzQghpACrzmWYc3hu11XKpvTtq91Cm
+XXTuWbGZR8rUqlE/3pyi9/1F6jZ3P/qq4D5fAaW2dXq9jBsqc0IIaQBO5oQQ0gA0s8wc0wrQ8b/J
+fcKPct6HMuW+5yqty/Vdi5wpIVq8LK2L7k20iJr7je+ztnkjMv1wcXSSUJkTQkgDUJlPnVEewbTc
+BUtV9VJQV6qqlwrb1Q5CGoVIcZe2s3Ubhe1K+5hWEBKQD5QqVem+D1IKlTkhhDQAlflUmKRdPFLS
+Fq+qc+rW/97+rlS1R256fZT+XnW5dqWUuh/6dlGdVdJLmb/7Pnxd7hn5dn3C+UspdaUcJT0A7el9
+oDInhJAGoDKfGONU4329PvrYwiNl7pV0To37dkcK2xWqagnq+mTe3wrOq9GXhCVS5lZ93gra+f43
+MmVP6btn+6+dipdeL+OGypwQQhqAkzkhhDQAzSxjY1YWOUvrjrh2OXNHZEqJ6o4UtjN4c8nhzPAA
+YNGUS9dC+5Jb17wTtLvtnrOWLkRb84k3wcwXlH0fFj8G3/9Q+rgw+t9Z6MIYQWVOCCENQGW+r6gR
+9l7qBphT3FG7o4V9OOxwV0z5sGt3OKjLCVO/4FnDM3HLlDczZQC4nSn74zXbxyhfPlZx3zTlKCtl
+5MJoqR14NO5AJkJlTgghDUBlXpXadvJxh9iXKu6VoN3RTNmRU98AsJwpR8r8YVf3UKbduJX57aDd
+W5l2/the87prV6za7Q2+6drN+j9zui3WgMqcEEIaYNb/k70PGKrGazyCvjbznPr2dZH6Nu2894lV
+nMczfwdSlb0StCtV7ZFt3RLd+kjo5Wzhkfr2itseW/UdXfP1oA+1z8U/c6/U36Hvu1ea3qAUJuuq
+AZU5IYQ0ACdzQghpAJpZZo4+C5u+XWmATp+FTdfOnvp4WpUcrxS2y5lmfJ03R5SaWfq88aUuh97M
+sp4pA6nJZD3zd3+86OoWM+0eWCgdJz7QqM+56bZYAypzQghpgCrKXEQ+C+DvAbikqj9Uo8/ZZVru
+h76uz849/jgK+Dm5e/++u+OZsj9+pLBdaX/eNTEXbOSVuXVVjB6RFYtbri6nxtdcO+uaGCluW44W
+QK+4ulwskD/XRvQVl6N0B6W+6ShKYU70Umop888B+LuV+iKEEDIiVZS5qv6JiLy3Rl/t0udWl+52
+P0oIuJWwkcthRo0/4prl1DcAnDLld2V+43/XR8EDwLLeLx56uLPjLi7dTZrNzW+Zcl6xbW3Om3Ia
+eXRnY+F++d5bZn1i3flm5tS3P76SKQOpMvc281ziMf/a2D437HsTBHmFlNq4S9V9xMFT2H2hzZwQ
+Qhpgwt4sz5ryeQAXJnv63tSwk+falapv37Z0X87SxFhL+WaRWl415Xe5Ovu7RzN/j+pcu0PHOiP0
+yonUQL2y0LmEHDEeFgsuL+0iOqU+94AxvGNroVPjd7CQ1N092knkW8ZzaO1uavBeu9Z9Bd274Yz8
+Vi1HAVW2XfSqlO6glKj0UXZGyuX99Wo52vc01y4i6qPVsP9XAVwc+VcTnsyfmOzpCCFk33EBqdB9
+ruhXNc0sgnj3RUIIIWOilmvi0wB+AsApEfkOgI+r6udq9L1/6XtrS3cX6rv7T8a04k+bW2xcde2s
+aeVRV2fbPmbKZ1w787tDpzpTyiOrV92Qru9aBlLTyorxEVxAugC6aMwuoZkF1sySrjzeNWaXNbOg
+fGsh3a3p+urxXcsAcOVYtzp877gxwUTBUN6UMjQA6gFLSuSqWmpmsUTt5jPtIph/JaKWN8vP1uiH
+EEJIPxjOP5ihi57RrjD+8eSCP0bZ/cccW6NYacCPX+S0ajxQ3EndGU2aHTtzqTvVQqfGTyFV5qfM
+6t0Jp8yXjRq3yvyI203HLojOB8p808jgu06Z3zL31yrzdZd58pq5iVfdau7KajfGKyc6lX7jsPv0
+mTcPKVoAjcjtjOQFsb3d2leZ27qlzN89tRdD92rbJnRNJISQBqAy35VJ3pZSG7k/7hs0ZIiSWtlj
+G/zj3QqtkPQ28/OmfKZTX6fPfTdpdhqdMl/FZVO+lLSzSt2r9uO4dr+8gt3dFIFayty4I5qbeB0n
+knZXzY3zXxL262FpwQQ5PZ7a+C/Pv7s7mA/elVKxHO2MZL04fWqC7DvlT7aRqfPvsq3z1zVOVd2u
+3Z3KnBBCGoCTOSGENADNLFXpmw2xTx8985nn8o/7XeNyi57elBK5HBrTymPnXrtffjdSM4s9fsyU
+rcll+7gzuzxoZunMGCuZxVCgjpnFLnra8nVnq7JmlkvOp3M5WaQ1ZhbnSjl3rhvjGzjrBmkeprUW
++MuyddaU4vOv27oNV5e4LR4JGuYWPaMFSm9W6bPrdjvmkr5QmRNCSANQmY9MH9UwSn+leVtKXRMd
+uQ2TSzMU+gXQwOXQLnRa9X0WryXtcnWPOQUfLY7mAopWbqbKcd6qz0jMWdHrshWuHe3ur1XjXplb
+Nb7svhCsGrdfCGEg07k0aujyplHqm8aFsXTHI7/7kf2d/1K7Zg+iBXZ7v0vf5Si/S19K87a0A5U5
+IYQ0AJX5fcZ9K3IqpW/WxJwN09X57q0at4n8SoOGvM3cHNvgHyB1ObTq29vMz5sMcVaZR7b101up
+Pf3oZWNrtlVefdrdf/IiOAmdn3cJD08sd+rzxOmufPN0asdfmdvdLg6MkL0R+eyNd850xzdumwfh
+r7lUmduPB59WwNZl7edAqsxzKh2Io5dy/xbHYRffbxkV81CZE0JIA1CZDybnfTJKMFCuvyicv/Bc
+3va5nKnzSiynzH2OcZsYayFVptbG/VhgM7fHuTIAnP1+15+kVUhM6FaZ33DteijzB/YbPWbKp7vi
+0dXUE2Xl7Ov3ywsnnZdK5uRbLpuW9aq55VTwhknstXbK5E6/7gac2/HI735k34e3grrEfh59Wdr3
+1Xu9lP77iIKLIva3yu4DlTkhhDQAJ3NCCGkAmlmKqO2OWNp35LYYuIfZbIiH06rkuIJros057gN5
+VjM5V7zLYc418dz30kVO/D9T9mYW26U1udx07eyi3x3kse6I3gRlEwp+P38uMa5+5x5312ICsaJF
+Tmta8VkZk+Cl1a58uXSLOv/Mrdklem/s+6WRW2y0AFq6OFqDg+GmSGVOCCENQGU+MXK3epSgocIN
+nQ9nyv54OVMGsgrObqq8XdXJuVOJBEyVek6lA06Zm0XORIkDwCumXKrMv+/a2eH74BqLvU9+AfSk
+KVs17hcNg/7PznXXefdkp8b9Iud6kC7gWiZgye5iBLidjKLNo+1x9N7Y8kbp+ztK0JBV7X12JDqY
+UJkTQkgDUJlPhei2992FKFPlFdbDmTqv0jIBRSsn0rB0q8x9zu5c/nEfim8DgBKXQ6++7bFX7bau
+UJlvBMp5qY8yL1X6AMQcnz7WXf/aXGoXt4rbr0nYRF5JCgP3jG5YZW6vJdpv1F+zrQtnjcKvx+J/
+A1TjpVCZE0JIAxxwZd7n8kt/U+oBU6pQRujfemJEpsrItp4EFHUJtFYW0hhwG6buk0nZ3X9yibAA
+F4pvVXXq9JIee9X+HVM2ZvdLqZhNhHq4o6RR8CddH6vWNh55xERK13jEHD3dXf/xx9J7k963JFon
+m0bXP6Mb5vlhxbiiRHbxSEjb9+uBHYly72Xf9zzquzBTWrF3zP4O7acyJ4SQBuBkTgghDXDAzSy1
+KTWLjBIolOvflMU1i9ZJc6aV4JP70MPdJ7zP/hft6mM3VrZ13sySeCracrpOmh77OvO7i1fzzayZ
+pfQj3ccdbZj+z9sKl/c8CS466ursIqoZuzezpPd3PajLZ2i0z+/eYWPvKXU/BPLrmv7d08gd0WI7
+8Xlbcm6L/olxodRCZU4IIQ1AZT6YSYb6F57LPtU5V2ePC5X54lK3QLfgVvwWTF7uI05hJYtyVkW6
+3X8SwWmzHHpJ/P1MGelCZy6BIoDEuc/rQYsNSo8U/JLpcNUvcgah/sl1muv392blaF5x2/ttn4N/
+Rvb5bZQq8+i9KZ41Sr9GaxDtMXowoDInhJAGoDLftxgl4lVUptmux+/g3wTT59x8l3vb7x6/aFTg
+g6p997p57873VqYc7RLkQudzot15FSZ1pcrcY2+VNYWv+nD+Htfi703uHvrjxaTscqeb51essEvf
+G//ubY5bgZMcVZS5iDwlIi+LyLdE5Jdr9EkIIaScwcpcRA4B+M8AfhLbYR3Pi8gXVPXloX2TMVOo
+zObmO6ux3yHHHs+7uvlcnTdCb2XKXsGbcHkfim8tpLZ7r743Mu08uZ0s/e/sef2Yluyxv5bcNbtB
+Ze+hO57LlIH0+RU7S5F9Rw1l/qMAXlHVb6vq2wB+C8CHKvRLCCGkkBqT+XuQBle/vvM3QgghE2LC
+H1bPmvJ5ABcme3pCCJl5XgVwceRf1ZjM/xLAOXN8Zudvu/BEhdMRQkjLXEAqdJ8r+lWNyfx5AO8T
+kfcCeAPARwD84wr9knETrQCalb2tze412VpIfdHs/pWbzk9tM1cXuEEmZR8eb4JallzAi81yaLsv
+3aHSE+ywmo1s92NKgnD8teSu2d2b7D10x1uZMpA+vzCWZv8lCiSGwZO5qm6JyL8E8GVs2+A/q6ov
+DR4ZIYSQYqrYzFX1SwB+oEZfpBQrnQN/M6/EcsoscBfc2szvHn/HSM67Tn7ezdRtOpU6b8Pgo51w
+cu2Q5hy3kfOl7oceq8ZPubqTmfIDOct7XIu/N7l76I/vJOX0GdnnF7lBJpS+N1v+DwcvjH5WYDg/
+IYQ0AMMEBmOVSO3bWSqPHFZxeeVkj29nyu74zkan9O4e9erQ7iyfWpftTvNrZuuitaNpuxPLRiMf
+MxVR2tiTaZUNpd/wMfyG0r1kbDt3Kqza8qmgoT3212Kv06h2f2/sfbP3c/u4a2ufg1fw9vmVPvPw
+vSm2rb+dKY8DfhFQmRNCSANwMieEkAagmaUq9vszyq8cOc+V+o6Zsrpz5RKVAPnP7OCT+95b3ee9
+/9RPzCfJLtDAmrEf2LrrOJ60O3HamFlOmwqXszxZ2fT5wU3uk/Pmz0vO5GKtHeGGzqb8gJnFmlbs
+eFd9w6Du9O5lf2/S+7sc1OXNMfb5FZtZfF0uIY0iaDjKCmuujr6UpVCZE0JIAxxwZW7/y156K6J9
+CC1eUeTaReqiVNk4dW8z9Pku7M8iJWa381zvNnpcu5uqw1sLnepbd8r8Ok6Y8vFdywBw83Qnn4+u
+mlzcXn3bHOB+vBaz/ud3/0kWSoM+kgAg73JopbpV3Gddu3dnyu53N093C5T+3qT37URSt55R4/4Z
+2eeXPNdImfvX175HPgNkQqnva2ldSd9D+hz6m9mBypwQQhrggCvzaVGqUiLXxKAPW+XVV07dRjvh
+mA3j16459b3aKcdrTlVeNeE2tnzJGZBX5sz+oGdfv1+WSDl6rJK2hnFvdzfXtVTaX6ky9+r7bKYM
+QM3x5bnOaO7vTe4eAun9tgrePyP7/MLdj25n2vm6UMDm3t9I6kd9kFKozAkhpAGozCdGztMlsq17
+hVKoem6b/iN1u54pA6maM+V7N1KZapX5VTyS1J0wP7SKczkx3Ka7zi+c7Gzm5x6/jCw+qZUdllXm
+3u5urzOy/dq4Gx+Kn2z8acqRMn88rXrtZKfGv2t+eClxc0nvm1fm9n5bZe6fUe5ZPvDM7XGxp0vp
+12O0eEOPlRpQmRNCSANwMieEkAagmaUI+xkY7Yg7tG8gdTOMPmGDLYe1h5nlumuX+zS/kja7cqz7
+9F9ZTc0nK8acYk0r1qwCAIvoTCvJZsTvSs91dq4zu4g3s1jTh12gvOHa2YW9BzL+GWxKcL8AavOq
+BEFDdpHTmlUA4DVjg7FmljecrcaaXaLF0SuXjAnGPaPss/TPvNTMkgQKRVtml5pSmLelBlTmhBDS
+AFTmgyldoMktevpHEC0aWdWzFLQzrLnj5UxdtABqlV7qfYh7xzvZeuVEukC3tNApcKvG550knstI
+ZL9jzt2TXXDN6WPp4ujR0ybYyFZFLpd9lbm9h0Zw2+AfIHU5/K5T3PbYqvTXnA/jG8Hi6JW73f2+
+d9UM0itzexwtgEbvg3+P7hMtbG4E7fqE+kfn4kIplTkhhDQAlfl9+oT2j0IftRGpdqt6brl2RrVv
+ulB/q7iswvT2U1t3JfN3d3zjcGrTXXy8U8tZu7jDqnG/Y04Ssj6XBsYcf+z6ruWVm6lNdz5KdZA0
+NM3c7j8253iUpsDauL2qfiOjzCMFf9nZzG+8bo7fxO5lIK/M/TOPAoqSexW9ezk1PkoAXPS72rSj
+6KnMCSGkAajMR8YrhaHeLVHQUJRGN6fS/bFT5tb2WarMcyodSIN35iWpujzfqcq5c2Vq3O4471O5
+rgdpdI+bC7BeNCtHU2PvgokU8rZ7ix2H37knl3rWjylKYWCVulXpoTL/jotKet3c79fN32t4s2Rt
+5EDoSZVV1X2DhvpyMDxYLFTmhBDSAJzMCSGkAWhmqUqfxZRokTPKNBeYUpJFKVdnF0TtZ7Zb5Es+
+1W2dH+5cUDff/eENs8i3dS51ObyTbAod5UfvzBinkG4hdBzX7pdXjL3AByjVMLOkG1V3NiifbzzK
+eJhbHPWLnIlp5XV3g61p5Q1T9gug3zNl+1y9KcW+Dw+8yrlFz8h9tvRd9uTMM6P0cfCgMieEkAag
+Mt+V0t2ExnGuKKNizm3RL0JFdUaZ2wUvr8ztMA5n/u5PFa0Fb3YNL2+mgTF3znTKfGPBqt5Umdv8
+3V7p2nQBK0nqgPT66yjz7h7aMfoviXS8aUbJJBTfBP8k7oZAfpETSBX4JVP2C6D2I6Z0AfQBcoue
+/v3KLWzOSmbEdtU8lTkhhDQAlflgSpNwlbpKRY/EqqCHMn/3ffiE3qZOTXYqr9Js97a7OZSTTW2d
+ujDeuP3o/fLaKeP2t5q3mR93A7a2cavMF0ywEgAsGmVeHryUKvO7xsa/ltmH04/Xuy3axFhJKL63
+d+fs4kCqxu3vvufalQYNJQm0/Htjj0tdE6Nw/tJdiEr/3Rw8V0QPlTkhhDTAIGUuIj8D4BMA/hqA
+v6mqX68xqDboa3fP7UgE5JMYeSJD9s3d63zYv1Vtfd8SeylWBPv0qsZWe+96p1Ivux1zknS7J1y6
+3YXdPVgW3HZCNdIKWBt64tlyN811YPfifGD3nyuZchSKH9VZNX7Jtcup8dBjxSvzUpt5LgWup4/t
+ul17dw2GKvMXAfxDAM9VGAshhJCeDFLmqvoXACAisldbQggh44MLoEWUZlSc5GJolF0xt1Dq2/pP
+aduFMbt4V7cc3mqRWwCNNhIOdjWyudNvHE/NFjeWu9W7Qw93ZpbFpXQBdG5+y5Tzn+1bxpVya9MF
+OW10Zpd7b5lFz3WnaaLFxtx1RnlV/MKmdTnMLXL6usQq4k0kuUVOfxyZUkoDfkrztkSUtjsY5pk9
+J3MReQbphliC7XXvj6nq7412umdN+TyAC6P9nBBCmudVABdH/tWek7mqPtljNBmeqNfVvqNPvvTC
+hNshfbM6mv43TB9eOUYbI9mFTrsOWarM3a5GybHf/WelU8X3DneVG4ddQyuySz+e/BfH7UzZh8fb
+/OCle6yWKvhR+khEtr2wyP3QX8zQoKG+6vhgqOqUC0iFbtmSZE3XRNrNCSFkSgx1TfwwgM8AeATA
+/xSRF1T1p6qMbGYpdTmM8p7XUBtRH1FAkaX08Zvgog3nwhjFfthjq2D7KvNcjnUgTTmQKwP93vjo
+iyNXBtLrivZYzV2/P44SY/VyOSx1P/THpcmvStuVJtAaJTDo4Cn6od4svwvgdyuNhRBCSE/ozTJz
+9AlLjlLgjhkbbHTV1d3JlL2CtYrTRvBHux95xV2qzC3R2x8Ju1JlXvo1Yq//raBdlBgrCcWPvFQi
+j5W1oK5PCtwaHiukFIbzE0JIA3AyJ4SQBqCZZTBDA4pq5E6PPln7fs6WLkKZxVGbhRHIf7WnyRBT
+84k1M0SmFO+amMu/7rM89vHU9JecyzPj272VaeePo4VSew/DNb3Shc1SU0rkctgnq2FE6a5Dffs4
+GFCZE0JIA1CZV6VG2P+sKww/vihqyCyO2oXSa65ZbgG0dJETSG93lH+9tjIvDZqKlHmx+o6UdJ9Q
+/FEyHvZZ2KyxB2jErP9bmSxU5oQQ0gBU5vuK2u5cpbb20sggX2ddJo9k/o68avcxxVaN+zfXbgaU
+2yWpFjnBeSdo55W5IkOpS6CvK1Xc0e4/kcthH8VN98NJQmVOCCENQGU+NsYR9m/7qK16vOrLGZdH
+sZnn9oP0QU5Wtds9Sl27jcDgbe3OUZagUfYwfYf8hkSBwvZENmh7nyL1HQXolHqiRHbxPoq7NBiI
+NvJxQ2VOCCENwMmcEEIagGaWiVHbbbGGycX2500fJb/xRKaEpczf/bG9Zj+maGXT1Glwfzdr+CYm
+HQbtorqcucPfm5ypyv+utF1kIokybPYJGqJpZZJQmRNCSANQmU+FPiodyC+O+j5qLI7aPkv3cvRK
+Ovc7r45LFbwdU6SwS9v1pXQHndKFwmiRs08ftRcvoz6idqV9l/ZBIqjMCSGkAajMp84oibb6JOsa
+d+BGpNgeypQDe3fWfu5/F9Xl+q5Fqftd7bD3UXa4H3quqI+hvxmlD1IKlTkhhDQAlfnMMYvJuiIF
+WLpdTx8vHW8zL43TH4caz1HbzlxbfUfn7mszj6AanxZU5oQQ0gCczAkhpAFoZplpauR3ifqssVBa
+aoLpYwYYxXwUmWcmxSiLgbVNH7XdBWlW2W9QmRNCSANQme8r+gYbWSKXxtr0caWM2lnFvd8WQEv7
+6OvqV9utcJRz56AanyRU5oQQ0gBU5vuWUpXuiVwES/qfZBCSp3Qck1SEtW3Gs5K4qkbyNjJJqMwJ
+IaQBqMybYJRAHksN23rtVLz7YS0gx7jV7Kyo7z7nIuNmkDIXkU+JyEsi8oKI/I6IHK01MEIIIeUM
+NbN8GcBfV9UPAHgFwK8MHxIhhJBRGWRmUdU/NIdfBfCPhg2H1KHULBJRI5BnkvRdEK553r6MO/CG
+5pSDQM0F0J8H8AcV+yOEEFLInhJGRJ4BsGr/BEABfExVf2+nzccAvK2qT49llKQiQxVs6SJkdN5x
+U+p+WaP/GkxS3ZdCJb7f2PNfs6o+GdWLyM8B+GkAH9z7dM+a8nkAF/b+CSGEHCheBXBx5F8NMi6K
+yFMAfgnA31bVO3v/4okhpyPVqWFbt5Sqw3Eo+NIkZONkHGp2nOOn+p5NLiAVus8V/WqozfwzAJYB
+PCMiXxeR/zKwP0IIIT0Y6s3yV2oNhMwaOdVWw1OkhoL37DeVud+/GMiswXB+QghpAE7mhBDSAMzN
+QkZklE/2oa/XJE0R+xGaT0gHlTkhhDQAlTkZI6XKka9hB9U26QeVOSGENAAlEZkBaqjRWXiVqarJ
+9KAyJ4SQBpgFOUNIBaiKycGGypwQQhqAkzkhhDQAJ3NCCGkATuaEENIAnMwJIaQBOJkTQkgDcDIn
+hJAG4GRuyiDIAAAEPklEQVROCCENwMmcEEIagJM5IYQ0ACdzQghpAE7mhBDSAJzMCSGkATiZE0JI
+A3AyJ4SQBuBkTgghDcDJnBBCGoCTOSGENAAnc0IIaYBBk7mI/AcR+V8i8g0R+ZKIPFprYIQQQsoZ
+qsw/pap/Q1V/GMDvA/h4hTHtU16d9gDGTMvX1/K1Aby+g8GgyVxV183hwwDuDRvOfubitAcwZi5O
+ewBj5OK0BzBmLk57AGPm4rQHMBPMD+1ARH4VwD8FcB3AE4NHRAghZGT2VOYi8oyI/Ln534s7///3
+AUBV/62qngPw3wH8wrgHTAgh5EFEVet0JHIWwBdV9Qcz9XVORAghBwxVlb3aDDKziMj7VPX/7hx+
+GMBLQwZDCCGkH4OUuYh8HsBfxfbC57cB/DNVfaPS2AghhBRSzcxCCCFkekw0ArTlICMR+ZSIvCQi
+L4jI74jI0WmPqSYi8jMi8r9FZEtEfmTa46mFiDwlIi+LyLdE5JenPZ6aiMhnReSSiPz5tMcyDkTk
+jIj8kYj8nx3HjI9Oe0y1EJFFEfnazlz5oojsGcMzUWUuIsvv+KaLyC8AeL+q/vOJDWCMiMjfAfBH
+qnpPRD4JQFX1V6Y9rlqIyA9g25z2XwH8a1X9+pSHNBgROQTgWwB+EsB3ATwP4COq+vJUB1YJEflb
+ANYB/Iaq/tC0x1ObHTH4qKq+ICLLAP4MwIcaen5HVPWWiMwB+AqAj6rqn+baT1SZtxxkpKp/qKrv
+XM9XAZyZ5nhqo6p/oaqvAGhpIftHAbyiqt9W1bcB/BaAD015TNVQ1T8BcG3a4xgXqvqmqr6wU17H
+tgPGe6Y7qnqo6q2d4iK2nVVC5T3xRFsi8qsi8h0APwvg3036/BPi5wH8wbQHQfbkPQBeM8evo6HJ
+4CAhIucBfADA16Y7knqIyCER+QaANwE8o6rPR+2rT+YtBxntdW07bT4G4G1VfXqKQ+1FyfURMmvs
+mFg+D+AX3df/vkZV7+3kvToD4MdE5P1R+8Hh/LsM4MnCpk8D+CKAT9Qew7jY69pE5OcA/DSAD05k
+QJUZ4dm1wl8COGeOz+z8jewTRGQe2xP5b6rqF6Y9nnGgqjdF5FkATwH4Zq7dpL1Z3mcOwyCj/YaI
+PAXglwD8A1W9M+3xjJlW7ObPA3ifiLxXRBYAfATA/5jymGojaOd57cavAfimqn562gOpiYg8IiLH
+dspLAJ4EEC7sTtqbpdkgIxF5BcACgKs7f/qqqv6LKQ6pKiLyYQCfAfAItpOqvaCqPzXdUQ1n5z/C
+n8a2sPmsqn5yykOqhog8DeAnAJwCcAnAx1X1c1MdVEVE5McB/DGAF7G9OKgA/o2qfmmqA6uAiPwg
+gF/H9nt5CMBvq+p/DH/DoCFCCNn/cNs4QghpAE7mhBDSAJzMCSGkATiZE0JIA3AyJ4SQBuBkTggh
+DcDJnBBCGoCTOSGENMD/B4QQRzpDbIoGAAAAAElFTkSuQmCC
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Végül a statisztikus problémák vizsgálatakor számtalanszor használt hisztogram készítéssel ismerkedjünk. Erre a <code>matplotlib</code> modul a <code>hist()</code> függvényét fogjuk használni. Először is gyártsunk a <code>numpy</code> modul <code>random</code> almoduljának <code>randn()</code> függvényével ezer darab véletlen számot. A  <code>randn()</code> függvény Gauss-eloszlás szerint generál véletlen számokat. A <code>numpy</code> <code>random</code> modulja sok egyéb más eloszlás szerint is tud véletlenszámokat generálni, a rendelkezésre álló generátorokról <a href="http://docs.scipy.org/doc/numpy/reference/routines.random.html">itt</a> található információ.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gauss_eloszlas</span><span class="o">=</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Egy adatsor hisztogramját egyszerűen a <code>hist()</code> függvénnyel lehet legyártani:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hist</span><span class="p">(</span><span class="n">gauss_eloszlas</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[55]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(array([   1.,    6.,   14.,   79.,  197.,  271.,  273.,  117.,   34.,    8.]),
+ array([-4.29185613, -3.54341105, -2.79496596, -2.04652088, -1.29807579,
+        -0.54963071,  0.19881438,  0.94725946,  1.69570454,  2.44414963,
+         3.19259471]),
+ &lt;a list of 10 Patch objects&gt;)</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fenti ábrán az ábrázolt intervallumot a hist parancs, az alapértelmezésnek megfelelően, 10 alintervallumra osztja és azt jeleníti meg hogy az adott alintervallumban hány érték található a bemeneti <code>gauss_eloszlas</code> tömbben.</p>
 
 </div>
 </div>
@@ -11814,16 +14835,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-Saj&#225;t-k&#233;plet">04-Saj&#225;t k&#233;plet<a class="anchor-link" href="#04-Saj&#225;t-k&#233;plet">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Az <a href="http://people.math.sfu.ca/~cbm/aands/">Abramowitz and Stegun</a> könyvből keresd ki azt a képletet, amelynek a száma a születési dátumod!</p>
+<p>Fontos megjegyezni hogy a <code>plot()</code>, <code>pcolor()</code> és<code>hist()</code> parancsoknak a fent tárgyalt legegyszerűbb használatán túl számos alapértelmezett értékekkel ellátott kulcsszavas argumentuma van, melyekről egy rövid leírás a megfelelő függvény dokumentációjában ( a docstringjében ) található.</p>
 
 </div>
 </div>

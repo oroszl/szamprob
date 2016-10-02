@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat00</title>
+<title>feladat03</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,7 +11751,13 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><p>Minden feladatot külön notebookba írj!</p>
+<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ul>
+<li>Minden feladatot külön notebookba oldj meg! </li>
+<li>A megoldásnotebook <strong>neve</strong> tartalmazza a feladat <strong>számát</strong>! </li>
+<li>A megoldasok kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra amelyek a MEGOLDASOK mappában vannak!</li>
+<li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldás notebook első <code>markdown</code> cellájában! </li>
+<li><strong>Kommentekkel</strong> illetve <code>markdown</code> cellákkal magyarázd hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
+</ul>
 <hr>
 
 </div>
@@ -11762,10 +11768,17 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-Sz&#246;veg-szerkezt&#233;s">01-Sz&#246;veg szerkezt&#233;s<a class="anchor-link" href="#01-Sz&#246;veg-szerkezt&#233;s">&#182;</a></h2><ul>
-<li>Foglald össze három rövid mondatban, hogy mit csináltál nyáron. Használj dőlt betűt és vastag betűt is!</li>
-<li>Csinálj egy táblázatot, amely összefoglalja, hogy a június, a július és az augusztus hónapban átlagosan sokat vagy keveset aludtál. </li>
-<li>Linkelj be egy képet egy Wikipedia-szócikkből!</li>
+<h2 id="01-feladat-import-szintaxis">01-feladat <code>import</code> szintaxis<a class="anchor-link" href="#01-feladat-import-szintaxis">&#182;</a></h2><p>A mintapéldában láttunk néhány pédát az <code>import</code> utasítás működésére.</p>
+<ul>
+<li>Nézz utána az interneten hogy az</li>
+</ul>
+<blockquote><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+</pre></div>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kifejezésnek milyen hatása van.</p>
+<ul>
+<li>Két mondatban fogalmazd meg, hogy a fenti kód sor lefuttatása milyen következményeket von maga után.<br> Következtetéseidet illusztráld is rövid pédákkal. </li>
+<li>A használt internetes forrásokat jelöld meg linkekkel!</li>
 </ul>
 
 </div>
@@ -11776,16 +11789,35 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-Barometrikus-magass&#225;gformula">02-Barometrikus magass&#225;gformula<a class="anchor-link" href="#02-Barometrikus-magass&#225;gformula">&#182;</a></h2>
+<h2 id="02-Ismerked&#233;s-az-array-adatstrukt&#250;r&#225;k-indexel&#233;s&#233;vel">02-Ismerked&#233;s az array adatstrukt&#250;r&#225;k indexel&#233;s&#233;vel<a class="anchor-link" href="#02-Ismerked&#233;s-az-array-adatstrukt&#250;r&#225;k-indexel&#233;s&#233;vel">&#182;</a></h2><p>Az array struktúrák indexelését kihasználva vizsgáljuk meg a következő problémákat:</p>
+
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">A</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Írd le a barometrikus magasságformulát! Ha esetleg nem emlékeznél rá, akkor <a href="http://www.google.com">itt</a> meglelheted a megoldást!</p>
+<ol>
+<li>Menny az A array 3-nál nagyobb elemeinek összege ?</li>
+<li>Mennyi az A array páros értékű elemeinek átlaga ?</li>
+<li>Mennyi az A array elemeinek négyzetösszege ( Euklédeszi-normája ) ?</li>
+</ol>
 
 </div>
 </div>
@@ -11795,16 +11827,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-M&#225;sodfok&#250;-egyenlet">03-M&#225;sodfok&#250; egyenlet<a class="anchor-link" href="#03-M&#225;sodfok&#250;-egyenlet">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Mi a másodfokú egyenlet megoldóképlete?</p>
+<ul>
+<li>Kezdjük ebben a példában a notebookot a <code>%pylab inline</code> utasítással!</li>
+<li><strong>NE HASZNLJUNK <code>for</code> és <code>if</code> parancsokat!!</strong> <br>
+He a megoldás file kód cellájában <code>for</code> vagy <code>if</code> konstrukció van a feladat automatikusan nem teljesítettnek minősül!</li>
+</ul>
 
 </div>
 </div>
@@ -11814,7 +11841,36 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-Saj&#225;t-k&#233;plet">04-Saj&#225;t k&#233;plet<a class="anchor-link" href="#04-Saj&#225;t-k&#233;plet">&#182;</a></h2>
+<h2 id="03-K&#233;t-indexes-array">03-K&#233;t indexes array<a class="anchor-link" href="#03-K&#233;t-indexes-array">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">B</span><span class="o">=</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">9</span><span class="p">,(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">B</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>Írasd ki a B array bal alsó 5x7-es almátrixát!</li>
+<li>Írasd ki minden második elemet a B array második sorából.</li>
+<li>Írasd ki minden három nál nagyobb elemet a B array 7. oszlopábol!</li>
+<li>Írasd ki azokat az elemeket a B array 3. oszlopából amelyeknek a sorában a 4. oszlopban 5-nél kisebb elem áll!</li>
+</ol>
+
 </div>
 </div>
 </div>
@@ -11823,7 +11879,78 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Az <a href="http://people.math.sfu.ca/~cbm/aands/">Abramowitz and Stegun</a> könyvből keresd ki azt a képletet, amelynek a száma a születési dátumod!</p>
+<ul>
+<li>Kezdjük ebben a példában a notebookot a <code>%pylab inline</code> utasítással!</li>
+<li><strong>NE HASZNLJUNK <code>for</code> és <code>if</code> parancsokat!!</strong> <br>
+He a megoldás file kód cellájában <code>for</code> vagy <code>if</code> konstrukció van a feladat automatikusan nem teljesítettnek minősül!</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="04-Egyszer&#369;-&#225;br&#225;zol&#225;s">04-Egyszer&#369; &#225;br&#225;zol&#225;s<a class="anchor-link" href="#04-Egyszer&#369;-&#225;br&#225;zol&#225;s">&#182;</a></h2><p>Ábrázoljuk a $$ f(x)=\mathrm{e}^{-x^2/\sigma^2} $$ függvényt $\sigma=1,2,5$ esetére egy ábrán!</p>
+<p>Kezdjük ebben a példában a notebookot a <code>%pylab inline</code> utasítással!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="05-Hisztogram">05-Hisztogram<a class="anchor-link" href="#05-Hisztogram">&#182;</a></h2><p>Generálj 10000 darab <strong>egyenletes</strong> eloszlású véletlen számot a $[0,1]$ intervallumon és gyártsd le ezen véletlen számok hisztogrammját! Az hisztogram készítése során a $[0,1]$ intervallumot osszuk 25 alintervallumra! Az alintervallumok számának meghatározásához szükséges kulcsszónak nézz utána!</p>
+<p>Kezdjük ebben a példában a notebookot a <code>%pylab inline</code> utasítással!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="06--P&#233;ks&#252;tem&#233;ny-&#9760;">06  P&#233;ks&#252;tem&#233;ny &#9760;<a class="anchor-link" href="#06--P&#233;ks&#252;tem&#233;ny-&#9760;">&#182;</a></h2><p>Írj egy olyan függvényt, melynek bemeneti értéke a p valószínűség (mely egy 0 és 1 közötti szám), kimeneti értéke pedig p valószínűséggel  a <code>"kakós csiga"</code> string, 1-p valószínűséggel pedig a <code>"túrós táska"</code> string.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="07-Ej-mi-a-k&#337;-!-&#9760;">07 Ej mi a k&#337; ! &#9760;<a class="anchor-link" href="#07-Ej-mi-a-k&#337;-!-&#9760;">&#182;</a></h2><p>Ábrázold hisztogramon az <a href="http://magyar-irodalom.elte.hu/sulinet/igyjo/setup/portrek/petofi/anyamtyu.htm">Anyám tyúkja</a> versben a szavak hosszának eloszlását.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="08--Centr&#225;lis-hat&#225;reloszl&#225;s-t&#233;tel-&#9760;">08  Centr&#225;lis hat&#225;reloszl&#225;s-t&#233;tel &#9760;<a class="anchor-link" href="#08--Centr&#225;lis-hat&#225;reloszl&#225;s-t&#233;tel-&#9760;">&#182;</a></h2><p>Bizonyítsuk numerikusan a <a href="https://hu.wikipedia.org/wiki/Centr%C3%A1lis_hat%C3%A1reloszl%C3%A1s-t%C3%A9tel">centrális határeloszlás-tételt</a> !</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="09--Webb&#225;ny&#225;szat-101-&#9760;">09  Webb&#225;ny&#225;szat 101 &#9760;<a class="anchor-link" href="#09--Webb&#225;ny&#225;szat-101-&#9760;">&#182;</a></h2><p>A <code>requests</code> csomag segítségével írjunk egy kódot ami az index.hu-ról leszedi az éppen aktuálisan az oldalon lévő címsorokat!</p>
+<ul>
+<li>Nézz utána hogyan lehet a <code>requests</code> csomag segítségével <code>text</code> formátumban egy weboldalt letölteni!</li>
+<li>Az <code>index.hu</code> weboldalán a <code>html</code> kódban a címeket mindig megelőzi egy olyan sor amelyben szerepel a <code>'&lt;h1'</code> karakterlánc!</li>
+<li>A megfelelő sor megtalálása után irassuk ki a címeket!</li>
+</ul>
 
 </div>
 </div>
