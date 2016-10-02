@@ -28,7 +28,7 @@
 <h2><a href="copy_paste.html">Ki kiről ...</a></h2>
 <img src="home_work_cluster.png" width=600></img>
 <hr>
-<h2><a href="if_hist.html">Ki kiről ...</a></h2>
+<h2><a href="if_hist.html">Ha (ha ha...)</a></h2>
 <img src="ifelifelse.png" width=600></img>
 
 </body>
