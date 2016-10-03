@@ -45,7 +45,7 @@
 <h2 id="linkek">Hasznos linkek </h3>
 <?php include 'vars.php'; echo "<a href=$bevezeto_foliak>Bevezető fóliák</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$hub_link_fix>Jupyterhub@ELTE</a><br>"; ?>
-<a href="https://cloud.sagemath.com/">Sage Math Cloud</a> / <a href="http://tmpnb.org/">Tmpnb</a> <br>
+<a href="https://cloud.sagemath.com/">Sage Math Cloud</a> / <a href="https://tmpnb.org/">Tmpnb</a> <br>
 <a href="https://jupyter.org/">Jupyter</a> / <a href="http://ipython.org/">IPython</a> <br>
 <a href="http://www.scipy.org/">Scipy</a> / <a href="http://matplotlib.org/">Matplotlib</a>  <br>
 <a href="http://python.hu/">Magyar python oldalak </a><br>
