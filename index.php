@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>szamprob</title>
 <link rel="stylesheet" href="../base.css" />
-<script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<!-- <script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script> -->
 
 <style> 
 .mytwocol {
@@ -45,7 +45,7 @@
 <h2 id="linkek">Hasznos linkek </h3>
 <?php include 'vars.php'; echo "<a href=$bevezeto_foliak>Bevezető fóliák</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$hub_link_fix>Jupyterhub@ELTE</a><br>"; ?>
-<a href="https://cloud.sagemath.com/">Sage Math Cloud</a> / <a href="http://tmpnb.org/">Tmpnb</a> <br>
+<a href="https://cloud.sagemath.com/">Sage Math Cloud</a> / <a href="https://tmpnb.org/">Tmpnb</a> <br>
 <a href="https://jupyter.org/">Jupyter</a> / <a href="http://ipython.org/">IPython</a> <br>
 <a href="http://www.scipy.org/">Scipy</a> / <a href="http://matplotlib.org/">Matplotlib</a>  <br>
 <a href="http://python.hu/">Magyar python oldalak </a><br>
@@ -86,6 +86,8 @@
                                                           <a href='notebooks/Package02/mintapelda02.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/mintapelda03.html'>Mintapelda-03</a><br>  
                                                           <a href='notebooks/Package03/mintapelda03.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/mintapelda04.html'>Mintapelda-04</a><br>  
+                                                          <a href='notebooks/Package04/pakk.tgz' download>(forrás)</a></td>
 
     
 </tr>
@@ -99,6 +101,8 @@
                                                           <a href='notebooks/Package02/feladat02.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/feladat03.html'>Feladat-03</a><br>  
                                                           <a href='notebooks/Package03/feladat03.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/feladat04.html'>Feladat-04</a><br>  
+                                                          <a href='notebooks/Package04/feladat04.ipynb' download>(forrás)</a></td>
 
 </tr>
 <tr>
@@ -107,7 +111,8 @@
 <td style="text-align:center; border: 1px solid #dddddd "></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheet02.html'>Vezérő utasítások<br>függvények</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/Cheat_sheet03.html'>Modulok <br>ábrák</a></td>
-    
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/Cheat_sheet04.html'>Matplotlib<br>interaktivitás</a></td>
+   
 </tr>
 </tbody>
 </table>
