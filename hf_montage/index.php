@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <title>szamprob</title>
 <link rel="stylesheet" href="../../base.css" />
-<script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
 
 <style> 
 .mytwocol {
