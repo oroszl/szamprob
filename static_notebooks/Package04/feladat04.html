@@ -11768,19 +11768,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-Egszer&#369;-plot">01 Egszer&#369; plot<a class="anchor-link" href="#01-Egszer&#369;-plot">&#182;</a></h2><p>Ábrázold az alábbi egszerű függvényeket a megdott intervallumokon külön-külön ábrára!
+<h2 id="01-Egyszer&#369;-plot">01 Egyszer&#369; plot<a class="anchor-link" href="#01-Egyszer&#369;-plot">&#182;</a></h2><p>Ábrázold az alábbi egyszerű függvényeket a megadott intervallumokon külön-külön ábrára!
 Mindegyiket a megadott vonalstílus (vastagság és jelleg) és szín szerint jelenítsd meg!</p>
 <ul>
-<li>Fermi-Dirac eloszlás függvény (kék egyenletes vonal 2-es vonalszélességgel) $$f(x)=\displaystyle\frac{1}{\mathrm{e}^x+1},\quad x\in[-4,4]$$</li>
+<li>Fermi$-$Dirac-eloszlásfüggvény (kék egyenletes vonal 2-es vonalszélességgel) $$f(x)=\displaystyle\frac{1}{\mathrm{e}^x+1},\quad x\in[-4,4]$$</li>
 </ul>
 <ul>
-<li>A 7. Csebishev polynom (piros egyenletes vonal 1-es vonalszélességgel) $$T_7(x)=64x^7-112x^5+56x^3-7x,\quad x\in[-1,1]$$</li>
+<li>A 7. Csebisev-polinom (piros egyenletes vonal 1-es vonalszélességgel) $$T_7(x)=64x^7-112x^5+56x^3-7x,\quad x\in[-1,1]$$</li>
 </ul>
 <ul>
-<li>Lorenz görbe (zöld szaggatott vonal 2-es vonalszélességgel) $$L(x)=\displaystyle\frac{1}{x^2+1},\quad x\in[-2,2]$$</li>
+<li>Lorenz-görbe (zöld szaggatott vonal 2-es vonalszélességgel) $$L(x)=\displaystyle\frac{1}{x^2+1},\quad x\in[-2,2]$$</li>
 </ul>
 <ul>
-<li>Gauss görbe (fekete pontozott vonal 3-as vonalszélességgel) $$G(x)=\displaystyle\mathrm{e}^{-x^2},\quad x\in[-3,3]$$</li>
+<li>Gauss-görbe (fekete pontozott vonal 3-as vonalszélességgel) $$G(x)=\displaystyle\mathrm{e}^{-x^2},\quad x\in[-3,3]$$</li>
 </ul>
 <p>Minden ábrán legyenek tengelyfeliratok!</p>
 
@@ -11792,7 +11792,7 @@ Mindegyiket a megadott vonalstílus (vastagság és jelleg) és szín szerint je
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-Adatok-&#225;br&#225;zol&#225;sa">02-Adatok &#225;br&#225;zol&#225;sa<a class="anchor-link" href="#02-Adatok-&#225;br&#225;zol&#225;sa">&#182;</a></h2><p>Ábrázold a Felix Bamugartner ugrásának sebesség-idő adatait! Az adatokat a <code>data</code> könyvtárban a <code>v_vs_t</code> file-ban találod. A <code>MEGOLDÁSOK</code> mappából <code>'../data/v_vs_t'</code> alapján érhető el az adatfile. A file első oszlopában az eltelt idő van másodpercben a második oszlopban pedig a sebesség km/h-ban.</p>
+<h2 id="02-Adatok-&#225;br&#225;zol&#225;sa">02-Adatok &#225;br&#225;zol&#225;sa<a class="anchor-link" href="#02-Adatok-&#225;br&#225;zol&#225;sa">&#182;</a></h2><p>Ábrázold Felix Bamugartner ugrásának sebesség-idő adatait! Az adatokat a <code>data</code> könyvtárban a <code>v_vs_t</code> file-ban találod. A <code>MEGOLDÁSOK</code> mappából <code>'../data/v_vs_t'</code> alapján érhető el az adatfile. A file első oszlopában az eltelt idő van másodpercben, a második oszlopban pedig a sebesség km/h-ban.</p>
 <ul>
 <li>Legyenek az ábrán tengely feliratok. </li>
 <li>Legyen az ábrán rácsozás. </li>
@@ -11807,13 +11807,13 @@ Mindegyiket a megadott vonalstílus (vastagság és jelleg) és szín szerint je
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-Interakt&#237;v-&#225;bra">03 Interakt&#237;v &#225;bra<a class="anchor-link" href="#03-Interakt&#237;v-&#225;bra">&#182;</a></h2><p>Lészítsünk egy kis interaktív ábrát amelyben a <a href="https://en.wikipedia.org/wiki/Chebyshev_polynomials">Chebyshev polynomokat</a> ábrázoljuk a $[-1,1]$ intervallumon.
-A Chebyshev polynomokat az alábbi összefüggés definiálja.</p>
+<h2 id="03-Interakt&#237;v-&#225;bra">03 Interakt&#237;v &#225;bra<a class="anchor-link" href="#03-Interakt&#237;v-&#225;bra">&#182;</a></h2><p>Lészítsünk egy kis interaktív ábrát amelyben a <a href="https://en.wikipedia.org/wiki/Chebyshev_polynomials">Csebisev-polinomokat</a> ábrázoljuk a $[-1,1]$ intervallumon.
+A Csebisev-polinomokat az alábbi összefüggés definiálja.</p>
 $$T_n(x)=\cos(n \arccos x)$$<ul>
-<li>Legyen az interaktívan válltoztatható paraméter az $n$ egész szám!  </li>
+<li>Legyen az interaktívan változtatható paraméter az $n$ egész szám!  </li>
 <li>Az $n$ értékeit a $[0,10]$ intervallumból válasszuk!</li>
 <li>Az ábrán legyenek tengelyfeliratok! </li>
-<li>Legyen az ábrázolt függvény vasag és piros színű!</li>
+<li>Legyen az ábrázolt függvény vastag és piros színű!</li>
 </ul>
 
 </div>
@@ -11824,10 +11824,10 @@ $$T_n(x)=\cos(n \arccos x)$$<ul>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-Egyszer&#369;-k&#233;t-v&#225;lltoz&#243;s-f&#252;ggv&#233;ny">04 Egyszer&#369; k&#233;t v&#225;lltoz&#243;s f&#252;ggv&#233;ny<a class="anchor-link" href="#04-Egyszer&#369;-k&#233;t-v&#225;lltoz&#243;s-f&#252;ggv&#233;ny">&#182;</a></h2><ul>
+<h2 id="04-Egyszer&#369;-k&#233;tv&#225;ltoz&#243;s-f&#252;ggv&#233;ny">04 Egyszer&#369; k&#233;tv&#225;ltoz&#243;s f&#252;ggv&#233;ny<a class="anchor-link" href="#04-Egyszer&#369;-k&#233;tv&#225;ltoz&#243;s-f&#252;ggv&#233;ny">&#182;</a></h2><ul>
 <li>Ábrázold az $$ f(x,y)=\mathrm{e}^{-(x-1)^2-(y+1.5)^2}+\cos(x^3-3y^2) $$ függvényt az $$x\in[-3,3],\quad 
-y\in[-3,3]$$ tartományban! Használda vagy a <code>pcolor</code> függvényt !</li>
-<li>Ábrázold, ugyan ezen a képen, azon pontokat az $(x-y)$ síkon melyekre a fent definiált $f(x,y)$ függvény a $0$ értéket veszi fel! Használda vagy a <code>contour</code> függvényt !</li>
+y\in[-3,3]$$ tartományban! Használd a ??? vagy a <code>pcolor</code> függvényt !</li>
+<li>Ábrázold ugyanezen a képen azon pontokat az $(x-y)$ síkon, melyekre a fent definiált $f(x,y)$ függvény a $0$ értéket veszi fel! Használd a ??? vagy a <code>contour</code> függvényt !</li>
 </ul>
 <p>Legyen az ábrádon színmagyarázat (colorbar),  illetve tengelyfeliratok!</p>
 
@@ -11839,7 +11839,7 @@ y\in[-3,3]$$ tartományban! Használda vagy a <code>pcolor</code> függvényt !<
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-2D-Coulomb-t&#233;r">05 2D Coulomb t&#233;r<a class="anchor-link" href="#05-2D-Coulomb-t&#233;r">&#182;</a></h2><p>Ábrázoljuk egy, az origóban elhelyezkedő elektromos töltés erőterét egy, az origón átmeő síkban! Az erőtér komponensei az $(x,y)$ pontba a következő összefüggések adják meg: 
+<h2 id="05-2D-Coulomb-t&#233;r">05 2D Coulomb-t&#233;r<a class="anchor-link" href="#05-2D-Coulomb-t&#233;r">&#182;</a></h2><p>Ábrázoljuk egy, az origóban elhelyezkedő elektromos töltés erőterét egy, az origón átmenő síkban! Az erőtér komponenseit az $(x,y)$ pontban a következő összefüggések adják meg: 
 $$E_x=\frac{x}{(x^2+y^2)^{3/2}}$$
 $$E_y=\frac{y}{(x^2+y^2)^{3/2}}$$</p>
 
@@ -11851,7 +11851,7 @@ $$E_y=\frac{y}{(x^2+y^2)^{3/2}}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="10-Angry-Bird-&#9760;">10 Angry-Bird &#9760;<a class="anchor-link" href="#10-Angry-Bird-&#9760;">&#182;</a></h2><p>Készétsünk egy olyan interaktív ábrát amely egy ferde hajítás trajektóriáját rajzolja ki! Legyen két változtatható paraméter: a kezdeti szög és a kezdősebesség! Jelöljük a pálya maximális magasságú pontját egy piros ponttal!</p>
+<h2 id="10-Angry-Bird-&#9760;">10 Angry Bird &#9760;<a class="anchor-link" href="#10-Angry-Bird-&#9760;">&#182;</a></h2><p>Készétsünk egy olyan interaktív ábrát, amely egy ferde hajítás trajektóriáját rajzolja ki! Legyen két változtatható paraméter: a kezdeti szög és a kezdősebesség! Jelöljük a pálya maximális magasságú pontját egy piros ponttal!</p>
 
 </div>
 </div>
@@ -11861,13 +11861,13 @@ $$E_y=\frac{y}{(x^2+y^2)^{3/2}}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-3D-g&#246;rbe">05 3D g&#246;rbe<a class="anchor-link" href="#05-3D-g&#246;rbe">&#182;</a></h2><p>Ábrázoljuk az alábbi paraméteres alakban megadott térbeli görbét:
+<h2 id="05-3D-g&#246;rbe">05 3D g&#246;rbe<a class="anchor-link" href="#05-3D-g&#246;rbe">&#182;</a></h2><p>Ábrázoljuk az alábbi, paraméteres alakban megadott térbeli görbét:
 \begin{align}
 x&amp;=\sin(t) + 2 \sin (2t),\
 y&amp;=\cos(t) - 2 \cos (2t),\
 z&amp;=-\sin(3t).
 \end{align}
-A $t$ paramétert $t\in[0,2\pi]$ intervallumba vegyük fel! Készítsünk képet két különböző nézőpontból!</p>
+A $t$ paramétert $t\in[0,2\pi]$ intervallumban vegyük fel! Készítsünk képet két különböző nézőpontból!</p>
 
 </div>
 </div>
@@ -11877,7 +11877,7 @@ A $t$ paramétert $t\in[0,2\pi]$ intervallumba vegyük fel! Készítsünk képet
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="07-Magass&#225;g-t&#233;rk&#233;p-&#9760;">07 Magass&#225;g t&#233;rk&#233;p &#9760;<a class="anchor-link" href="#07-Magass&#225;g-t&#233;rk&#233;p-&#9760;">&#182;</a></h2><p>Ábrázoljuk térben az alábbi függvényt! Legyen $x,y\in[-3,3]$ 
+<h2 id="07-Magass&#225;gt&#233;rk&#233;p-&#9760;">07 Magass&#225;gt&#233;rk&#233;p &#9760;<a class="anchor-link" href="#07-Magass&#225;gt&#233;rk&#233;p-&#9760;">&#182;</a></h2><p>Ábrázoljuk térben az alábbi függvényt! Legyen $x,y\in[-3,3]$ 
 $$z = \sin(x)^{10} + \cos(10 + yx)\cos(x)$$</p>
 
 </div>

@@ -11751,7 +11751,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="3D-&#225;br&#225;k">3D &#225;br&#225;k<a class="anchor-link" href="#3D-&#225;br&#225;k">&#182;</a></h1><p>A <code>matplotlib</code> csomag elsősorban 2D ábrák gyártására lett kitalálva. Ennek ellenére rendelkezik néhány 3D-s ábra készítési függvénnyel is. Vizsgáljunk meg ebből párat! Ahhoz hogy a 3D-s ábrázolási függvényeket el tudjuk érni be kell tölteni a <code>matplotlib</code> csomag <code>mpl_toolkits.mplot3d</code> alcsomagját.</p>
+<h1 id="3D-&#225;br&#225;k">3D &#225;br&#225;k<a class="anchor-link" href="#3D-&#225;br&#225;k">&#182;</a></h1><p>A <code>matplotlib</code> csomag elsősorban 2D ábrák gyártására lett kitalálva. Ennek ellenére rendelkezik néhány 3D-s ábrakészítési függvénnyel is. Vizsgáljunk meg ebből párat! Ahhoz, hogy a 3D-s ábrázolási függvényeket el tudjuk érni, be kell tölteni a <code>matplotlib</code> csomag <code>mpl_toolkits.mplot3d</code> alcsomagját.</p>
 
 </div>
 </div>
@@ -11790,7 +11790,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="T&#233;rbeli--g&#246;rb&#233;k,-adathalmazok">T&#233;rbeli  g&#246;rb&#233;k, adathalmazok<a class="anchor-link" href="#T&#233;rbeli--g&#246;rb&#233;k,-adathalmazok">&#182;</a></h2><p>Ahhoz hogy egy ábrát térben tudjunk megjeleníteni fel kell készíteni a környezetet. A térbeli ábrák megjelenítése és azok tulajdonságainak beállítása kicsit körülményesebb a 2D-s ábráknál. A legszembetűnőbb különbség hogy az ábrák úgynevezett <code>axes</code> (körül belül itt a koordináta tengelyekre kell gondolni...) objektumok köré csoportusulnak, s ezek tulajdonságaiként  illetve ezeken alkalmazott függvényekként jönnek létre maguk az ábrák. Példaképpen ábrázoljunk egy egszerű paraméteres térbeli görbét! Legyen ez a görbe a következő spirális függvény:</p>
+<h2 id="T&#233;rbeli--g&#246;rb&#233;k,-adathalmazok">T&#233;rbeli  g&#246;rb&#233;k, adathalmazok<a class="anchor-link" href="#T&#233;rbeli--g&#246;rb&#233;k,-adathalmazok">&#182;</a></h2><p>Ahhoz hogy egy ábrát térben tudjunk megjeleníteni, fel kell készíteni a környezetet. A térbeli ábrák megjelenítése és azok tulajdonságainak beállítása kicsit körülményesebb a 2D-s ábráknál. A legszembetűnőbb különbség, hogy az ábrák úgynevezett <code>axes</code> (körül belül itt a koordinátatengelyekre kell gondolni...) objektumok köré csoportosulnak, s ezek tulajdonságaiként, illetve ezeken alkalmazott függvényekként jönnek létre maguk az ábrák. Példaképpen ábrázoljunk egy egszerű paraméteres térbeli görbét! Legyen ez a görbe a következő spirális függvény:</p>
 \begin{equation}
 \mathbf{r}(t)=\left(\begin{array}{c}
 \cos(3t)\\
@@ -11829,7 +11829,7 @@ t
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A következő kód cellában két dolog fog történni. Előszöris létrehozzuk az <code>ax</code> nevű <code>axes</code> objektumot amelynek expliciten megadjuk hogy 3D-s koordináta rendszer legyen. Illetve erre az objektumra hatva a <code>plot</code> függvénnyel létrehozzuk magát az ábrát. Figyeljük meg hogy most a <code>plot</code> függvény hárum bemenő paramétert vár!</p>
+<p>A következő kódcellában két dolog fog történni. Előszöris létrehozzuk az <code>ax</code> nevű <code>axes</code> objektumot, amelynek expliciten megadjuk, hogy 3D-s koordinátarendszer legyen. Illetve erre az objektumra hatva a <code>plot</code> függvénnyel létrehozzuk magát az ábrát. Figyeljük meg, hogy most a <code>plot</code> függvény háruom bemenő paramétert vár!</p>
 
 </div>
 </div>
@@ -12371,7 +12371,7 @@ AElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ahogy a síkbeli ábráknál láttuk a <code>plot</code> függvényt itt is használhatjuk rendezetlenül mintavételezett adatok ábrázolására is.</p>
+<p>Ahogy a síkbeli ábráknál láttuk, a <code>plot</code> függvényt itt is használhatjuk rendezetlenül mintavételezett adatok ábrázolására is.</p>
 
 </div>
 </div>
@@ -12857,7 +12857,7 @@ u0kjIuVZAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A stílus definíciók a 2D ábrákhoz hasonló kulcsszavas argumentumok alapján dolgozódnak fel! Lássunk erre is egy példát:</p>
+<p>A stílusdefiníciók a 2D ábrákhoz hasonló kulcsszavas argumentumok alapján dolgozódnak fel! Lássunk erre is egy példát:</p>
 
 </div>
 </div>
@@ -13421,7 +13421,7 @@ Fc0bkL8IdQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Térbeli ábrák megjelenítése kapcsán rendszeresen felmerülő probléma hogy jó irányból nézzünk rá az ábrára. Az ábra nézőpontjait a <code>view_init</code> függvény segítségével tudjuk megadni. A <code>view_init</code>-nek két paramétere <a href="https://hu.wikipedia.org/wiki/Koordin%C3%A1ta-rendszer">ekvatoriális gömbi koordinátarendszerben</a> adják meg az ábra nézőpontját. A két bemenő paraméter a  deklináció és az azimut szögek fokban mérve. Példáuk az $x$-tengely felől így lehet készíteni ábrát:</p>
+<p>Térbeli ábrák megjelenítése kapcsán rendszeresen felmerülő probléma, hogy jó irányból nézzünk rá az ábrára. Az ábra nézőpontjait a <code>view_init</code> függvény segítségével tudjuk megadni. A <code>view_init</code> két paramétere <a href="https://hu.wikipedia.org/wiki/Koordin%C3%A1ta-rendszer">ekvatoriális gömbi koordinátarendszerben</a> adja meg az ábra nézőpontját. A két bemenő paraméter a deklináció és az azimutszög fokban mérve. Például az $x$-tengely felől így lehet készíteni ábrát:</p>
 
 </div>
 </div>
@@ -13916,7 +13916,7 @@ GLpERCZi6BIRmYihS0RkIoYuEZGJ/j//ZZK/jNe2OwAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ha interaktív függvényeket használunk akkor a nézőpontot az alábbiak szerint interaktívan tudjuk változtatni:</p>
+<p>Ha interaktív függvényeket használunk, akkor a nézőpontot az alábbiak szerint interaktívan tudjuk változtatni:</p>
 
 </div>
 </div>
@@ -14178,9 +14178,9 @@ GqLQJYQQDVHoEkKIhih0CSFEQ/8fD2QIsrEGbhIAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A térbeli ábrák egyik előnye hogy térbeli felületeket is meg tudunk jeleníteni. Ennek a legegyszerűbb esete a kétváltozós
+<p>A térbeli ábrák egyik előnye, hogy térbeli felületeket is meg tudunk jeleníteni. Ennek a legegyszerűbb esete a kétváltozós
 $$z=f(x,y)$$
- függvények magasság térkép szerű ábrázolása. Ahogy azt már megszoktuk itt is az első feladat a mintavételezés és a függvény kiértékelés. Az alábbiakban vizsgáljuk meg a $$z=-[\sin(x) ^{10} + \cos(10 + y  x)  \cos(x)]\exp((-x^2-y^2)/4)$$ függvényt!</p>
+ függvények magasságtérképszerű ábrázolása. Ahogy azt már megszoktuk, itt is az első feladat a mintavételezés és a függvény kiértékelése. Az alábbiakban vizsgáljuk meg a $$z=-[\sin(x) ^{10} + \cos(10 + y  x)  \cos(x)]\exp((-x^2-y^2)/4)$$ függvényt!</p>
 
 </div>
 </div>
@@ -14962,7 +14962,7 @@ rkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sokszor szemléletes a kirajzolódott felületet valamilyen színskála szerint szinezni. Ezt a síkbeli ábráknál már megszokott módon a  <code>cmap</code> kulcsszó segítségével tehetjük.</p>
+<p>Sokszor szemléletes a kirajzolódott felületet valamilyen színskála szerint színezni. Ezt a síkbeli ábráknál már megszokott módon a  <code>cmap</code> kulcsszó segítségével tehetjük.</p>
 
 </div>
 </div>
@@ -15896,14 +15896,14 @@ vtYBlwJHgruqEM5W/H8b3jTAlKbiFgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A térbeli felületek legálltalánosabb megadása két paraméteres vektor értékű függvényekkel lehetséges. Azaz</p>
+<p>A térbeli felületek legáltalánosabb megadása kétparaméteres vektor értékű függvényekkel lehetséges. Azaz</p>
 \begin{equation}
 \mathbf{r}(u,v)=\left(\begin{array}{c}
 f(u,v)\\
 g(u,v)\\
 h(u,v)
 \end{array}\right)
-\end{equation}<p>Vizsgáljunk meg erre egy példát ahol a megjeleníteni kívánt felület egy tórusz! A <a href="https://hu.wikipedia.org/wiki/T%C3%B3rusz">tórusz</a> egy lehetséges paraméterezése a következő:</p>
+\end{equation}<p>Vizsgáljunk meg erre egy példát, ahol a megjeleníteni kívánt felület egy tórusz! A <a href="https://hu.wikipedia.org/wiki/T%C3%B3rusz">tórusz</a> egy lehetséges paraméterezése a következő:</p>
 \begin{equation}
 \mathbf{r}(\theta,\varphi)=\left(\begin{array}{c}
 (R_1 + R_2 \cos \theta) \cos{\varphi}\\
@@ -16574,7 +16574,7 @@ q0NH9TABicArVqs1ESgC6kK/9SYQazAYDgH/CzSsSuE1Cj29oENHNTAYDK2BfVarNdb29S3Ak1ar
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A fenti ábrát egy kicsit arányosabbá tehetjük ha a tengelyek megjelenítésének arányát illetve a tengerek határait átállítjuk. Ezt a <code>set_aspect</code> illetve a <code>set_xlim</code>, <code>set_ylim</code> és <code>set_zlim</code> függvények segítségével tehetjük meg:</p>
+<p>A fenti ábrát egy kicsit arányosabbá tehetjük, ha a tengelyek megjelenítésének arányát, illetve a tengerek határait átállítjuk. Ezt a <code>set_aspect</code>, illetve a <code>set_xlim</code>, <code>set_ylim</code> és <code>set_zlim</code> függvények segítségével tehetjük meg:</p>
 
 </div>
 </div>
@@ -17586,7 +17586,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Térbeli vektor tereket, azaz olyan függvényeket amelyek a tér minden pontjához egy három dimenziós vektort rendelnek a síkbeli ábrákhoz hasonlóan itt is a quiver parancs segítségével tudunk megjeleníteni. Az alábbi példában az egység gömb felületének 100 pontjába rajzolunk egy-egy radiális irányba mutató vektort:</p>
+<p>Térbeli vektortereket, azaz olyan függvényeket, amelyek a tér minden pontjához egy háromdimenziós vektort rendelnek, a síkbeli ábrákhoz hasonlóan itt is a quiver parancs segítségével tudunk megjeleníteni. Az alábbi példában az egységgömb felületének 100 pontjába rajzolunk egy-egy radiális irányba mutató vektort:</p>
 
 </div>
 </div>
@@ -18124,19 +18124,6 @@ Ff4nrR8AZFneBZQ1sMlErAYty/JeIFLtCHMSR+vaRp1vfuD/AzMbb8WuMthFAAAAAElFTkSuQmCC
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
 </div>
 </div>
 
