@@ -11757,6 +11757,7 @@ div#notebook {
 <li>A megoldasok kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
 <li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldás notebook első <code>markdown</code> cellájában! </li>
 <li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
+<li>Az elkészített ábrákon legyen minden esetben <strong>tengelyfelirat</strong>! Amennyiben a beadott ábrákon nincs <strong>tengelyfelirat</strong> az adott feladat automatikusan <strong>nem teljesítettnek</strong> minősül!</li>
 </ul>
 <hr>
 
@@ -11825,33 +11826,13 @@ $$T_n(x)=\cos(n \arccos x)$$<ul>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="04-Egyszer&#369;-k&#233;tv&#225;ltoz&#243;s-f&#252;ggv&#233;ny">04 Egyszer&#369; k&#233;tv&#225;ltoz&#243;s f&#252;ggv&#233;ny<a class="anchor-link" href="#04-Egyszer&#369;-k&#233;tv&#225;ltoz&#243;s-f&#252;ggv&#233;ny">&#182;</a></h2><ul>
-<li>Ábrázold az $$ f(x,y)=\mathrm{e}^{-(x-1)^2-(y+1.5)^2}+\cos(x^3-3y^2) $$ függvényt az $$x\in[-3,3],\quad 
-y\in[-3,3]$$ tartományban! Használd a ??? vagy a <code>pcolor</code> függvényt !</li>
-<li>Ábrázold ugyanezen a képen azon pontokat az $(x-y)$ síkon, melyekre a fent definiált $f(x,y)$ függvény a $0$ értéket veszi fel! Használd a ??? vagy a <code>contour</code> függvényt !</li>
+<li>Ábrázold az $$ f(x,y)=\mathrm{e}^{-(x-1)^2-(y+1.5)^2}+\cos(x^3-3y^2) $$ függvényt az $x\in[-3,3],\quad 
+y\in[-3,3]$ tartományban! Használd a <code>pcolor</code> függvényt !</li>
+<li><p>Ábrázold ugyanezen a képen azon pontokat az $(x-y)$ síkon, melyekre a fent definiált $f(x,y)$ függvény a $0$ értéket veszi fel! Használd a <code>contour</code> függvényt !</p>
+</li>
+<li><p>Legyen az ábrádon színmagyrázat (colorbar),  illetve tengelyfeliratok!</p>
+</li>
 </ul>
-<p>Legyen az ábrádon színmagyarázat (colorbar),  illetve tengelyfeliratok!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-2D-Coulomb-t&#233;r">05 2D Coulomb-t&#233;r<a class="anchor-link" href="#05-2D-Coulomb-t&#233;r">&#182;</a></h2><p>Ábrázoljuk egy, az origóban elhelyezkedő elektromos töltés erőterét egy, az origón átmenő síkban! Az erőtér komponenseit az $(x,y)$ pontban a következő összefüggések adják meg: 
-$$E_x=\frac{x}{(x^2+y^2)^{3/2}}$$
-$$E_y=\frac{y}{(x^2+y^2)^{3/2}}$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="10-Angry-Bird-&#9760;">10 Angry Bird &#9760;<a class="anchor-link" href="#10-Angry-Bird-&#9760;">&#182;</a></h2><p>Készétsünk egy olyan interaktív ábrát, amely egy ferde hajítás trajektóriáját rajzolja ki! Legyen két változtatható paraméter: a kezdeti szög és a kezdősebesség! Jelöljük a pálya maximális magasságú pontját egy piros ponttal!</p>
 
 </div>
 </div>
@@ -11877,8 +11858,19 @@ A $t$ paramétert $t\in[0,2\pi]$ intervallumban vegyük fel! Készítsünk képe
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="06-Angry-Bird-&#9760;">06 Angry Bird &#9760;<a class="anchor-link" href="#06-Angry-Bird-&#9760;">&#182;</a></h2><p>Készétsünk egy olyan interaktív ábrát, amely egy ferde hajítás trajektóriáját rajzolja ki! Legyen két változtatható paraméter: a kezdeti szög és a kezdősebesség! Jelöljük a pálya maximális magasságú pontját egy piros ponttal!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="07-Magass&#225;gt&#233;rk&#233;p-&#9760;">07 Magass&#225;gt&#233;rk&#233;p &#9760;<a class="anchor-link" href="#07-Magass&#225;gt&#233;rk&#233;p-&#9760;">&#182;</a></h2><p>Ábrázoljuk térben az alábbi függvényt! Legyen $x,y\in[-3,3]$ 
-$$z = \sin(x)^{10} + \cos(10 + yx)\cos(x)$$</p>
+$$z = \sin(x)^{10} + \cos(10 + yx)\cos(x)$$
+A <code>matplotlib</code> vagy a <code>plotly</code> könyvtárak bármelyikét használhatod!</p>
 
 </div>
 </div>
@@ -11894,6 +11886,7 @@ $$z = \sin(x)^{10} + \cos(10 + yx)\cos(x)$$</p>
   y &= (2 +  \cos (\theta)) \sin{(\varphi)}, \\
   z &=  \sin( \theta).
 \end{align}<p>A felület paraméterei az $\theta,\varphi\in[0,2\pi]$ intervallumban fussanak!</p>
+<p>A <code>matplotlib</code> vagy a <code>plotly</code> könyvtárak bármelyikét használhatod!</p>
 
 </div>
 </div>
@@ -11903,7 +11896,8 @@ $$z = \sin(x)^{10} + \cos(10 + yx)\cos(x)$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Plotly-feladatok">Plotly feladatok<a class="anchor-link" href="#Plotly-feladatok">&#182;</a></h1><h2 id="&#9760;-1.-K&#246;rdiagram">&#9760; 1. K&#246;rdiagram<a class="anchor-link" href="#&#9760;-1.-K&#246;rdiagram">&#182;</a></h2><p>Az alábbi lista egy osztályban kiosztott érdemjegyek darabszámát tartalmazza a jegyek szerint növekvő sorrendben.</p>
+<h1 id="Plotly-feladatok">Plotly feladatok<a class="anchor-link" href="#Plotly-feladatok">&#182;</a></h1><p>Az alábbi feladatok elkészítéséhez mindenképpen használd a <code>plotly</code> könyvtárat!!</p>
+<h2 id="&#9760;-09.-K&#246;rdiagram">&#9760; 09. K&#246;rdiagram<a class="anchor-link" href="#&#9760;-09.-K&#246;rdiagram">&#182;</a></h2><p>Az alábbi lista egy osztályban kiosztott érdemjegyek darabszámát tartalmazza a jegyek szerint növekvő sorrendben.</p>
 
 </div>
 </div>
@@ -11913,7 +11907,7 @@ $$z = \sin(x)^{10} + \cos(10 + yx)\cos(x)$$</p>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">jegyek_darab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">jegyek_darab</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -11936,11 +11930,24 @@ $$z = \sin(x)^{10} + \cos(10 + yx)\cos(x)$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#9760;-2.-Sz&#237;nes-g&#246;mb">&#9760; 2. Sz&#237;nes g&#246;mb<a class="anchor-link" href="#&#9760;-2.-Sz&#237;nes-g&#246;mb">&#182;</a></h2><p>Készítsük el egy $r=5$ sugarú gömb paraméterezését a fenti "színes kör" minta alapján és ábrázoljuk 3 dimenzióban a kapott pontokat úgy, hogy az azonos "térnyolcadba" eső pontok egyszínűek legyenek.</p>
-<h2 id="&#9760;-3.-N&#233;ps&#369;r&#369;s&#233;g">&#9760; 3. N&#233;ps&#369;r&#369;s&#233;g<a class="anchor-link" href="#&#9760;-3.-N&#233;ps&#369;r&#369;s&#233;g">&#182;</a></h2><p>Ábrázoljuk Európa országait térképen úgy, hogy az ábrán egy ország színét az adott ország népsűrűsége határozza meg. Az adatok a <code>data/europe_population_data.csv</code> fájban találhatók. Egy kis <a href="https://plot.ly/python/choropleth-maps/">segítség</a>.</p>
+<h2 id="&#9760;-10.-Sz&#237;nes-g&#246;mb">&#9760; 10. Sz&#237;nes g&#246;mb<a class="anchor-link" href="#&#9760;-10.-Sz&#237;nes-g&#246;mb">&#182;</a></h2><p>Készítsük el egy $r=5$ sugarú gömb paraméterezését a fenti "színes kör" minta alapján és ábrázoljuk 3 dimenzióban a kapott pontokat úgy, hogy az azonos "térnyolcadba" eső pontok egyszínűek legyenek.</p>
+<h2 id="&#9760;-11.-N&#233;ps&#369;r&#369;s&#233;g">&#9760; 11. N&#233;ps&#369;r&#369;s&#233;g<a class="anchor-link" href="#&#9760;-11.-N&#233;ps&#369;r&#369;s&#233;g">&#182;</a></h2><p>Ábrázoljuk Európa országait térképen úgy, hogy az ábrán egy ország színét az adott ország népsűrűsége határozza meg. Az adatok a <code>data/europe_population_data.csv</code> fájban találhatók. Egy kis <a href="https://plot.ly/python/choropleth-maps/">segítség</a>.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
     </div>
   </div>
