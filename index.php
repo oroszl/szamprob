@@ -68,7 +68,7 @@
 <h2 id="aktualis">Aktuális információk </h2>
 <?php include 'vars.php'; echo "<a href=$kurzus_adatok>Kurzus adatok</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$kiseloadas>Kiselőadás vállalások</a><br>"; ?>
-
+<h1><strong>!ZH 2016 okt. 17. / 19. ZH!</strong></h1>
 <hr><div class="se-section-delimiter"></div>
 
 <h2 id="notebooks">Notebookok</h2>
