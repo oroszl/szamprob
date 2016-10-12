@@ -69,6 +69,7 @@
 <?php include 'vars.php'; echo "<a href=$kurzus_adatok>Kurzus adatok</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$kiseloadas>Kiselőadás vállalások</a><br>"; ?>
 <h1><strong>!ZH 2016 okt. 17. / 19. ZH!</strong></h1>
+A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
 <hr><div class="se-section-delimiter"></div>
 
 <h2 id="notebooks">Notebookok</h2>
