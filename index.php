@@ -45,6 +45,7 @@
 <h2 id="linkek">Hasznos linkek </h3>
 <?php include 'vars.php'; echo "<a href=$bevezeto_foliak>Bevezető fóliák</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$hub_link_fix>Jupyterhub@ELTE</a><br>"; ?>
+<a href="http://mybinder.org:/repo/oroszl/szamprob"><img src="http://mybinder.org/badge.svg"></img></a><br>
 <a href="https://cloud.sagemath.com/">Sage Math Cloud</a> / <a href="https://tmpnb.org/">Tmpnb</a> <br>
 <a href="https://jupyter.org/">Jupyter</a> / <a href="http://ipython.org/">IPython</a> <br>
 <a href="http://www.scipy.org/">Scipy</a> / <a href="http://matplotlib.org/">Matplotlib</a>  <br>
@@ -67,7 +68,8 @@
 <h2 id="aktualis">Aktuális információk </h2>
 <?php include 'vars.php'; echo "<a href=$kurzus_adatok>Kurzus adatok</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$kiseloadas>Kiselőadás vállalások</a><br>"; ?>
-
+<h1><strong>!ZH 2016 okt. 17. / 19. ZH!</strong></h1>
+A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
 <hr><div class="se-section-delimiter"></div>
 
 <h2 id="notebooks">Notebookok</h2>
