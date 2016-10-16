@@ -176,23 +176,63 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h2><p>A <code>Megoldás</code> mappában megtalálható az <code>osztaly.csv</code> fájl. Ez egy osztály öt témazáróra <code>[T1,T2,T3,T4,T5]</code> kapott jegyeit tartalmazza néhány plusz információval (<code>Nem</code>, <code>Kor</code>, <code>Fakt</code>) kiegészítve. A <code>Fakt</code> oszlopban az 1-es azt jelöli, hogy az adott ember jár matekfaktra.</p>
+<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><h2 id="01-oszt&#225;lyn&#233;vsor">01-oszt&#225;lyn&#233;vsor<a class="anchor-link" href="#01-oszt&#225;lyn&#233;vsor">&#182;</a></h2><p>A <code>Megoldás</code> mappában megtalálható az <code>osztaly.csv</code> fájl. Ez egy osztály öt témazáróra <code>[T1,T2,T3,T4,T5]</code> kapott jegyeit tartalmazza néhány plusz információval (<code>Nem</code>, <code>Kor</code>, <code>Fakt</code>) kiegészítve. A <code>Fakt</code> oszlopban az 1-es azt jelöli, hogy az adott ember jár matekfaktra.</p>
 <ol>
 <li><p>Olvasd be a fájlt egy DataFrame-be! Vigyázz arra, hogy a szövegfájlban a mezők a <code>#</code> jellel vannak elválasztva. (Ha a fejlécet és az indexet automatikusan készíted (nem adsz meg semmit), akkor az index 0-tól növekvő számsorozat, a fejléc pedig a szövegfájl első sora lesz, a további munkához ezek elegendők.)</p>
 </li>
 <li><p>Rendezd a táblázatot névsor szerint úgy, hogy az az előző, nem rendezett táblázatot felülírja!</p>
 </li>
-<li><p>Minden emberhez számold ki az 5 dolgozatának átlagát! Ábrázold ezt egy ploton is.</p>
+<li><p>Minden emberhez számold ki az 5 dolgozatának átlagát!</p>
 </li>
 <li><p>Hány darab faktos lány van?</p>
 </li>
 <li><p>Írasd ki a 16 évesek neveit!</p>
 </li>
-<li><p>☠ Mennyi lett a különböző korú emberek dolgozatainak átlaga? Ábrázold ezt egy ploton is.</p>
-</li>
 <li><p>☠ Hányféle férfi keresztnév szerepel a táblázatban?</p>
 </li>
 <li><p>☠ Készíts egy táblázatot, amelyben a sorok a különböző korcsoportok, az oszlopok a nemek, az értékek pedig a kor/nem szerinti dolgozatátlagok!</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="02-&#233;retts&#233;gi-adatok">02-&#233;retts&#233;gi adatok<a class="anchor-link" href="#02-&#233;retts&#233;gi-adatok">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Olvasd be egy pandas DataFrame-be a mintapéldában is használt érettségikről szóló adatfájlt!</p>
+<ol>
+<li><p>Mely városok dobogósak, ha a 2015-ös emelt szintű érettségik átlagos százalékát nézzük? És mely megyék vannak az utolsó ötben?</p>
+</li>
+<li><p>Az ember gyakran hallja, hogy a lányok szóban jobban teljesítenek, mint a fiúk. Vegyük évenként csoportosítva az emelt szintű érettségik szóbeli pontszámának átlagát a lányokra és a fiúkra egy külön DataFrame-be! Vonjuk ki egymásból a két értéket, majd az eredményt ábrázoljuk oszlopdiagramon. Megjelenik-e a nemek közötti különbség a szóbeli pontszámában? <em>Figyelj a szépen formázott, megfelelő tengelyfeliratokra, és a megfelelő ábraméretre!</em></p>
+</li>
+<li><p>A két szinten hogyan oszlanak el a nemek? Ábrázold két kördiagramon a fiúk és a lányok arányát, a körcikkekre írd rá a százalékos értéket 1 tizedesjegyre kerekítve! <em>Figyelj a szépen formázott, megfelelő tengelyfeliratokra, és a megfelelő ábraméretre!</em> (Megjegyzés: a "nő" szóban az "ő" helyett "õ" szerepel.)</p>
+</li>
+<li><p>Ábrázold hisztogramon 2014-es középszintű érettségi jegyeloszlását, a pandas DataFrame-hez tartozó plot parancsot használva. Az x tengely felirata legyen az 5 lehetséges érdemjegy, az ábrán csak az ezekhez tartozó oszlopok látszódjanak (<a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html">puska</a>)! <em>Figyelj a szépen formázott, megfelelő tengelyfeliratokra, és a megfelelő ábraméretre!</em></p>
+</li>
+<li><p>☠ Találj ki egy számodra érdekes kérdést ezzel az adathalmazzal kapcsolatban, és válaszold meg pandas segítségével! (Ötletek érdekes adatokra: előrehozott érettségi, szintemelő érettségi, levelező képzés stb.)</p>
+</li>
+<li><p>☠  Mennyi volt iskolatípusonként az emelt szintű dolgozatok átlagpontszáma 2011 és 2015 között évenként? Ábrázold oszlopdiagramon az eredményt, figyelj a szépen formázott, megfelelő tengelyfeliratokra, és a megfelelő ábraméretre! (Segítség: év és iskolatípus szerint is kell majd csoportosítani, majd pedig <code>pivot_table</code>-t készíteni, miután a megfelelő oszlopokat kivettük az indexből.)</p>
+</li>
+<li><p>☠ Oldd megy a 2. feladatot <code>apply</code> segítségével! Vázlat segítségül:</p>
+<ul>
+<li>Csoportosíts év és nem szerint.</li>
+<li>Számold ki a csoportonkénti szóbeli pontszám átlagát.</li>
+<li>Készíts <code>pivot_table</code>-t, az oszlopok legyenek a nemek.</li>
+<li><code>apply</code> segítségével hozz létre egy új oszlopot, amely a férfi és a nő oszlop különbsége lesz minden sorban.</li>
+<li>Ábrázold csak ezt az oszlopot oszlopdiagramon.</li>
+</ul>
 </li>
 </ol>
 
