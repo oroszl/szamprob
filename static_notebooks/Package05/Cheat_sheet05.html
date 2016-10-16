@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat05</title>
+<title>Cheat_sheet05</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,129 +11751,26 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ul>
-<li>Minden feladatot külön notebookba oldj meg! </li>
-<li>A megoldásnotebook <strong>neve</strong> tartalmazza a feladat <strong>számát</strong>! </li>
-<li>A megoldasok kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
-<li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldás notebook első <code>markdown</code> cellájában! </li>
-<li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
-<li>Az elkészített ábrákon legyen minden esetben <strong>tengelyfelirat</strong>! Amennyiben a beadott ábrákon nincs <strong>tengelyfelirat</strong> az adott feladat automatikusan <strong>nem teljesítettnek</strong> minősül!</li>
-</ul>
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-File-megnyit&#225;s-mode-ok">01-File megnyit&#225;s mode-ok<a class="anchor-link" href="#01-File-megnyit&#225;s-mode-ok">&#182;</a></h2><p>Milyen értékeket vehet fel az <code>open</code> függvény <code>mode</code> paramétere?</p>
-<ul>
-<li>Sorold fel a lehetséges értékeket és jelentésüket!</li>
-<li>Melyek az alapértelmezett értékek?</li>
-<li>Linkekkel jelöld a forrásaidat!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-File-manipul&#225;ci&#243;">02-File manipul&#225;ci&#243;<a class="anchor-link" href="#02-File-manipul&#225;ci&#243;">&#182;</a></h2><p>Cseréld ki a <code>'../data/NAPFOLT/SN_m_tot_V2.0.txt'</code> file 137. és 42. karakterét!</p>
-<ul>
-<li>Az eredményt írd ki a <code>'napfolt_csere.dat'</code> file-ba!</li>
-<li>Használjuk a python beépített függvényeit!</li>
-<li>Emlékezz hogy a <code>python</code>-ban minden 0-val kezdődik!</li>
-<li><strong>NE</strong> használd a <code>numpy</code> által biztosított függvényeket! Amennyiben a feladat megoldásához tartozó notebookban <code>loadtxt()</code> vagy <code>savetxt()</code> függvény van a feladat automatikusan nem teljesítettnek <strong>minősül</strong>!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-Napfolt-megfigyel&#233;sek-sz&#225;ma-&#233;s-sz&#243;r&#225;sa">03-Napfolt megfigyel&#233;sek sz&#225;ma &#233;s sz&#243;r&#225;sa<a class="anchor-link" href="#03-Napfolt-megfigyel&#233;sek-sz&#225;ma-&#233;s-sz&#243;r&#225;sa">&#182;</a></h2><p>Ábrázoljuk a <code>'../data/NAPFOLT/SN_m_tot_V2.0.txt'</code> file-ban található napfolt adatok számát és a megfigyelések pontosságát jellemző szórásokat az idő függvényében!</p>
-<ul>
-<li>Használjuk a python beépített függvényeit, a mintapéldában bemutatott módon!</li>
-<li>Két ábrát készíts, egyet a megfigyelések számáról (nem a napfoltok számáról), egyet pedig az adatok szórásáról!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04--Baumgartner-sebesen">04- Baumgartner sebesen<a class="anchor-link" href="#04--Baumgartner-sebesen">&#182;</a></h2><p>A <code>'../data/BAUMGARTNER/v_vs_t'</code> file tartalmazza a Felix Baumgartner ugrásának <strong>mért</strong> sebesség-idő adatait. A file két oszlopot tartalmaz, az első a mérés idejét másodpercben mérve a második az eséséi sebesség abszolult értékét km/h mértékegységben.</p>
-<ul>
-<li>Hasonlítsuk össze, egy ábra segítségével, az út idő függvényből numerikus deriválással kapott adatsorral! Használjuk a <code>'../data/BAUMGARTNER/h_vs_t'</code> fileból a magasság idő adatokat!<ul>
-<li>Az ábrán legyen jelmagyarázat! Jelmagyarázat nélküli ábra automatikusan 0 pontos feladatot jelent!</li>
-</ul>
-</li>
-<li>A sebesség-idő adatok numerikus deriválásával számítsuk ki az idő-gyorsulás függvényt és elemezzük a függvény első néhány (10) pontját!<ul>
-<li>Mennyi a pontok átlaga?</li>
-<li>Fizikai megfontolások alapján mennyinek kell lennie ennek az értéknek?</li>
-</ul>
-</li>
-<li>Az adatok elemzése segítségével, illetve az eredeti felvételt alaposabban is megvizsgálva nyilatkozzunk, hogy mi lehet az oka a sebesség-idő adatokban mutatkozó drasztikus ugrásnak $t\approx 270s$ környékén?</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-Ebola">05-Ebola<a class="anchor-link" href="#05-Ebola">&#182;</a></h2><p>A <code>'../data/EBOLA/ebola.txt'</code> file tartalmazza a 2014-es Ebola járvány fertőzöttségi és kommulatív (adott napig hányan haltak meg összesen) halálozási adatait.</p>
-<ul>
-<li>Ábrázoljuk a file-ban szereplő összes országra külön külön az elhalálozottak számát az idő függvényében!</li>
-<li>A járványterjedések jó közelítéssel exponenciális függvény alakkal jellemezhatőek, azaz az alábbi függvény $$f(t)=A e^{\alpha t} $$ jól szokott illeni ezen adatokra. Átlagképzés és numerikus deriválás segítségével határozzuk meg az $A$ és $\alpha$ együtthatókat az összes elhalálozások számából! Mivel $$\mathrm{d}f/\mathrm{d}t=\alpha f(t)$$ ezért $\alpha$ a halálozási idősor és annak idő-deriváltjának hányadosának az átlagával közelíthető. Az $\alpha$ ráta ismeretében az  $A$ eggyütható értékét becsüljük meg az adatsor utólsó napjához tartozó adatokból!</li>
-<li>Ábrázoljuk a meghatározott paraméter értékek segítségével az $f(t)$ függvényt és az adatokat egyszerre!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="06-&#9760;-Mekeg&#252;nk-vagy-nem-mekeg&#252;nk?">06-&#9760; Mekeg&#252;nk vagy nem mekeg&#252;nk?<a class="anchor-link" href="#06-&#9760;-Mekeg&#252;nk-vagy-nem-mekeg&#252;nk?">&#182;</a></h2><p>Gyakran mondják, hogy a magyar nyelv aránytalanul sok e-betűt használ, idegen hallgatóság úgy érzékeli, mintha sokat "mekegnénk".</p>
-<ul>
-<li>Vizsgáljuk meg, mi a 10 leggyakoribb magyar betű Mikszáth Kálmán A fekete város c. regényében (<code>../data/fekete_varos.txt</code>)! </li>
-<li>Figyeljünk arra, hogy számlálás közben mindent kisbetűssé alakítsunk. </li>
-<li>Benne van-e az első 10 betű között az "e"? </li>
-<li>A két- és háromjegyű mássalhangzókat most kezeljük két külön betűnek.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="07-&#9760;-R&#237;mdetektor">07-&#9760; R&#237;mdetektor<a class="anchor-link" href="#07-&#9760;-R&#237;mdetektor">&#182;</a></h2><ul>
-<li>Olvassuk be Petőfi Sándor Szeptember végén c. versének sorait egy listába (<code>../data/szeptember_vegen.txt</code>)! </li>
-<li>Írjunk egy függvényt, amelynek ha beadunk két sort, akkor "megméri", hogy azok mennyire rímelnek! </li>
-<li>A "mérés" úgy történik, hogy vesszük mindkét sor utolsó szavát, majd a két szó közös karaktereinek számának a kétszeresét elosztjuk a két szó hosszának összegével.</li>
-<li>A mérés előtt a szavakből távolítsuk el az írásjeleket! </li>
-<li>Ezután vizsgáljuk meg, hogy a versen végigmenve a rímdetektor páros rímre (aabb) vagy keresztrímre (abab) ad-e nagyobb átlagos "rímmértéket"!</li>
-</ul>
+<h1 id="File-m&#369;veletek">File m&#369;veletek<a class="anchor-link" href="#File-m&#369;veletek">&#182;</a></h1><h3 style='color: darkcyan '> Alap python I/O </h3><p>Olvasás</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">file1</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;adat.dat&#39;</span><span class="p">)</span>
+<span class="n">egeszfile</span><span class="o">=</span><span class="n">file1</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">file1</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</blockquote>
+<p>Írás</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">file1</span> <span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;mentes.dat&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">file1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Ez kerul a fileba&#39;</span><span class="p">)</span>
+<span class="n">file1</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</blockquote>
+<h3 style='color: darkcyan'> Numpy file műveletek </h3><p>Olvasás</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">dat</span><span class="o">=</span><span class="n">loadtxt</span><span class="p">(</span><span class="s1">&#39;adat.data&#39;</span><span class="p">)</span>
+</pre></div>
+</blockquote>
+<p>Írás</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">savetxt</span><span class="p">(</span><span class="s1">&#39;mentes&#39;</span><span class="p">,</span><span class="n">valtozo</span><span class="p">)</span>
+</pre></div>
+</blockquote>
 
 </div>
 </div>
