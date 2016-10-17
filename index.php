@@ -91,7 +91,7 @@ A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/mintapelda04.html'>Mintapelda-04</a><br>  
                                                           <a href='notebooks/Package04/pakk.tgz' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/mintapelda05.html'>Mintapelda-05</a><br>  
-                                                          <a href='notebooks/Package05/mintapelda05.ipynb' download>(forrás)</a><a href='notebooks/Package05/data/' download>(adatok)</a></td>
+                                                          <a href='notebooks/Package05/mintapelda05.ipynb' download>(forrás)</a><a href='notebooks/Package05/data/' >(adatok)</a></td>
 
     
 </tr>
