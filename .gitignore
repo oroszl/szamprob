@@ -6,4 +6,7 @@ conv_to_html.sh
 diak_lista
 for_fun
 ZH*
-notebooks/*/.ipynb_checkpoints 
+notebooks/*/.ipynb_checkpoints/
+*~
+hfk
+
