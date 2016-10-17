@@ -1,2 +1,9 @@
-hfk
-notebooks/*/.ipynb_checkpoints
+slides
+beszed
+push_task.sh
+pull_task.sh
+conv_to_html.sh
+diak_lista
+for_fun
+ZH*
+notebooks/*/.ipynb_checkpoints/ 
