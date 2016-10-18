@@ -1,4 +1,0 @@
-
-{"sender_id":"303a3a03-424a-4b7d-9564-ff713ca5c72d","date":"2015-09-25T13:08:10.293Z","event":"start_video","payload":{"room_id":6.574402812402696e+23}}
-{"sender_id":"303a3a03-424a-4b7d-9564-ff713ca5c72d","date":"2015-09-25T13:08:25.093Z","event":"chat","payload":{"content":"$E=mc^2$"}}
-{"sender_id":"303a3a03-424a-4b7d-9564-ff713ca5c72d","date":"2015-09-25T13:08:34.456Z","event":"stop_video","payload":{"room_id":6.574402812402696e+23}}
