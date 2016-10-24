@@ -91,7 +91,11 @@ A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/mintapelda04.html'>Mintapelda-04</a><br>  
                                                           <a href='notebooks/Package04/pakk.tgz' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/mintapelda05.html'>Mintapelda-05</a><br>  
-                                                          <a href='notebooks/Package05/mintapelda05.ipynb' download>(forrás)</a><a href='notebooks/Package05/data/' >(adatok)</a></td>
+                                                          <a href='notebooks/Package05/mintapelda05.ipynb' download>(forrás)</a>
+							  <a href='notebooks/Package05/data/' >(adatok)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/mintapelda06.html'>Mintapelda-06</a><br>  
+                                                          <a href='notebooks/Package06/mintapelda06.ipynb' download>(forrás)</a>
+							  <a href='notebooks/Package06/data/' >(adatok)</a></td>
 
     
 </tr>
@@ -109,6 +113,9 @@ A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
                                                           <a href='notebooks/Package04/feladat04.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/feladat05.html'>Feladat-05</a><br>  
                                                           <a href='notebooks/Package05/feladat05.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/feladat06.html'>Feladat-06</a><br>  
+                                                          <a href='notebooks/Package06/feladat06.ipynb' download>(forrás)</a></td>
+
 
 </tr>
 <tr>
@@ -119,7 +126,8 @@ A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/Cheat_sheet03.html'>Modulok <br>ábrák</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/Cheat_sheet04.html'>Matplotlib<br>interaktivitás</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/Cheat_sheet05.html'>File-I/O</a></td>
-  
+<td style="text-align:center; border: 1px solid #dddddd "></td>
+ 
 </tr>
 </tbody>
 </table>
