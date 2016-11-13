@@ -68,9 +68,6 @@
 <h2 id="aktualis">Aktuális információk </h2>
 <?php include 'vars.php'; echo "<a href=$kurzus_adatok>Kurzus adatok</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$kiseloadas>Kiselőadás vállalások</a><br>"; ?>
-<h1><strong>!ZH 2016 okt. 17. / 19. ZH!</strong></h1>
-A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
-<hr><div class="se-section-delimiter"></div>
 
 <h2 id="notebooks">Notebookok</h2>
 <p>Az alábbi táblázat tartalmazza statikus(.html) és notebook (.ipynb) formátumban az órai és a házi feladat IPython notebook-okat. Továbbá néhány rövid összefoglaló puskát is a melyek alapvető feladatok megoldásában nyújthatnak némi segítséget. A feladatok közt szereplő ☠-el jelölt feladatok vagy alfeladatok nem kötelezőek viszont megoldásuk pozitívan befolyásolják a félév végén megszerzett érdemjegyet.</p>
@@ -96,6 +93,9 @@ A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/mintapelda06.html'>Mintapelda-06</a><br>  
                                                           <a href='notebooks/Package06/mintapelda06.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package06/data/' >(adatok)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/mintapelda07.html'>Mintapelda-05</a><br>  
+                                                          <a href='notebooks/Package07/mintapelda07.ipynb' download>(forrás)</a>
+							  <a href='notebooks/Package07/data/' >(adatok)</a></td>
 
     
 </tr>
@@ -115,6 +115,8 @@ A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
                                                           <a href='notebooks/Package05/feladat05.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/feladat06.html'>Feladat-06</a><br>  
                                                           <a href='notebooks/Package06/feladat06.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/feladat07.html'>Feladat-06</a><br>  
+                                                          <a href='notebooks/Package07/feladat07.ipynb' download>(forrás)</a></td>
 
 
 </tr>
@@ -127,7 +129,8 @@ A ZH-n megjelenni kötelező, a jegyszerzés szükséges feltétele!
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/Cheat_sheet04.html'>Matplotlib<br>interaktivitás</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/Cheat_sheet05.html'>File-I/O</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "></td>
- 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/Cheat_sheet07.html'>Fit,FFT</a></td>
+
 </tr>
 </tbody>
 </table>
