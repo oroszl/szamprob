@@ -124,7 +124,7 @@
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
 <td style="text-align:center; border: 1px solid #dddddd "></td> 
 <td style="text-align:center; border: 1px solid #dddddd "></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheet02.html'>Vezérő utasítások<br>függvények</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheet02.html'>Vezérlő utasítások<br>függvények</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/Cheat_sheet03.html'>Modulok <br>ábrák</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/Cheat_sheet04.html'>Matplotlib<br>interaktivitás</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/Cheat_sheet05.html'>File-I/O</a></td>
