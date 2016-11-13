@@ -93,7 +93,7 @@
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/mintapelda06.html'>Mintapelda-06</a><br>  
                                                           <a href='notebooks/Package06/mintapelda06.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package06/data/' >(adatok)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/mintapelda07.html'>Mintapelda-05</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/mintapelda07.html'>Mintapelda-07</a><br>  
                                                           <a href='notebooks/Package07/mintapelda07.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package07/data/' >(adatok)</a></td>
 
@@ -115,7 +115,7 @@
                                                           <a href='notebooks/Package05/feladat05.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/feladat06.html'>Feladat-06</a><br>  
                                                           <a href='notebooks/Package06/feladat06.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/feladat07.html'>Feladat-06</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/feladat07.html'>Feladat-07</a><br>  
                                                           <a href='notebooks/Package07/feladat07.ipynb' download>(forrás)</a></td>
 
 
