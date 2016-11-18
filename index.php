@@ -68,6 +68,8 @@
 <h2 id="aktualis">Aktuális információk </h2>
 <?php include 'vars.php'; echo "<a href=$kurzus_adatok>Kurzus adatok</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$kiseloadas>Kiselőadás vállalások</a><br>"; ?>
+<?php include 'mod.php';?>
+<hr><div class="se-section-delimiter"></div>
 
 <h2 id="notebooks">Notebookok</h2>
 <p>Az alábbi táblázat tartalmazza statikus(.html) és notebook (.ipynb) formátumban az órai és a házi feladat IPython notebook-okat. Továbbá néhány rövid összefoglaló puskát is a melyek alapvető feladatok megoldásában nyújthatnak némi segítséget. A feladatok közt szereplő ☠-el jelölt feladatok vagy alfeladatok nem kötelezőek viszont megoldásuk pozitívan befolyásolják a félév végén megszerzett érdemjegyet.</p>
