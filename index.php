@@ -98,6 +98,8 @@
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/mintapelda07.html'>Mintapelda-07</a><br>  
                                                           <a href='notebooks/Package07/mintapelda07.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package07/data/' >(adatok)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/mintapelda08.html'>Mintapelda-08</a><br>  
+                                                          <a href='notebooks/Package08/mintapelda08.ipynb' download>(forrás)</a></td>
 
     
 </tr>
@@ -119,6 +121,8 @@
                                                           <a href='notebooks/Package06/feladat06.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/feladat07.html'>Feladat-07</a><br>  
                                                           <a href='notebooks/Package07/feladat07.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/feladat08.html'>Feladat-08</a><br>  
+                                                          <a href='notebooks/Package08/feladat08.ipynb' download>(forrás)</a></td>
 
 
 </tr>
@@ -132,6 +136,7 @@
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/Cheat_sheet05.html'>File-I/O</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/Cheat_sheet07.html'>Fit,FFT</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/Cheat_sheet08.html'>Szimbolikus<br>számítások</a></td>
 
 </tr>
 </tbody>
