@@ -79,26 +79,26 @@
 <tbody>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Mintapéldák </p> </td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/mintapelda00.html'>Mintapelda-00</a><br> 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/mintapelda00.html'>Mintapélda<br>00</a><br> 
                                                           <a href='notebooks/Package00/mintapelda00.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/mintapelda01.html'>Mintapelda-01</a><br> 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/mintapelda01.html'>Mintapélda<br>01</a><br> 
                                                           <a href='notebooks/Package01/mintapelda01.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/mintapelda02.html'>Mintapelda-02</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/mintapelda02.html'>Mintapélda<br>02</a><br>  
                                                           <a href='notebooks/Package02/mintapelda02.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/mintapelda03.html'>Mintapelda-03</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/mintapelda03.html'>Mintapélda<br>03</a><br>  
                                                           <a href='notebooks/Package03/mintapelda03.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/mintapelda04.html'>Mintapelda-04</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/mintapelda04.html'>Mintapélda<br>04</a><br>  
                                                           <a href='notebooks/Package04/pakk.tgz' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/mintapelda05.html'>Mintapelda-05</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/mintapelda05.html'>Mintapélda<br>05</a><br>  
                                                           <a href='notebooks/Package05/mintapelda05.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package05/data/' >(adatok)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/mintapelda06.html'>Mintapelda-06</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/mintapelda06.html'>Mintapélda<br>06</a><br>  
                                                           <a href='notebooks/Package06/mintapelda06.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package06/data/' >(adatok)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/mintapelda07.html'>Mintapelda-07</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/mintapelda07.html'>Mintapélda<br>07</a><br>  
                                                           <a href='notebooks/Package07/mintapelda07.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package07/data/' >(adatok)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/mintapelda08.html'>Mintapelda-08</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/mintapelda08.html'>Mintapélda<br>08</a><br>  
                                                           <a href='notebooks/Package08/mintapelda08.ipynb' download>(forrás)</a></td>
 
     
