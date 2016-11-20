@@ -11751,7 +11751,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Ismerked&#233;s-a-sympy-modullal">Ismerked&#233;s a <a href="www.sympy.org">sympy</a> modullal<a class="anchor-link" href="#Ismerked&#233;s-a-sympy-modullal">&#182;</a></h1><p>Számos kereskedelmi (<a href="https://www.wolfram.com/mathematica/">Mathematica</a>, <a href="http://www.maplesoft.com/products/maple/">Maple</a>) számítógépes algebrai csomag létezik már, melyek bonyolult analitikus formulamanipulációs készséggel rendelkeznek. A sympy csomag egy ingyenes python könyvtár ami lassan használható alternatívát kínál kereskedelmi vetélytársaival szemben. Ebben a notebookban néhány sympy függvénnyel fogunk megismerkedni. <strong>Fontos</strong> megjegyezni hogy mivel van pár a <code>sympy</code> függvényeihez hasonló nevű függvény a <code>pylab</code> parancs álltal importált modulokban ezért a kellemetlenségek elkerülése végett célszerű mindig külön notebookot indítani a <code>sympy</code>-os problémák megoldásánál!</p>
+<h1 id="Ismerked&#233;s-a-sympy-modullal">Ismerked&#233;s a <a href="www.sympy.org">sympy</a> modullal<a class="anchor-link" href="#Ismerked&#233;s-a-sympy-modullal">&#182;</a></h1><p>Számos kereskedelmi (<a href="https://www.wolfram.com/mathematica/">Mathematica</a>, <a href="http://www.maplesoft.com/products/maple/">Maple</a>) számítógépes algebrai csomag létezik már, melyek bonyolult analitikus formulamanipulációs készséggel rendelkeznek. A sympy csomag egy ingyenes Python-könyvtár, ami lassan használható alternatívát kínál kereskedelmi vetélytársaival szemben. Ebben a notebookban néhány sympy függvénnyel fogunk megismerkedni. <strong>Fontos</strong> megjegyezni hogy mivel van pár, a <code>sympy</code> függvényeihez hasonló nevű függvény a <code>pylab</code> parancs által importált modulokban, ezért a kellemetlenségek elkerülése végett célszerű mindig külön notebookot indítani a <code>sympy</code>-os problémák megoldásánál!</p>
 
 </div>
 </div>
@@ -11775,7 +11775,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="V&#225;ltoz&#243;k,-egyenletek-&#233;s-egyenlet-rendszerek-megold&#225;sa">V&#225;ltoz&#243;k, egyenletek &#233;s egyenlet rendszerek megold&#225;sa<a class="anchor-link" href="#V&#225;ltoz&#243;k,-egyenletek-&#233;s-egyenlet-rendszerek-megold&#225;sa">&#182;</a></h2><p>Ahoz hogy változókat szimbolikusan is manipulálni tudjunk meg kell mondanunk a pythonnak hogy ezentúl tekintsen a változónkra mint valamilyen matematikai formulában előforduló szimbólumra. Ezt a leg egyszerűbben így tehetjük meg:</p>
+<h2 id="V&#225;ltoz&#243;k,-egyenletek-&#233;s-egyenletrendszerek-megold&#225;sa">V&#225;ltoz&#243;k, egyenletek &#233;s egyenletrendszerek megold&#225;sa<a class="anchor-link" href="#V&#225;ltoz&#243;k,-egyenletek-&#233;s-egyenletrendszerek-megold&#225;sa">&#182;</a></h2><p>Ahhoz, hogy változókat szimbolikusan is manipulálni tudjunk, meg kell mondanunk a Pythonnak, hogy ezentúl tekintsen a változónkra mint valamilyen matematikai formulában előforduló szimbólumra. Ezt a legegyszerűbben így tehetjük meg:</p>
 
 </div>
 </div>
@@ -11798,8 +11798,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ezek után az $x$ változót használhatjuk szimbolikus számításokra. Oldjunk meg például a következő egyszerű egyenletet: $$3x=5$$
-Ezt a <code>solve</code> függvény segítségével tehetjük meg. A <code>solve</code> függvény első bementete a megoldandó egyenlet 0-ra rendezve a második pedig a keresett változó:</p>
+<p>Ezek után az $x$ változót használhatjuk szimbolikus számításokra. Oldjuk meg például a következő egyszerű egyenletet: $$3x=5$$
+Ezt a <code>solve</code> függvény segítségével tehetjük meg. A <code>solve</code> függvény első bementete a megoldandó egyenlet 0-ra rendezve, a második pedig a keresett változó:</p>
 
 </div>
 </div>
@@ -11900,7 +11900,7 @@ $$\left [ \frac{1}{a} \left(- b + y\right)\right ]$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ha több megoldása is van az egyenletnek akkor a <code>sympy</code> <code>solve</code> függvénye, lehetőség szerint mind a kettőt megtalálja. Jól mutatja ezt a másodfokú egyenlet megoldásának "megtalálása":</p>
+<p>Ha több megoldása is van az egyenletnek, akkor a <code>sympy</code> <code>solve</code> függvénye lehetőség szerint mind a kettőt megtalálja. Jól mutatja ezt a másodfokú egyenlet megoldásának "megtalálása":</p>
 
 </div>
 </div>
@@ -11978,12 +11978,12 @@ $$-1$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A <code>solve</code> függvényt egyenletrendszerek megoldására is lehet használni. Ilyenkor a nullára rendezett egyenleteket listába foglaljuk. A keresett válltozókat szintúgy. Oldjuk meg a következő egyenletrendszert az $x$ és $y$ változókra:
+<p>A <code>solve</code> függvényt egyenletrendszerek megoldására is lehet használni. Ilyenkor a nullára rendezett egyenleteket listába foglaljuk. A keresett változókat szintúgy. Oldjuk meg a következő egyenletrendszert az $x$ és $y$ változókra:
 \begin{align}
 y&amp;=x^2+ax-4b\
 y&amp;=x-b
 \end{align}
-Mivel $x$-ben másodrendű az első egyenlet ezért két megoldáspárt várunk (A parabola legfeljebb két helyen metszi az egyenest...)</p>
+Mivel $x$-ben másodrendű az első egyenlet, ezért két megoldáspárt várunk (A parabola legfeljebb két helyen metszi az egyenest...)</p>
 
 </div>
 </div>
@@ -12022,7 +12022,7 @@ $$\left [ \left ( - \frac{a}{2} - \frac{1}{2} \sqrt{a^{2} - 2 a - 4 b + 1} + \fr
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A <code>solve</code> függvény kimenete most egy lista amelynek az elemei a megfelelő $(x,y)$ párok.</p>
+<p>A <code>solve</code> függvény kimenete most egy lista, amelynek az elemei a megfelelő $(x,y)$ párok.</p>
 
 </div>
 </div>
@@ -12032,7 +12032,7 @@ $$\left [ \left ( - \frac{a}{2} - \frac{1}{2} \sqrt{a^{2} - 2 a - 4 b + 1} + \fr
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="F&#252;ggv&#233;ny-anal&#237;zis">F&#252;ggv&#233;ny anal&#237;zis<a class="anchor-link" href="#F&#252;ggv&#233;ny-anal&#237;zis">&#182;</a></h2><p>A <code>sympy</code> egyik legnagyobb előnye hogy a <code>python</code> nyelven belül lehetővé teszi egyszerűbb analízis beli feladatok elvégzését. Alább a teljesség igénye nélkül összefoglalunk néhány egyszerű függvényt.Vizsgáljuk meg a következő két határértéket: $$\lim_{x\rightarrow 0}\frac{\sin x}{x}=? $$ illetve $$\lim_{x\rightarrow \infty}\frac{1}{1+\mathrm{e}^{-x}}=? $$ A határértéket a <code>limit</code> függvény segítségével tudjuk meghatározni:</p>
+<h2 id="F&#252;ggv&#233;nyanal&#237;zis">F&#252;ggv&#233;nyanal&#237;zis<a class="anchor-link" href="#F&#252;ggv&#233;nyanal&#237;zis">&#182;</a></h2><p>A <code>sympy</code> egyik legnagyobb előnye, hogy a <code>Python</code> nyelven belül lehetővé teszi egyszerűbb analízisbeli feladatok elvégzését. Alább a teljesség igénye nélkül összefoglalunk néhány egyszerű függvényt. Vizsgáljuk meg a következő két határértéket: $$\lim_{x\rightarrow 0}\frac{\sin x}{x}=? $$ illetve $$\lim_{x\rightarrow \infty}\frac{1}{1+\mathrm{e}^{-x}}=? $$ A határértéket a <code>limit</code> függvény segítségével tudjuk meghatározni:</p>
 
 </div>
 </div>
@@ -12071,7 +12071,7 @@ $$1$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Ha a végtelenben vagyunk kíváncsiak a határértékre akkor azt az <code>oo</code>-szimbólummal tudjuk elérni!</p>
+<p>Ha a végtelenben vagyunk kíváncsiak a határértékre, akkor azt az <code>oo</code>-szimbólummal tudjuk elérni!</p>
 
 </div>
 </div>
@@ -12188,7 +12188,7 @@ $$- \sin{\left (x \right )}$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>vagy így, (talán egy kicsit átláthatóban ) írjuk.</p>
+<p>vagy így, (talán egy kicsit átláthatóbban) írjuk.</p>
 
 </div>
 </div>
@@ -12266,7 +12266,7 @@ $$- \sin{\left (y \right )} \cos{\left (x \right )}$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A magasabb rendű parciális deriváltak legyártása az egyszerű deriváltak álltalánosításán alapszik:</p>
+<p>A magasabb rendű parciális deriváltak legyártása az egyszerű deriváltak általánosításán alapszik:</p>
 
 </div>
 </div>
@@ -12346,7 +12346,7 @@ $$\frac{x^{3}}{3}$$
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Az
-$$\int_0^3 x^2\mathrm{d}x$$ határozottintegrált pedig az alábbi módon értékelhetjük ki.</p>
+$$\int_0^3 x^2\mathrm{d}x$$ határozott integrált pedig az alábbi módon értékelhetjük ki.</p>
 
 </div>
 </div>
@@ -12424,7 +12424,7 @@ $$3 y^{3} + 9$$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Több változós integrált egyszerűen a változók (és ha határozott integrálról van szó akkor az integrálási határok  ) egymás után írásával értékelhetünk ki:</p>
+<p>Többváltozós integrált egyszerűen a változók (és ha határozott integrálról van szó, akkor az integrálási határok) egymás után írásával értékelhetünk ki:</p>
 
 </div>
 </div>

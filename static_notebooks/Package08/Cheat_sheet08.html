@@ -11751,20 +11751,20 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Szimbolikus-sz&#225;mol&#225;s">Szimbolikus sz&#225;mol&#225;s<a class="anchor-link" href="#Szimbolikus-sz&#225;mol&#225;s">&#182;</a></h1><h3 style='color: darkcyan '> A sympy modul használata </h3><p>A modul betöltése és szépen formázot kimenet beállítása</p>
+<h1 id="Szimbolikus-sz&#225;mol&#225;s">Szimbolikus sz&#225;mol&#225;s<a class="anchor-link" href="#Szimbolikus-sz&#225;mol&#225;s">&#182;</a></h1><h3 style='color: darkcyan '> A sympy modul használata </h3><p>A modul betöltése és szépen formázott kimenet beállítása</p>
 <blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># a sympy csomag rutinjainak betöltése</span>
 <span class="n">init_printing</span><span class="p">()</span>     <span class="c1"># szépen formázott kiírás (ez nem kötelező)</span>
 </pre></div>
 </blockquote>
-<p>A Szimbolikus számítás során használt változók deklarálása</p>
-<blockquote><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>  <span class="c1"># x változó mint szimbolikusan maniplálhatóvá tevése</span>
+<p>A szimbolikus számítás során használt változók deklarálása</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>  <span class="c1"># x változó szimbolikusan manipulálhatóvá tevése</span>
 </pre></div>
 </blockquote>
-<p>Egyenlet megoldás</p>
+<p>Egyenletmegoldás</p>
 <blockquote><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">c</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>     <span class="c1"># A megoldandó egyenletet nullára rendezzük!</span>
 </pre></div>
 </blockquote>
-<p>Függvény analízis</p>
+<p>Függvényanalízis</p>
 <blockquote><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span>            <span class="c1"># deriválás</span>
 </pre></div>
 <div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>   <span class="c1"># határozott integrál</span>
