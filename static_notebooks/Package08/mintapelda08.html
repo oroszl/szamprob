@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat07</title>
+<title>mintapelda08</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,15 +11751,278 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ul>
-<li>Minden feladatot külön notebookba oldj meg! </li>
-<li>A megoldásnotebook <strong>neve</strong> tartalmazza a feladat <strong>számát</strong>! </li>
-<li>A megoldások kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
-<li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldásnotebook első <code>markdown</code> cellájában! </li>
-<li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd, hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
-<li>Az elkészített ábrákon legyen minden esetben <strong>tengelyfelirat</strong>! Amennyiben a beadott ábrákon nincs <strong>tengelyfelirat</strong>, az adott feladat automatikusan <strong>nem teljesítettnek</strong> minősül!</li>
-</ul>
-<hr>
+<h1 id="Ismerked&#233;s-a-sympy-modullal">Ismerked&#233;s a <a href="www.sympy.org">sympy</a> modullal<a class="anchor-link" href="#Ismerked&#233;s-a-sympy-modullal">&#182;</a></h1><p>Számos kereskedelmi (<a href="https://www.wolfram.com/mathematica/">Mathematica</a>, <a href="http://www.maplesoft.com/products/maple/">Maple</a>) számítógépes algebrai csomag létezik már, melyek bonyolult analitikus formulamanipulációs készséggel rendelkeznek. A sympy csomag egy ingyenes python könyvtár ami lassan használható alternatívát kínál kereskedelmi vetélytársaival szemben. Ebben a notebookban néhány sympy függvénnyel fogunk megismerkedni. <strong>Fontos</strong> megjegyezni hogy mivel van pár a <code>sympy</code> függvényeihez hasonló nevű függvény a <code>pylab</code> parancs álltal importált modulokban ezért a kellemetlenségek elkerülése végett célszerű mindig külön notebookot indítani a <code>sympy</code>-os problémák megoldásánál!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="o">*</span> <span class="c1"># a sympy csomag rutinjainak betöltése</span>
+<span class="n">init_printing</span><span class="p">()</span>     <span class="c1"># szép kimenet  </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="V&#225;ltoz&#243;k,-egyenletek-&#233;s-egyenlet-rendszerek-megold&#225;sa">V&#225;ltoz&#243;k, egyenletek &#233;s egyenlet rendszerek megold&#225;sa<a class="anchor-link" href="#V&#225;ltoz&#243;k,-egyenletek-&#233;s-egyenlet-rendszerek-megold&#225;sa">&#182;</a></h2><p>Ahoz hogy változókat szimbolikusan is manipulálni tudjunk meg kell mondanunk a pythonnak hogy ezentúl tekintsen a változónkra mint valamilyen matematikai formulában előforduló szimbólumra. Ezt a leg egyszerűbben így tehetjük meg:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ezek után az $x$ változót használhatjuk szimbolikus számításokra. Oldjunk meg például a következő egyszerű egyenletet: $$3x=5$$
+Ezt a <code>solve</code> függvény segítségével tehetjük meg. A <code>solve</code> függvény első bementete a megoldandó egyenlet 0-ra rendezve a második pedig a keresett változó:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\left [ \frac{5}{3}\right ]$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Definiáljunk náhány további változót is!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;y,z,a,b,c&#39;</span><span class="p">)</span> <span class="c1"># Így definiálunk egyszerre több változót</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Oldjuk meg most az $$a x+b=y$$ egyenletet $x$ -re!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">b</span><span class="o">-</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\left [ \frac{1}{a} \left(- b + y\right)\right ]$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha több megoldása is van az egyenletnek akkor a <code>sympy</code> <code>solve</code> függvénye, lehetőség szerint mind a kettőt megtalálja. Jól mutatja ezt a másodfokú egyenlet megoldásának "megtalálása":</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">c</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\left [ \frac{1}{2 a} \left(- b + \sqrt{- 4 a c + b^{2}}\right), \quad - \frac{1}{2 a} \left(b + \sqrt{- 4 a c + b^{2}}\right)\right ]$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Természetesen a megoldás nem feltétlenül valós szám! A komplex egységgyököt a <code>sympy</code> <code>I</code>-vel jelöli:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">**</span><span class="mi">2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$-1$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>solve</code> függvényt egyenletrendszerek megoldására is lehet használni. Ilyenkor a nullára rendezett egyenleteket listába foglaljuk. A keresett válltozókat szintúgy. Oldjuk meg a következő egyenletrendszert az $x$ és $y$ változókra:
+\begin{align}
+y&amp;=x^2+ax-4b\
+y&amp;=x-b
+\end{align}
+Mivel $x$-ben másodrendű az első egyenlet ezért két megoldáspárt várunk (A parabola legfeljebb két helyen metszi az egyenest...)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">solve</span><span class="p">([</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">-</span> <span class="n">b</span><span class="p">],[</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">])</span> <span class="c1"># Így kell egyenletrendszert megoldani</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\left [ \left ( - \frac{a}{2} - \frac{1}{2} \sqrt{a^{2} - 2 a - 4 b + 1} + \frac{1}{2}, \quad - \frac{a}{2} - b - \frac{1}{2} \sqrt{a^{2} - 2 a - 4 b + 1} + \frac{1}{2}\right ), \quad \left ( - \frac{a}{2} + \frac{1}{2} \sqrt{a^{2} - 2 a - 4 b + 1} + \frac{1}{2}, \quad - \frac{a}{2} - b + \frac{1}{2} \sqrt{a^{2} - 2 a - 4 b + 1} + \frac{1}{2}\right )\right ]$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>solve</code> függvény kimenete most egy lista amelynek az elemei a megfelelő $(x,y)$ párok.</p>
 
 </div>
 </div>
@@ -11769,9 +12032,399 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-Baumgartner">01-Baumgartner<a class="anchor-link" href="#01-Baumgartner">&#182;</a></h2><p>A mintapéldák között láttunk Felix Baumgartner ugrásával kapcsolatban több példát is. Határozzuk meg $g$ és $\alpha$ értékét a $v(t)$ függvény elejéhez vett lineáris, illetve a $t=210\dots260$ intervallumban illesztett konstans függvényekből! Itt is készítsünk szépen formázott ábrát! A szükséges adatok a <code>../data/v_vs_t</code> file-ban találhatóak. A file első oszlopa az esés ideje s-ban, a második oszlop a sebesség km/h-ban.
-Egy egyenletesen $g$-vel gyorsuló test sebessége az idő függvényében az egyszerű $$ v(t)=gt $$ kifejezés szerint változik.
-Az $\alpha$ közegellenállási együttható pedig a $$ \alpha=\frac{mg}{v^2} $$ kifejezésből kapható meg, ahol a $v$ sebesség a $v(t)$ függvény $t=210\dots260$ időintervallumban vett konstans illesztéséből adódó érték.</p>
+<h2 id="F&#252;ggv&#233;ny-anal&#237;zis">F&#252;ggv&#233;ny anal&#237;zis<a class="anchor-link" href="#F&#252;ggv&#233;ny-anal&#237;zis">&#182;</a></h2><p>A <code>sympy</code> egyik legnagyobb előnye hogy a <code>python</code> nyelven belül lehetővé teszi egyszerűbb analízis beli feladatok elvégzését. Alább a teljesség igénye nélkül összefoglalunk néhány egyszerű függvényt.Vizsgáljuk meg a következő két határértéket: $$\lim_{x\rightarrow 0}\frac{\sin x}{x}=? $$ illetve $$\lim_{x\rightarrow \infty}\frac{1}{1+\mathrm{e}^{-x}}=? $$ A határértéket a <code>limit</code> függvény segítségével tudjuk meghatározni:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">limit</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="c1"># sin(x)/x határértéke az x=0 pontban.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$1$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ha a végtelenben vagyunk kíváncsiak a határértékre akkor azt az <code>oo</code>-szimbólummal tudjuk elérni!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">limit</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="p">)),</span><span class="n">x</span><span class="p">,</span><span class="n">oo</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$1$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Egy kifejezés deriváltjait a <code>diff</code> függvény segítségével tudjuk meghatározni. Például a $\sin$ függvény első $x$-szerinti deriváltja:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\cos{\left (x \right )}$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A második deriváltat vagy így</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$- \sin{\left (x \right )}$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>vagy így, (talán egy kicsit átláthatóban ) írjuk.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$- \sin{\left (x \right )}$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Természetesen parciális deriváltak elvégzésére is van mód:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$- \sin{\left (y \right )} \cos{\left (x \right )}$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A magasabb rendű parciális deriváltak legyártása az egyszerű deriváltak álltalánosításán alapszik:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">y</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$- \sin{\left (x \right )} \sin{\left (y \right )}$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Az <code>integrate</code> függvény segítségével határozott és határozattlan integrálokat tudunk elvégezni.</p>
+<p>Határozzuk meg először az $x^2$ primitív függvényét:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\frac{x^{3}}{3}$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Az
+$$\int_0^3 x^2\mathrm{d}x$$ határozottintegrált pedig az alábbi módon értékelhetjük ki.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$9$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Természetesen az integrálás során szerepelhetnek a kifejezésben más paraméterek is:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">3</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$3 y^{3} + 9$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Több változós integrált egyszerűen a változók (és ha határozott integrálról van szó akkor az integrálási határok  ) egymás után írásával értékelhetünk ki:</p>
 
 </div>
 </div>
@@ -11781,89 +12434,79 @@ Az $\alpha$ közegellenállási együttható pedig a $$ \alpha=\frac{mg}{v^2} $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-Ebola-illeszt&#233;s">02-Ebola illeszt&#233;s<a class="anchor-link" href="#02-Ebola-illeszt&#233;s">&#182;</a></h2><p>Az <code>../data/ebola.txt</code> file tartalmazza a legutóbbi ebolajárvány terjedési idősorát országokra lebontva.</p>
-<ul>
-<li>Ábrázoljuk az idő függvényében az összes bekövetkezett haláleset számát (Ezt az adatsort több oszlop összegeként tudjuk előállítani! ). </li>
-<li><p>Illesszünk az összes bekövetkezett haláleset számára egy exponenciális függvényalakot! $$f(t,A,\beta)=A\mathrm{e}^{\beta t}$$</p>
-</li>
-<li><p>Becsüljük meg, ha nem tett volna az ENSZ semmit, akkor mikor pusztult volna ki az emberiség!</p>
-</li>
-</ul>
+<p>A $$\int x^2+y^3 \mathrm{d}x\mathrm{d}y $$ határozatlan integrál:</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\frac{x^{3} y}{3} + \frac{x y^{4}}{4}$$
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-Cs&#250;cs-keres&#233;s">03-Cs&#250;cs keres&#233;s<a class="anchor-link" href="#03-Cs&#250;cs-keres&#233;s">&#182;</a></h2><p>A <code>../data/pupos</code> file tartalmaz egy zajos adatsort.</p>
-<ul>
-<li><p>Illesszünk erre az adatsorra két Gauss-görbe összegét! $$ f_{2G}(x)=A_1 \mathrm{e}^{-(x-e_1)^2/s_1^2}+A_2 \mathrm{e}^{-(x-e_2)^2/s_2^2} $$</p>
-</li>
-<li><p>Illesszünk erre az adatsorra két Lorentz-görbe összegét is! $$ f_{2L}(x)=\frac{B_1}{w_1^2+(x-p_1)^2}+\frac{B_2}{w_2^2+(x-p_2)^2} $$</p>
-</li>
-</ul>
-<p>Ábrázoljuk az eredeti adatsort, illetve mind a két esetben ábrázoljuk az illesztés eredményét is! Ha az illesztés során esetleg problémákba ütközünk, akkor próbálkozzunk az illesztési paraméterek kezdeti értékének becslésével!</p>
+<p>A
+$$\int_0^3\int_{-3}^{5} x^2+y^3 \mathrm{d}x\mathrm{d}y $$ határozott integrál:</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-Zenebona">04-Zenebona<a class="anchor-link" href="#04-Zenebona">&#182;</a></h2><p>Vizsgáljuk meg a <code>../data/zenebona</code> nevű file-ban található zajos adatsor Fourier-spektrumát. Határozzuk meg azokat a pozitív frekvenciákat, melyek dominánsan szerepelnek ! Az file két oszlopot tartalmaz: az első oszlop az idő, a második pedig a jel.</p>
-<ul>
-<li>Készíts ábrát a jel alakjáról!</li>
-<li>Készíts ábrát a jel Fourier-transzformáltjáról!</li>
-<li>Határozd meg a Fourier-transzformált domináns frekvenciáit, és jelöld azokat az ábrán! Például tegyünk esetlegesen előforduló csúcs(ok) tetejére valamilyen jelet!</li>
-</ul>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">y</span><span class="o">**</span><span class="mi">3</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">),(</span><span class="n">y</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$480$$
 </div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-&#193;rap&#225;ly">05-&#193;rap&#225;ly<a class="anchor-link" href="#05-&#193;rap&#225;ly">&#182;</a></h2><p>Vizsgáljuk meg az <code>../data/arapaly</code> fileban található adatokat, melyek egy idilli kis tengerparti angol falu, <a href="https://en.wikipedia.org/wiki/Heysham">Heysham</a>, atomerőművének tengerszintmérő berendezésének a méréseit tartalmazza. Az adatsor két oszlopból áll: az első oszlop az idő napban mérve, a második oszlop az aktuális tengerszint méterben.</p>
-<ul>
-<li>Fizikai meggondolások alapján milyen domináns frekvenciát vársz az adatsortól? </li>
-<li>Készíts ábrát az első 3 nap adatai alapján a tengerszint ingadozásáról!</li>
-<li>Készíts ábrát a jel Fourier-transzformáltjáról! Megjelenik a várt frekvencia? </li>
-</ul>
+
+</div>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="06-Centr&#225;lis-hat&#225;reloszl&#225;s-t&#233;tel--&#9760;">06-Centr&#225;lis hat&#225;reloszl&#225;s-t&#233;tel  &#9760;<a class="anchor-link" href="#06-Centr&#225;lis-hat&#225;reloszl&#225;s-t&#233;tel--&#9760;">&#182;</a></h2><p>Görbeillesztéssel vizsgáljuk meg, hogy mennyire teljesül a <a href="https://hu.wikipedia.org/wiki/Centr%C3%A1lis_hat%C3%A1reloszl%C3%A1s-t%C3%A9tel">Centrális határeloszlás-tétel</a>!</p>
-<ul>
-<li>Generálj 20, egyenként 1000 véletlen számot tartalmazó array-t, melyek a [0,1] intervallumon egyenletes eloszlásúak!</li>
-<li>Gyártsd le a 20 array összegének eloszlását!</li>
-<li>Illessz az eloszlás pontjaira Gauss-görbét!</li>
-</ul>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="07-Frekvenciasz&#369;r&#337;-&#9760;">07-Frekvenciasz&#369;r&#337; &#9760;<a class="anchor-link" href="#07-Frekvenciasz&#369;r&#337;-&#9760;">&#182;</a></h2><p>Az <code>ifft</code> fügvény segítségével kaphatjuk meg egy függvény inverz Fourier transzformáltját. Alkalmazva ezt a függvényt, szűrjük ki a <code>../data/zenebona</code> fileban található hangmintából a 20Hz-nél magasabb frekvenciájú komponenseket!</p>
-
-</div>
-</div>
 </div>
     </div>
   </div>

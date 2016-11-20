@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat07</title>
+<title>feladat08</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11757,7 +11757,7 @@ div#notebook {
 <li>A megoldások kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
 <li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldásnotebook első <code>markdown</code> cellájában! </li>
 <li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd, hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
-<li>Az elkészített ábrákon legyen minden esetben <strong>tengelyfelirat</strong>! Amennyiben a beadott ábrákon nincs <strong>tengelyfelirat</strong>, az adott feladat automatikusan <strong>nem teljesítettnek</strong> minősül!</li>
+<li><strong>Figyelem</strong> a megoldásokat az egyszerűség kedvéért most <strong>NE</strong> kezdjétek a megszokott <code>%pylab inline</code> paranccsal!</li>
 </ul>
 <hr>
 
@@ -11769,9 +11769,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-Baumgartner">01-Baumgartner<a class="anchor-link" href="#01-Baumgartner">&#182;</a></h2><p>A mintapéldák között láttunk Felix Baumgartner ugrásával kapcsolatban több példát is. Határozzuk meg $g$ és $\alpha$ értékét a $v(t)$ függvény elejéhez vett lineáris, illetve a $t=210\dots260$ intervallumban illesztett konstans függvényekből! Itt is készítsünk szépen formázott ábrát! A szükséges adatok a <code>../data/v_vs_t</code> file-ban találhatóak. A file első oszlopa az esés ideje s-ban, a második oszlop a sebesség km/h-ban.
-Egy egyenletesen $g$-vel gyorsuló test sebessége az idő függvényében az egyszerű $$ v(t)=gt $$ kifejezés szerint változik.
-Az $\alpha$ közegellenállási együttható pedig a $$ \alpha=\frac{mg}{v^2} $$ kifejezésből kapható meg, ahol a $v$ sebesség a $v(t)$ függvény $t=210\dots260$ időintervallumban vett konstans illesztéséből adódó érték.</p>
+<h2 id="01-Harmadfok&#250;-egyenlet">01-Harmadfok&#250; egyenlet<a class="anchor-link" href="#01-Harmadfok&#250;-egyenlet">&#182;</a></h2><p>Határozzuk meg az általános harmadfokú egyenlet $$ ax^3+bx^2+cx+d=0 $$ megoldásait zárt alakban!</p>
 
 </div>
 </div>
@@ -11781,13 +11779,56 @@ Az $\alpha$ közegellenállási együttható pedig a $$ \alpha=\frac{mg}{v^2} $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-Ebola-illeszt&#233;s">02-Ebola illeszt&#233;s<a class="anchor-link" href="#02-Ebola-illeszt&#233;s">&#182;</a></h2><p>Az <code>../data/ebola.txt</code> file tartalmazza a legutóbbi ebolajárvány terjedési idősorát országokra lebontva.</p>
+<h2 id="02-K&#233;t-ismeretlenes-egyenletrendszer">02-K&#233;t ismeretlenes egyenletrendszer<a class="anchor-link" href="#02-K&#233;t-ismeretlenes-egyenletrendszer">&#182;</a></h2><p>A következő feladatsorban szükségünk lesz a legáltalánosabb két ismeretlenes lineáris egyenletrenszer megoldására. Oldjuk meg hát sympy-al az alábbi egyenletrendszert!
+$$a_{11} x_1 +a_{12} x_2 = b_1$$
+$$a_{21} x_1 +a_{22} x_2 = b_2$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="03-Has&#225;b-a-lejt&#337;n">03-Has&#225;b a lejt&#337;n<a class="anchor-link" href="#03-Has&#225;b-a-lejt&#337;n">&#182;</a></h2><p><img src="https://www2.southeastern.edu/Academics/Faculty/rallain/plab193/page1/page21/files/page21_3.jpg" alt=""></p>
+<p>Vizsgáljuk egy lejtőre helyeztt hasáb mozgásegyenleteit a <code>sympy</code> csomag segítségével. Legyen a hasáb tömege $M$ jelöljük a test lejtő menti gyorsulását $a$-val a tartó erőt $F_t$-vel. Tételezzük fel hogy a test és a lejtő között csúszási surlódás lép fel melyet a $\mu$ együttható jellemez. Jelöljük a surlódási erőt $F_s$-el. A lejtő vízszintessel bezárt szöge legyen $\alpha$. Ha $0$ kezdősebességgel elengedjük a hasábot akkor $t$ idő múlva mekkora utat fog megtenni ? Határozzuk meg $a$-t,$F_s$-et illetve $F_t$-t is!
+A megoldandó egyenletrendszer tehát:</p>
+\begin{align}
+Mg\sin(\alpha)-F_s&=Ma \\
+Mg\cos(\alpha)-F_t&=0 \\
+F_s&=\mu F_t \\
+s&=\frac{a}{2}t^2 
+\end{align}<p>A megoldáshoz használjuk a sympy csomag <code>solve</code> függvényét!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="04-Rugalmas-&#252;tk&#246;z&#233;s-&#9760;">04-Rugalmas &#252;tk&#246;z&#233;s &#9760;<a class="anchor-link" href="#04-Rugalmas-&#252;tk&#246;z&#233;s-&#9760;">&#182;</a></h2><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Elastischer_sto%C3%9F3.gif" alt=""></p>
+<p>Oldjuk meg a képen vázolt rugalmas ütközési problémát a <code>sympy</code> csomag segítségével! Azaz két $2m$ és $m$ tömegű test kezdetben egymás felé száguld $v$ sebességgel! Lássuk be hogy miután rugalmas ütközést szenvedtek a sebességeik $v/3$ illetve $v5/3$ lesz. Emlékeztetés képp a rugalmas ütközés során a lendület és a kinetikus energia megmarad! 
+$$ I=\sum_i m_i v_i = const.$$
+$$E_{kin}=\sum_i\frac{1}{2} m_i v_i^2 =const.$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="05-Maxwell----Boltzmann">05-Maxwell -- Boltzmann<a class="anchor-link" href="#05-Maxwell----Boltzmann">&#182;</a></h2><p>Vizsgáljuk a termodinamikából ismert <a href="https://hu.wikipedia.org/wiki/Maxwell%E2%80%93Boltzmann-eloszl%C3%A1s#A_sebess.C3.A9g_eloszl.C3.A1s">Maxwell -- Boltztmann-sebességeloszlást</a> !</p>
+$$f(v)=\sqrt{\frac{2}{\pi}} \frac{v^2 e^{-v^2/(2a^2)}}{a^3}$$<p></p>
+<p>Határozzuk meg <code>sympy</code> függvények segítségével a következő mennyiségeket:</p>
 <ul>
-<li>Ábrázoljuk az idő függvényében az összes bekövetkezett haláleset számát (Ezt az adatsort több oszlop összegeként tudjuk előállítani! ). </li>
-<li><p>Illesszünk az összes bekövetkezett haláleset számára egy exponenciális függvényalakot! $$f(t,A,\beta)=A\mathrm{e}^{\beta t}$$</p>
-</li>
-<li><p>Becsüljük meg, ha nem tett volna az ENSZ semmit, akkor mikor pusztult volna ki az emberiség!</p>
-</li>
+<li>Az átlagos sebesség: $\displaystyle\int_0^\infty  vf(v) \mathrm{d}v$</li>
+<li>A tipikus sebesség: $\sqrt{\displaystyle\int_0^\infty  v^2f(v) \mathrm{d}v}$</li>
+<li>A legvalószínűbb $v^*$ sebesség (ahol az eloszlásnak maximuma van): $\partial_v f(v)|_{v=v^*}=0$ ☠</li>
 </ul>
 
 </div>
@@ -11798,28 +11839,10 @@ Az $\alpha$ közegellenállási együttható pedig a $$ \alpha=\frac{mg}{v^2} $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-Cs&#250;cs-keres&#233;s">03-Cs&#250;cs keres&#233;s<a class="anchor-link" href="#03-Cs&#250;cs-keres&#233;s">&#182;</a></h2><p>A <code>../data/pupos</code> file tartalmaz egy zajos adatsort.</p>
+<h2 id="06-Taylor-sorok-&#9760;">06-Taylor-sorok &#9760;<a class="anchor-link" href="#06-Taylor-sorok-&#9760;">&#182;</a></h2><p>Határozzuk meg az alábbi függvények Taylor-sorát a megadott rendig a megadott pont körül!</p>
 <ul>
-<li><p>Illesszünk erre az adatsorra két Gauss-görbe összegét! $$ f_{2G}(x)=A_1 \mathrm{e}^{-(x-e_1)^2/s_1^2}+A_2 \mathrm{e}^{-(x-e_2)^2/s_2^2} $$</p>
-</li>
-<li><p>Illesszünk erre az adatsorra két Lorentz-görbe összegét is! $$ f_{2L}(x)=\frac{B_1}{w_1^2+(x-p_1)^2}+\frac{B_2}{w_2^2+(x-p_2)^2} $$</p>
-</li>
-</ul>
-<p>Ábrázoljuk az eredeti adatsort, illetve mind a két esetben ábrázoljuk az illesztés eredményét is! Ha az illesztés során esetleg problémákba ütközünk, akkor próbálkozzunk az illesztési paraméterek kezdeti értékének becslésével!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-Zenebona">04-Zenebona<a class="anchor-link" href="#04-Zenebona">&#182;</a></h2><p>Vizsgáljuk meg a <code>../data/zenebona</code> nevű file-ban található zajos adatsor Fourier-spektrumát. Határozzuk meg azokat a pozitív frekvenciákat, melyek dominánsan szerepelnek ! Az file két oszlopot tartalmaz: az első oszlop az idő, a második pedig a jel.</p>
-<ul>
-<li>Készíts ábrát a jel alakjáról!</li>
-<li>Készíts ábrát a jel Fourier-transzformáltjáról!</li>
-<li>Határozd meg a Fourier-transzformált domináns frekvenciáit, és jelöld azokat az ábrán! Például tegyünk esetlegesen előforduló csúcs(ok) tetejére valamilyen jelet!</li>
+<li>$f(x)=\sin(x^2)+cos(x),\,x=\pi/3 $-körül harmad rendig</li>
+<li>$g(t)=\exp(-(x-3)^2)\sin(x),\,x=0$-körül negyed rendig</li>
 </ul>
 
 </div>
@@ -11830,37 +11853,7 @@ Az $\alpha$ közegellenállási együttható pedig a $$ \alpha=\frac{mg}{v^2} $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-&#193;rap&#225;ly">05-&#193;rap&#225;ly<a class="anchor-link" href="#05-&#193;rap&#225;ly">&#182;</a></h2><p>Vizsgáljuk meg az <code>../data/arapaly</code> fileban található adatokat, melyek egy idilli kis tengerparti angol falu, <a href="https://en.wikipedia.org/wiki/Heysham">Heysham</a>, atomerőművének tengerszintmérő berendezésének a méréseit tartalmazza. Az adatsor két oszlopból áll: az első oszlop az idő napban mérve, a második oszlop az aktuális tengerszint méterben.</p>
-<ul>
-<li>Fizikai meggondolások alapján milyen domináns frekvenciát vársz az adatsortól? </li>
-<li>Készíts ábrát az első 3 nap adatai alapján a tengerszint ingadozásáról!</li>
-<li>Készíts ábrát a jel Fourier-transzformáltjáról! Megjelenik a várt frekvencia? </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="06-Centr&#225;lis-hat&#225;reloszl&#225;s-t&#233;tel--&#9760;">06-Centr&#225;lis hat&#225;reloszl&#225;s-t&#233;tel  &#9760;<a class="anchor-link" href="#06-Centr&#225;lis-hat&#225;reloszl&#225;s-t&#233;tel--&#9760;">&#182;</a></h2><p>Görbeillesztéssel vizsgáljuk meg, hogy mennyire teljesül a <a href="https://hu.wikipedia.org/wiki/Centr%C3%A1lis_hat%C3%A1reloszl%C3%A1s-t%C3%A9tel">Centrális határeloszlás-tétel</a>!</p>
-<ul>
-<li>Generálj 20, egyenként 1000 véletlen számot tartalmazó array-t, melyek a [0,1] intervallumon egyenletes eloszlásúak!</li>
-<li>Gyártsd le a 20 array összegének eloszlását!</li>
-<li>Illessz az eloszlás pontjaira Gauss-görbét!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="07-Frekvenciasz&#369;r&#337;-&#9760;">07-Frekvenciasz&#369;r&#337; &#9760;<a class="anchor-link" href="#07-Frekvenciasz&#369;r&#337;-&#9760;">&#182;</a></h2><p>Az <code>ifft</code> fügvény segítségével kaphatjuk meg egy függvény inverz Fourier transzformáltját. Alkalmazva ezt a függvényt, szűrjük ki a <code>../data/zenebona</code> fileban található hangmintából a 20Hz-nél magasabb frekvenciájú komponenseket!</p>
+<h2 id="07-Differenci&#225;l-egyenletek-&#9760;">07-Differenci&#225;l egyenletek &#9760;<a class="anchor-link" href="#07-Differenci&#225;l-egyenletek-&#9760;">&#182;</a></h2><p>Határozzuk meg az $$f''(x) + 9 f(x) = 1$$ másodrendű differenciál egyenlet általános megoldását!</p>
 
 </div>
 </div>

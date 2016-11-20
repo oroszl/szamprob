@@ -68,6 +68,8 @@
 <h2 id="aktualis">Aktuális információk </h2>
 <?php include 'vars.php'; echo "<a href=$kurzus_adatok>Kurzus adatok</a><br>"; ?>
 <?php include 'vars.php'; echo "<a href=$kiseloadas>Kiselőadás vállalások</a><br>"; ?>
+<?php include 'mod.php';?>
+<hr><div class="se-section-delimiter"></div>
 
 <h2 id="notebooks">Notebookok</h2>
 <p>Az alábbi táblázat tartalmazza statikus(.html) és notebook (.ipynb) formátumban az órai és a házi feladat IPython notebook-okat. Továbbá néhány rövid összefoglaló puskát is a melyek alapvető feladatok megoldásában nyújthatnak némi segítséget. A feladatok közt szereplő ☠-el jelölt feladatok vagy alfeladatok nem kötelezőek viszont megoldásuk pozitívan befolyásolják a félév végén megszerzett érdemjegyet.</p>
@@ -77,25 +79,27 @@
 <tbody>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Mintapéldák </p> </td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/mintapelda00.html'>Mintapelda-00</a><br> 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package00/mintapelda00.html'>Mintapélda<br>00</a><br> 
                                                           <a href='notebooks/Package00/mintapelda00.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/mintapelda01.html'>Mintapelda-01</a><br> 
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package01/mintapelda01.html'>Mintapélda<br>01</a><br> 
                                                           <a href='notebooks/Package01/mintapelda01.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/mintapelda02.html'>Mintapelda-02</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/mintapelda02.html'>Mintapélda<br>02</a><br>  
                                                           <a href='notebooks/Package02/mintapelda02.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/mintapelda03.html'>Mintapelda-03</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/mintapelda03.html'>Mintapélda<br>03</a><br>  
                                                           <a href='notebooks/Package03/mintapelda03.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/mintapelda04.html'>Mintapelda-04</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/mintapelda04.html'>Mintapélda<br>04</a><br>  
                                                           <a href='notebooks/Package04/pakk.tgz' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/mintapelda05.html'>Mintapelda-05</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/mintapelda05.html'>Mintapélda<br>05</a><br>  
                                                           <a href='notebooks/Package05/mintapelda05.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package05/data/' >(adatok)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/mintapelda06.html'>Mintapelda-06</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/mintapelda06.html'>Mintapélda<br>06</a><br>  
                                                           <a href='notebooks/Package06/mintapelda06.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package06/data/' >(adatok)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/mintapelda07.html'>Mintapelda-05</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/mintapelda07.html'>Mintapélda<br>07</a><br>  
                                                           <a href='notebooks/Package07/mintapelda07.ipynb' download>(forrás)</a>
 							  <a href='notebooks/Package07/data/' >(adatok)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/mintapelda08.html'>Mintapélda<br>08</a><br>  
+                                                          <a href='notebooks/Package08/mintapelda08.ipynb' download>(forrás)</a></td>
 
     
 </tr>
@@ -115,8 +119,10 @@
                                                           <a href='notebooks/Package05/feladat05.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package06/feladat06.html'>Feladat-06</a><br>  
                                                           <a href='notebooks/Package06/feladat06.ipynb' download>(forrás)</a></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/feladat07.html'>Feladat-06</a><br>  
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/feladat07.html'>Feladat-07</a><br>  
                                                           <a href='notebooks/Package07/feladat07.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/feladat08.html'>Feladat-08</a><br>  
+                                                          <a href='notebooks/Package08/feladat08.ipynb' download>(forrás)</a></td>
 
 
 </tr>
@@ -124,12 +130,13 @@
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
 <td style="text-align:center; border: 1px solid #dddddd "></td> 
 <td style="text-align:center; border: 1px solid #dddddd "></td>
-<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheet02.html'>Vezérő utasítások<br>függvények</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package02/Cheat_sheet02.html'>Vezérlő utasítások<br>függvények</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package03/Cheat_sheet03.html'>Modulok <br>ábrák</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package04/Cheat_sheet04.html'>Matplotlib<br>interaktivitás</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package05/Cheat_sheet05.html'>File-I/O</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/Cheat_sheet07.html'>Fit,FFT</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/Cheat_sheet08.html'>Szimbolikus<br>számítások</a></td>
 
 </tr>
 </tbody>

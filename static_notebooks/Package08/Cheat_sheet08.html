@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat07</title>
+<title>Cheat_sheet08</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,116 +11751,25 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ul>
-<li>Minden feladatot külön notebookba oldj meg! </li>
-<li>A megoldásnotebook <strong>neve</strong> tartalmazza a feladat <strong>számát</strong>! </li>
-<li>A megoldások kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
-<li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldásnotebook első <code>markdown</code> cellájában! </li>
-<li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd, hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
-<li>Az elkészített ábrákon legyen minden esetben <strong>tengelyfelirat</strong>! Amennyiben a beadott ábrákon nincs <strong>tengelyfelirat</strong>, az adott feladat automatikusan <strong>nem teljesítettnek</strong> minősül!</li>
-</ul>
-<hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01-Baumgartner">01-Baumgartner<a class="anchor-link" href="#01-Baumgartner">&#182;</a></h2><p>A mintapéldák között láttunk Felix Baumgartner ugrásával kapcsolatban több példát is. Határozzuk meg $g$ és $\alpha$ értékét a $v(t)$ függvény elejéhez vett lineáris, illetve a $t=210\dots260$ intervallumban illesztett konstans függvényekből! Itt is készítsünk szépen formázott ábrát! A szükséges adatok a <code>../data/v_vs_t</code> file-ban találhatóak. A file első oszlopa az esés ideje s-ban, a második oszlop a sebesség km/h-ban.
-Egy egyenletesen $g$-vel gyorsuló test sebessége az idő függvényében az egyszerű $$ v(t)=gt $$ kifejezés szerint változik.
-Az $\alpha$ közegellenállási együttható pedig a $$ \alpha=\frac{mg}{v^2} $$ kifejezésből kapható meg, ahol a $v$ sebesség a $v(t)$ függvény $t=210\dots260$ időintervallumban vett konstans illesztéséből adódó érték.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-Ebola-illeszt&#233;s">02-Ebola illeszt&#233;s<a class="anchor-link" href="#02-Ebola-illeszt&#233;s">&#182;</a></h2><p>Az <code>../data/ebola.txt</code> file tartalmazza a legutóbbi ebolajárvány terjedési idősorát országokra lebontva.</p>
-<ul>
-<li>Ábrázoljuk az idő függvényében az összes bekövetkezett haláleset számát (Ezt az adatsort több oszlop összegeként tudjuk előállítani! ). </li>
-<li><p>Illesszünk az összes bekövetkezett haláleset számára egy exponenciális függvényalakot! $$f(t,A,\beta)=A\mathrm{e}^{\beta t}$$</p>
-</li>
-<li><p>Becsüljük meg, ha nem tett volna az ENSZ semmit, akkor mikor pusztult volna ki az emberiség!</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03-Cs&#250;cs-keres&#233;s">03-Cs&#250;cs keres&#233;s<a class="anchor-link" href="#03-Cs&#250;cs-keres&#233;s">&#182;</a></h2><p>A <code>../data/pupos</code> file tartalmaz egy zajos adatsort.</p>
-<ul>
-<li><p>Illesszünk erre az adatsorra két Gauss-görbe összegét! $$ f_{2G}(x)=A_1 \mathrm{e}^{-(x-e_1)^2/s_1^2}+A_2 \mathrm{e}^{-(x-e_2)^2/s_2^2} $$</p>
-</li>
-<li><p>Illesszünk erre az adatsorra két Lorentz-görbe összegét is! $$ f_{2L}(x)=\frac{B_1}{w_1^2+(x-p_1)^2}+\frac{B_2}{w_2^2+(x-p_2)^2} $$</p>
-</li>
-</ul>
-<p>Ábrázoljuk az eredeti adatsort, illetve mind a két esetben ábrázoljuk az illesztés eredményét is! Ha az illesztés során esetleg problémákba ütközünk, akkor próbálkozzunk az illesztési paraméterek kezdeti értékének becslésével!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04-Zenebona">04-Zenebona<a class="anchor-link" href="#04-Zenebona">&#182;</a></h2><p>Vizsgáljuk meg a <code>../data/zenebona</code> nevű file-ban található zajos adatsor Fourier-spektrumát. Határozzuk meg azokat a pozitív frekvenciákat, melyek dominánsan szerepelnek ! Az file két oszlopot tartalmaz: az első oszlop az idő, a második pedig a jel.</p>
-<ul>
-<li>Készíts ábrát a jel alakjáról!</li>
-<li>Készíts ábrát a jel Fourier-transzformáltjáról!</li>
-<li>Határozd meg a Fourier-transzformált domináns frekvenciáit, és jelöld azokat az ábrán! Például tegyünk esetlegesen előforduló csúcs(ok) tetejére valamilyen jelet!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-&#193;rap&#225;ly">05-&#193;rap&#225;ly<a class="anchor-link" href="#05-&#193;rap&#225;ly">&#182;</a></h2><p>Vizsgáljuk meg az <code>../data/arapaly</code> fileban található adatokat, melyek egy idilli kis tengerparti angol falu, <a href="https://en.wikipedia.org/wiki/Heysham">Heysham</a>, atomerőművének tengerszintmérő berendezésének a méréseit tartalmazza. Az adatsor két oszlopból áll: az első oszlop az idő napban mérve, a második oszlop az aktuális tengerszint méterben.</p>
-<ul>
-<li>Fizikai meggondolások alapján milyen domináns frekvenciát vársz az adatsortól? </li>
-<li>Készíts ábrát az első 3 nap adatai alapján a tengerszint ingadozásáról!</li>
-<li>Készíts ábrát a jel Fourier-transzformáltjáról! Megjelenik a várt frekvencia? </li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="06-Centr&#225;lis-hat&#225;reloszl&#225;s-t&#233;tel--&#9760;">06-Centr&#225;lis hat&#225;reloszl&#225;s-t&#233;tel  &#9760;<a class="anchor-link" href="#06-Centr&#225;lis-hat&#225;reloszl&#225;s-t&#233;tel--&#9760;">&#182;</a></h2><p>Görbeillesztéssel vizsgáljuk meg, hogy mennyire teljesül a <a href="https://hu.wikipedia.org/wiki/Centr%C3%A1lis_hat%C3%A1reloszl%C3%A1s-t%C3%A9tel">Centrális határeloszlás-tétel</a>!</p>
-<ul>
-<li>Generálj 20, egyenként 1000 véletlen számot tartalmazó array-t, melyek a [0,1] intervallumon egyenletes eloszlásúak!</li>
-<li>Gyártsd le a 20 array összegének eloszlását!</li>
-<li>Illessz az eloszlás pontjaira Gauss-görbét!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="07-Frekvenciasz&#369;r&#337;-&#9760;">07-Frekvenciasz&#369;r&#337; &#9760;<a class="anchor-link" href="#07-Frekvenciasz&#369;r&#337;-&#9760;">&#182;</a></h2><p>Az <code>ifft</code> fügvény segítségével kaphatjuk meg egy függvény inverz Fourier transzformáltját. Alkalmazva ezt a függvényt, szűrjük ki a <code>../data/zenebona</code> fileban található hangmintából a 20Hz-nél magasabb frekvenciájú komponenseket!</p>
+<h1 id="Szimbolikus-sz&#225;mol&#225;s">Szimbolikus sz&#225;mol&#225;s<a class="anchor-link" href="#Szimbolikus-sz&#225;mol&#225;s">&#182;</a></h1><h3 style='color: darkcyan '> A sympy modul használata </h3><p>A modul betöltése és szépen formázot kimenet beállítása</p>
+<blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># a sympy csomag rutinjainak betöltése</span>
+<span class="n">init_printing</span><span class="p">()</span>     <span class="c1"># szépen formázott kiírás (ez nem kötelező)</span>
+</pre></div>
+</blockquote>
+<p>A Szimbolikus számítás során használt változók deklarálása</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>  <span class="c1"># x változó mint szimbolikusan maniplálhatóvá tevése</span>
+</pre></div>
+</blockquote>
+<p>Egyenlet megoldás</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">solve</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">c</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>     <span class="c1"># A megoldandó egyenletet nullára rendezzük!</span>
+</pre></div>
+</blockquote>
+<p>Függvény analízis</p>
+<blockquote><div class="highlight"><pre><span></span><span class="n">diff</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">)</span>            <span class="c1"># deriválás</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>   <span class="c1"># határozott integrál</span>
+</pre></div>
+</blockquote>
 
 </div>
 </div>
