@@ -11757,7 +11757,7 @@ div#notebook {
 <li>A megoldások kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
 <li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldásnotebook első <code>markdown</code> cellájában! </li>
 <li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd, hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
-<li><strong>Figyelem</strong> a megoldásokat az egyszerűség kedvéért most <strong>NE</strong> kezdjétek a megszokott <code>%pylab inline</code> paranccsal!</li>
+<li><strong>Figyelem</strong>: a megoldásokat az egyszerűség kedvéért most <strong>NE</strong> kezdjétek a megszokott <code>%pylab inline</code> paranccsal!</li>
 </ul>
 <hr>
 
@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02-K&#233;t-ismeretlenes-egyenletrendszer">02-K&#233;t ismeretlenes egyenletrendszer<a class="anchor-link" href="#02-K&#233;t-ismeretlenes-egyenletrendszer">&#182;</a></h2><p>A következő feladatsorban szükségünk lesz a legáltalánosabb két ismeretlenes lineáris egyenletrenszer megoldására. Oldjuk meg hát sympy-al az alábbi egyenletrendszert!
+<h2 id="02-K&#233;tismeretlenes-egyenletrendszer">02-K&#233;tismeretlenes egyenletrendszer<a class="anchor-link" href="#02-K&#233;tismeretlenes-egyenletrendszer">&#182;</a></h2><p>A következő feladatsorban szükségünk lesz a legáltalánosabb kétismeretlenes lineáris egyenletrenszer megoldására. Oldjuk meg hát sympy-al az alábbi egyenletrendszert!
 $$a_{11} x_1 +a_{12} x_2 = b_1$$
 $$a_{21} x_1 +a_{22} x_2 = b_2$$</p>
 
@@ -11792,7 +11792,7 @@ $$a_{21} x_1 +a_{22} x_2 = b_2$$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="03-Has&#225;b-a-lejt&#337;n">03-Has&#225;b a lejt&#337;n<a class="anchor-link" href="#03-Has&#225;b-a-lejt&#337;n">&#182;</a></h2><p><img src="https://www2.southeastern.edu/Academics/Faculty/rallain/plab193/page1/page21/files/page21_3.jpg" alt=""></p>
-<p>Vizsgáljuk egy lejtőre helyeztt hasáb mozgásegyenleteit a <code>sympy</code> csomag segítségével. Legyen a hasáb tömege $M$ jelöljük a test lejtő menti gyorsulását $a$-val a tartó erőt $F_t$-vel. Tételezzük fel hogy a test és a lejtő között csúszási surlódás lép fel melyet a $\mu$ együttható jellemez. Jelöljük a surlódási erőt $F_s$-el. A lejtő vízszintessel bezárt szöge legyen $\alpha$. Ha $0$ kezdősebességgel elengedjük a hasábot akkor $t$ idő múlva mekkora utat fog megtenni ? Határozzuk meg $a$-t,$F_s$-et illetve $F_t$-t is!
+<p>Vizsgáljuk egy lejtőre helyeztt hasáb mozgásegyenleteit a <code>sympy</code> csomag segítségével. Legyen a hasáb tömege $M$, jelöljük a test lejtő menti gyorsulását $a$-val, a tartóerőt $F_t$-vel. Tételezzük fel, hogy a test és a lejtő között csúszási súrlódás lép fel, melyet a $\mu$ együttható jellemez. Jelöljük a súrlódási erőt $F_s$-el. A lejtő vízszintessel bezárt szöge legyen $\alpha$. Ha $0$ kezdősebességgel elengedjük a hasábot, akkor $t$ idő múlva mekkora utat fog megtenni? Határozzuk meg $a$-t,$F_s$-et, illetve $F_t$-t is!
 A megoldandó egyenletrendszer tehát:</p>
 \begin{align}
 Mg\sin(\alpha)-F_s&=Ma \\
@@ -11810,7 +11810,7 @@ s&=\frac{a}{2}t^2
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="04-Rugalmas-&#252;tk&#246;z&#233;s-&#9760;">04-Rugalmas &#252;tk&#246;z&#233;s &#9760;<a class="anchor-link" href="#04-Rugalmas-&#252;tk&#246;z&#233;s-&#9760;">&#182;</a></h2><p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Elastischer_sto%C3%9F3.gif" alt=""></p>
-<p>Oldjuk meg a képen vázolt rugalmas ütközési problémát a <code>sympy</code> csomag segítségével! Azaz két $2m$ és $m$ tömegű test kezdetben egymás felé száguld $v$ sebességgel! Lássuk be hogy miután rugalmas ütközést szenvedtek a sebességeik $v/3$ illetve $v5/3$ lesz. Emlékeztetés képp a rugalmas ütközés során a lendület és a kinetikus energia megmarad! 
+<p>Oldjuk meg a képen vázolt rugalmas ütközési problémát a <code>sympy</code> csomag segítségével! Azaz két $2m$ és $m$ tömegű test kezdetben egymás felé száguld $v$ sebességgel. Lássuk be, hogy miután rugalmas ütközést szenvedtek, a sebességeik $v/3$ illetve $v5/3$ lesznek. Emlékeztetésképp a rugalmas ütközés során a lendület és a kinetikus energia megmarad! 
 $$ I=\sum_i m_i v_i = const.$$
 $$E_{kin}=\sum_i\frac{1}{2} m_i v_i^2 =const.$$</p>
 
@@ -11841,8 +11841,8 @@ $$f(v)=\sqrt{\frac{2}{\pi}} \frac{v^2 e^{-v^2/(2a^2)}}{a^3}$$<p></p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="06-Taylor-sorok-&#9760;">06-Taylor-sorok &#9760;<a class="anchor-link" href="#06-Taylor-sorok-&#9760;">&#182;</a></h2><p>Határozzuk meg az alábbi függvények Taylor-sorát a megadott rendig a megadott pont körül!</p>
 <ul>
-<li>$f(x)=\sin(x^2)+cos(x),\,x=\pi/3 $-körül harmad rendig</li>
-<li>$g(t)=\exp(-(x-3)^2)\sin(x),\,x=0$-körül negyed rendig</li>
+<li>$f(x)=\sin(x^2)+cos(x),\,x=\pi/3 $ körül harmadrendig</li>
+<li>$g(t)=\exp(-(x-3)^2)\sin(x),\,x=0$ körül negyedrendig</li>
 </ul>
 
 </div>
@@ -11853,7 +11853,7 @@ $$f(v)=\sqrt{\frac{2}{\pi}} \frac{v^2 e^{-v^2/(2a^2)}}{a^3}$$<p></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="07-Differenci&#225;l-egyenletek-&#9760;">07-Differenci&#225;l egyenletek &#9760;<a class="anchor-link" href="#07-Differenci&#225;l-egyenletek-&#9760;">&#182;</a></h2><p>Határozzuk meg az $$f''(x) + 9 f(x) = 1$$ másodrendű differenciál egyenlet általános megoldását!</p>
+<h2 id="07-Differenci&#225;legyenletek-&#9760;">07-Differenci&#225;legyenletek &#9760;<a class="anchor-link" href="#07-Differenci&#225;legyenletek-&#9760;">&#182;</a></h2><p>Határozzuk meg az $$f''(x) + 9 f(x) = 1$$ másodrendű differenciál egyenlet általános megoldását!</p>
 
 </div>
 </div>
