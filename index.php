@@ -100,6 +100,10 @@
 							  <a href='notebooks/Package07/data/' >(adatok)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/mintapelda08.html'>08</a><br>  
                                                           <a href='notebooks/Package08/mintapelda08.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package09/mintapelda09.html'>09</a><br>  
+                                                          <a href='notebooks/Package09/mintapelda09.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package10/mintapelda10.html'>10</a><br>  
+                                                          <a href='notebooks/Package10/mintapelda10.ipynb' download>(forrás)</a></td>
 
     
 </tr>
@@ -123,8 +127,10 @@
                                                           <a href='notebooks/Package07/feladat07.ipynb' download>(forrás)</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/feladat08.html'>08</a><br>  
                                                           <a href='notebooks/Package08/feladat08.ipynb' download>(forrás)</a></td>
-
-
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package09/feladat09.html'>09</a><br>  
+                                                          <a href='notebooks/Package09/feladat09.ipynb' download>(forrás)</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package10/feladat10.html'>10</a><br>  
+                                                          <a href='notebooks/Package10/feladat10.ipynb' download>(forrás)</a></td>
 </tr>
 <tr>
 <td style="text-align:center; border: 1px solid #dddddd "><p style="font-weight: bold;"> Puskák </p> </td>
@@ -137,6 +143,8 @@
 <td style="text-align:center; border: 1px solid #dddddd "></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package07/Cheat_sheet07.html'>Fit,FFT</a></td>
 <td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package08/Cheat_sheet08.html'>sympy</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package09/Cheat_sheet09.html'>linalg</a></td>
+<td style="text-align:center; border: 1px solid #dddddd "><a href='static_notebooks/Package10/Cheat_sheet10.html'>quad,odeint</a></td>
 
 </tr>
 </tbody>
