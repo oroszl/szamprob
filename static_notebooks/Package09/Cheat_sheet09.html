@@ -11758,13 +11758,13 @@ B=matrix(...) #
 trace(A) # diagonális elemek összege
 inv(A)   # inverz
 det(A)   # determináns
-C=A*B # a * mátrix szorzás!
+C=A*B # a * mátrixszorzás!
 ```
 
 
-<h3 style='color: darkcyan'>Lineáris egyenletrendszer megoldása</h3><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># az egyenlet rendszer megoldasa</span>
+<h3 style='color: darkcyan'>Lineáris egyenletrendszer megoldása</h3><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># az egyenletrendszer megoldasa</span>
 </pre></div>
-<h3 style='color: darkcyan'>Sajatertek problema</h3><div class="highlight"><pre><span></span><span class="n">ertek</span><span class="p">,</span><span class="n">vektor</span><span class="o">=</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># Az A matrix sajatertekei es sajatvektorai</span>
+<h3 style='color: darkcyan'>Sajatérték-probléma</h3><div class="highlight"><pre><span></span><span class="n">ertek</span><span class="p">,</span><span class="n">vektor</span><span class="o">=</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># Az A matrix sajatertekei es sajatvektorai</span>
 
 <span class="n">v1</span><span class="o">=</span><span class="n">vektor</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ez az elso sajat vektor</span>
 <span class="n">w1</span><span class="o">=</span><span class="n">ertek</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ez az elso sajatertek</span>
@@ -11772,19 +11772,6 @@ C=A*B # a * mátrix szorzás!
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div>
   </div>

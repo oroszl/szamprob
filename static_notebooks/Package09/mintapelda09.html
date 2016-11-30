@@ -11751,8 +11751,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Line&#225;ris-algebra">Line&#225;ris algebra<a class="anchor-link" href="#Line&#225;ris-algebra">&#182;</a></h1><p>A lineáris algebra a sokváltozós lineáris egyenletrendszerek megoldásával illetve megoldhatóságának vizsgálatával foglalkozik. 
-A lineáris algebra gyakorlati jelentősége abban mutatkozik meg hogy számos bonyolult matematikai probléma numerikus megoldása sok esetben egy sok (esetenként igen sok, akár több millió) ismeretlenes lineáris egyenletrendszerre vezet. Az alábbiakban a <code>numpy</code> csomag lineáris algebrai rutinjaival fogunk megismerkedni. Először a <code>matrix</code> típust vizsgáljuk meg, mely segítségével egszerű vektor-mátrix műveletek tömören fogalmazhatóak meg. Ezután a <code>solve</code> lineáris egyenletrendszer megoldó függvény használatát sajátítjuk el végül az <code>eig</code> sajátért illetve sajátvektor kereső rutinnal ismerkedünk meg.</p>
+<h1 id="Line&#225;ris-algebra">Line&#225;ris algebra<a class="anchor-link" href="#Line&#225;ris-algebra">&#182;</a></h1><p>A lineáris algebra a sokváltozós lineáris egyenletrendszerek megoldásával, illetve megoldhatóságának vizsgálatával foglalkozik. 
+A lineáris algebra gyakorlati jelentősége abban mutatkozik meg, hogy számos bonyolult matematikai probléma numerikus megoldása sok esetben egy sok (esetenként igen sok, akár több millió) ismeretlenes lineáris egyenletrendszerre vezet. Az alábbiakban a <code>numpy</code> csomag lineáris algebrai rutinjaival fogunk megismerkedni. Először a <code>matrix</code> típust vizsgáljuk meg, mely segítségével egszerű vektor-mátrix műveletek tömören fogalmazhatóak meg. Ezután a <code>solve</code> lineáris egyenletrendszereket megoldó függvény használatát sajátítjuk el, végül az <code>eig</code> sajátérték-, illetve sajátvektor-kereső rutinnal ismerkedünk meg.</p>
 
 </div>
 </div>
@@ -11799,7 +11799,7 @@ A lineáris algebra gyakorlati jelentősége abban mutatkozik meg hogy számos b
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A korábbiakban rendszeresen használtuk a <code>numpy</code> csomag <code>array</code> válltozóit. Ezek sok szempontból hasznosnak bizonyultak, de alapvetően táblázat ként működtek és nem a lineáris algebrában megszokott mátrixként. Ennek a legszembetűnőbb megnyílvánulása az hogy a rájuk értelmezett műveletek szigorúan elemenként értendőek voltak. Azaz a <code>*</code> elemenkénti szorzást és nem mátrix szorzást jelent. Például az alább definiált <code>A</code> és <code>B</code> tömbök</p>
+<p>A korábbiakban rendszeresen használtuk a <code>numpy</code> csomag <code>array</code> válltozóit. Ezek sok szempontból hasznosnak bizonyultak, de alapvetően táblázatként működtek, és nem a lineáris algebrában megszokott mátrixként. Ennek a legszembetűnőbb megnyilvánulása az, hogy a rájuk értelmezett műveletek szigorúan elemenként értendőek voltak. Azaz a <code>*</code> elemenkénti szorzást és nem mátrixszorzást jelent. Például az alább definiált <code>A</code> és <code>B</code> tömbök</p>
 
 </div>
 </div>
@@ -11827,7 +11827,7 @@ A lineáris algebra gyakorlati jelentősége abban mutatkozik meg hogy számos b
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>egymással össze szorozva egy olyan <code>array</code> -t adnak végeredményül amelynek elemei az <code>A</code> és a <code>B</code> elemek szorzata: 
+<p>egymással összeszorozva egy olyan <code>array</code> -t adnak végeredményül, amelynek elemei az <code>A</code> és a <code>B</code> elemeinek szorzata: 
 $$ (A*B)_{ij}=A_{ij}*B_{ij} $$</p>
 
 </div>
@@ -11908,7 +11908,7 @@ $$ (A*B)_{ij}=A_{ij}*B_{ij} $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A <code>numpy</code> rendelkezik egy <code>matrix</code> típussal is ami sok szempontból hasonlóan viselkedik mint az <code>array</code> de bizonyos műveletek, például a * is a lineáris algebrában megszokott módon van definiálva. Azaz itt a *-jel az alábbiakat jelenti:
+<p>A <code>numpy</code> rendelkezik egy <code>matrix</code> típussal is, ami sok szempontból hasonlóan viselkedik, mint az <code>array</code>, de bizonyos műveletek, például a * is a lineáris algebrában megszokott módon van definiálva. Azaz itt a *-jel az alábbiakat jelenti:
 $$ (A*B)_{ij}=\sum_l A_{il}B_{lj} $$</p>
 
 </div>
@@ -11944,7 +11944,7 @@ $$ (A*B)_{ij}=\sum_l A_{il}B_{lj} $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Figyeljük meg hogy az <code>Am</code> és <code>Bm</code> változókra miként hat a * művelet:</p>
+<p>Figyeljük meg, hogy az <code>Am</code> és <code>Bm</code> változókra miként hat a * művelet:</p>
 
 </div>
 </div>
@@ -12014,7 +12014,7 @@ $$ (A*B)_{ij}=\sum_l A_{il}B_{lj} $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A szorzás eredménye tehát, ahogy vártuk, függ a műveleti sorrendtől!</p>
+<p>A szorzás eredménye tehát ahogy vártuk, függ a műveleti sorrendtől!</p>
 
 </div>
 </div>
@@ -12024,7 +12024,7 @@ $$ (A*B)_{ij}=\sum_l A_{il}B_{lj} $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Nézzünk meg egy pár hasznos lineáris algebrai mátrixműveletet:</p>
+<p>Nézzünk meg egypár hasznos lineáris algebrai mátrixműveletet:</p>
 
 </div>
 </div>
@@ -12330,10 +12330,10 @@ $$ (A*B)_{ij}=\sum_l A_{il}B_{lj} $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Line&#225;ris-egyenletrendszerek">Line&#225;ris egyenletrendszerek<a class="anchor-link" href="#Line&#225;ris-egyenletrendszerek">&#182;</a></h2><p>Az egyik gyakran előforduló lineáris algebrai feladat az egyenletrendszerek megoldása. Például, keressük azt az $x$ vektort amley teljesíti a</p>
-$$ \mathbf{A}x=b$$<p>egyenletet ahol $\mathbf{A}$ egy ismert mátrix és $b$ egy ismert vektor. A <code>numpy</code> csomag ilyen formában megadott egyenlet rendszer megoldására a <code>solve</code> függvényt kínálja.</p>
-<p><strong>Fgyelem</strong>: ez a függvény nem keverendő össze a <code>sympy</code> csomag azonos nevű függvényével amely tetszőleges algebrai egyenletrendszerre kínál analitikus megoldást. A <code>numpy</code> modul <code>solve</code> függvénye szigorúan csak numerikus lineáris algebrai feladatok megoldására alkalmas!</p>
-<p>Vizsgáljuk meg egy példát ! Keressük meg azt a síkbeli vektort amit ha $\varphi=30^\circ$-al az óra járásávalmeg egyező irányban elforgatunk akkor az $y$ irányú egységvektort kapjuk! 
+<h2 id="Line&#225;ris-egyenletrendszerek">Line&#225;ris egyenletrendszerek<a class="anchor-link" href="#Line&#225;ris-egyenletrendszerek">&#182;</a></h2><p>Az egyik gyakran előforduló lineáris algebrai feladat az egyenletrendszerek megoldása. Például keressük azt az $x$ vektort amely teljesíti a</p>
+$$ \mathbf{A}x=b$$<p>egyenletet, ahol $\mathbf{A}$ egy ismert mátrix és $b$ egy ismert vektor. A <code>numpy</code> csomag az ilyen formában megadott egyenletrendszer megoldására a <code>solve</code> függvényt kínálja.</p>
+<p><strong>Fgyelem</strong>: ez a függvény nem keverendő össze a <code>sympy</code> csomag azonos nevű függvényével, amely tetszőleges algebrai egyenletrendszerre kínál analitikus megoldást. A <code>numpy</code> modul <code>solve</code> függvénye szigorúan csak numerikus lineáris algebrai feladatok megoldására alkalmas!</p>
+<p>Vizsgáljuk meg egy példát ! Keressük meg azt a síkbeli vektort, amit ha $\varphi=30^\circ$-al az óra járásával megegyező irányban elforgatunk, akkor az $y$ irányú egységvektort kapjuk! 
 Azaz</p>
 $$A=\begin{pmatrix}
 \cos(\varphi) & -\sin(\varphi)\\ 
@@ -12349,7 +12349,7 @@ $$b=\begin{pmatrix}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># az ismert mennyiségek definiálása:</span>
@@ -12415,9 +12415,9 @@ $$b=\begin{pmatrix}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Saj&#225;t&#233;rt&#233;k-probl&#233;ma">Saj&#225;t&#233;rt&#233;k probl&#233;ma<a class="anchor-link" href="#Saj&#225;t&#233;rt&#233;k-probl&#233;ma">&#182;</a></h2><p>A másik sokszor felmerülő lineáris algebrai problémakör egy mátrix sajátértékeinek és sajátvektorainak meghatározása. Legyen $A$ egy ismert mátrix és keressük tehát azon $x$ vektorokat és azon $\lambda$ számokat melyek teljesítik az alábbi feltételt.</p>
+<h2 id="Saj&#225;t&#233;rt&#233;k-probl&#233;ma">Saj&#225;t&#233;rt&#233;k-probl&#233;ma<a class="anchor-link" href="#Saj&#225;t&#233;rt&#233;k-probl&#233;ma">&#182;</a></h2><p>A másik sokszor felmerülő lineáris algebrai problémakör egy mátrix sajátértékeinek és sajátvektorainak meghatározása. Legyen $A$ egy ismert mátrix, és keressük tehát azon $x$ vektorokat, illetve azon $\lambda$ számokat, melyek teljesítik az alábbi feltételt.</p>
 $$ \mathbf{M}x=\lambda x.$$<p>Ilyen jellegű problémákat az <code>eig</code> rutin segítségével tudunk megoldani. Lássunk erre is egy példát!
-Legyen $M$ egy 10x10-es mátrix melynek mindkét első mellékátlója -1 a többi elem pedig nulla!</p>
+Legyen $M$ egy 10x10-es mátrix, melynek mindkét első mellékátlója -1, a többi elem pedig nulla!</p>
 
 </div>
 </div>
@@ -12481,7 +12481,7 @@ Legyen $M$ egy 10x10-es mátrix melynek mindkét első mellékátlója -1 a töb
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A sajátérték probléma megoldása:</p>
+<p>A sajátérték-probléma megoldása:</p>
 
 </div>
 </div>
@@ -12592,7 +12592,9 @@ Legyen $M$ egy 10x10-es mátrix melynek mindkét első mellékátlója -1 a töb
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Az $i$-edik sajátvektor a <code>vektor</code> változó <code>i</code>-edik oszlopa tartalmazza, azaz <code>vektor[:,i]</code>-ként hivatkozhatunk erre a vektorra. tehát az $i$-edik sajátértékkel <code>ertek[i]</code> ez a vektor megoldása az $Mx=\lambda x$ sajátérték problémának. Ellenőrizzük ezt le:</p>
+<p>Az $i$-edik sajátvektort a <code>vektor</code> változó <code>i</code>-edik oszlopa, <code>vektor[:,i]</code> tartalmazza.</p>
+<p>Ez a sajátvektor az $i$-edik, <code>ertek[i]</code> sajátértékhez tartozó megoldása az $Mx=\lambda x$ sajátérték-problémának.</p>
+<p>Ellenőrizzük ezt le:</p>
 
 </div>
 </div>

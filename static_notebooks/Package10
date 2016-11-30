@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat09</title>
+<title>feladat10</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,14 +11751,29 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ul>
-<li>Minden feladatot külön notebookba oldj meg! </li>
-<li>A megoldásnotebook <strong>neve</strong> tartalmazza a feladat <strong>számát</strong>! </li>
-<li>A megoldások kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
-<li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldásnotebook első <code>markdown</code> cellájában! </li>
-<li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd, hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
-</ul>
-<hr>
+<h1 id="Ferde-haj&#237;t&#225;s">Ferde haj&#237;t&#225;s<a class="anchor-link" href="#Ferde-haj&#237;t&#225;s">&#182;</a></h1><p>Vizsgáljuk meg, hogy a $v_0=30~\mathrm{m}/\mathrm{s}$-os kezdősebességű, $\alpha=50^\circ$-os szögű <a href="https://hu.wikipedia.org/wiki/Ferde_haj%C3%ADt%C3%A1s#A_mozg.C3.A1s_p.C3.A1ly.C3.A1ja_ferde_haj.C3.ADt.C3.A1sn.C3.A1l">ferde hajítás</a> differenciálegyenlet-rendszerének megoldása ugyanazt a pályát adja-e, mint az analitikus megoldás! Ábrázoljuk a numerikus és az egzakt megoldást ugyanazon koordinátarendszerben!</p>
+<p>Segítségül:</p>
+\begin{align}
+\ddot{x}&=0&\dot{x}_0&=v_0\cdot \cos\alpha &x_0&=0\\
+\ddot{y}&=-g& \dot{y}_0&=v_0\cdot \sin\alpha & y_0&=0
+\end{align}
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Kepler-probl&#233;ma">Kepler-probl&#233;ma<a class="anchor-link" href="#Kepler-probl&#233;ma">&#182;</a></h1><p>A bolygómozgás Hamilton-függvénye a következőképpen néz ki:</p>
+$$\mathscr{H}(p_x,p_y,x,y)=K+V=\frac{1}{2m}(p_x^2+p_y^2)-\gamma M \frac{m}{\sqrt{x^2+y^2}}$$<p>Legyen most az alternatív naprendszerünkben $M=\gamma=m=1$!</p>
+<p>Rajzoljuk fel a bolygó pályáját a kanonikus egyeneletek numerikus megoldásának segítségével:</p>
+\begin{align}
+\dot{p_x}&=-\frac{\partial \mathscr{H}}{\partial{x}} & p_{x,0}&=0\\\\
+\dot{p_y}&=\frac{\partial \mathscr{H}}{\partial{y}} & p_{y,0}&=\frac{1}{\sqrt{10}}\\
+\dot{x}&=p_x & x_0&=4\\
+\dot{y}&=p_y & y_0&=0\\
+\end{align}<p>Milyen alakú pályát kaptunk?</p>
 
 </div>
 </div>
@@ -11768,35 +11783,31 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="01---M&#225;trixszorz&#225;s">01 - M&#225;trixszorz&#225;s<a class="anchor-link" href="#01---M&#225;trixszorz&#225;s">&#182;</a></h2><p>Az alábbi mátrixok közül</p>
-\begin{equation}
-M_1=\left(\begin{array}{ccc}
-3 &6 &3\\
-9 &3 &9\\
-2 &0 &2
-\end{array}\right)\,, 
-M_2=\left(\begin{array}{ccc}
-7 &9 &6\\
-9 &3 &0\\
-1 &2 &3
-\end{array}\right)\,, 
-M_3=\left(\begin{array}{ccc}
-3 &2 &6\\
-6 &5 &9\\
-8 &5 &8
-\end{array}\right)\,,
-M_4=\left(\begin{array}{ccc}
-0 &2 &9\\
-6 &5 &4\\
-9 &9 &2\end{array}\right)
-\end{equation}<p>ha kettőt megfelelő sorrendben összeszorzunk, akkor eredményül az</p>
-\begin{equation}
-X=\left(\begin{array}{ccc}
-36&   6&  36\\
-71&  51&  71\\
-112&  81& 112
-\end{array}\right)
-\end{equation}<p>mátrixot kapjuk. Határozzuk meg, hogy melyik mátrixok azok, amelyek a szorzás tényezőit adják, illetve hogy milyen sorrendben kell a szorzást elvégezni!</p>
+<h1 id="T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">T&#246;lt&#246;tt r&#233;szecske elektrom&#225;gneses t&#233;rben<a class="anchor-link" href="#T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">&#182;</a></h1><p>Adott egy egymásra merőleges homogén elektromos és mágneses tér, a térerősségek</p>
+\begin{align}
+E&=0.01~\frac{\mathrm{N}}{\mathrm{C}}\\
+B&=1~T
+\end{align}<p>Egy elektront lövünk ebbe a térbe az elektromos erővonalakkal párhuzamosan, a mágneses térre merőlegesen. Rajzoljuk ki a differenciálegyenlet-megoldás segítségével, hogy a 3D térben milyen pályán mozog a részecske (egy jó választás pl. $t=0~\mathrm{s}$-tól $10~\mathrm{s}$-ig elmenni)! Ha <code>matplotlib</code>bel ábrázolsz, figyelj arra, hogy olyan szögből legyen a 3D ábra, hogy jól látszódjon a pálya alakja, <code>plotly</code>val pedig akár forgathatod is az elkészült ábrát. Magyarázzuk meg a látottakat néhány mondatban!</p>
+\begin{align}
+m\ddot{x}&=eE & \dot{x}_0&=0 & x_0&=0\\
+m\ddot{y}&=ev_zB & \dot{y}_0&=1 & y_0&=0\\
+m\ddot{z}&=-ev_yB & \dot{z}_0&=1 & z_0&=0\\
+\end{align}
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Rak&#233;tamozg&#225;s">Rak&#233;tamozg&#225;s<a class="anchor-link" href="#Rak&#233;tamozg&#225;s">&#182;</a></h1><p>Modellezzünk <a href="https://hu.wikipedia.org/wiki/Ciolkovszkij-egyenlet">rakétamozgást</a>!</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Var_mass_system.PNG" alt=""></p>
+<p>Egy adott időpillanatban legyen a rakétánk $m$ tömegű, tegyük fel, hogy $v$ sebességgel halad. A rakéta hátulján egy kis, $\Delta m$ tömegű darabka a rakétához képest $v_e$, az álló megfigyelőhöz képest $v-v_e$ sebességgel távozik. A lendületmegmaradás miatt az álló megfigyelő szemszögévől:</p>
+$$ (m + \Delta m)\cdot v = m (v+\Delta v)+\Delta m\cdot  (v-v_e) ,$$<p>tehát</p>
+$$ 0 = m \Delta v - \Delta m \cdot v_e $$<p>Rendezzük át:</p>
+$$\frac{\Delta v}{\Delta m}=-\frac{v_e}{m}$$<p>Tartsunk $\Delta m$-mel a 0-hoz:</p>
+$$\frac{\mathrm{d} v}{\mathrm{d} m}=-\frac{v_e}{m},$$<p>Ábrázoljuk a rakéta sebességét a rakéta tömegének függvényében! Vegyük a rakéta össztömegét 1-nek, és tételezzük fel, hogy az össztömeg 90%-a üzemanyag, tehát maximum 0.1-ig tud a tömeg csökkenni. Legyen $v_e=10$! Értelmezzük a kapott eredményt, vessük össze az analitikus megoldássa (a diffegyenlet szétválasztható)!</p>
 
 </div>
 </div>
@@ -11806,10 +11817,20 @@ X=\left(\begin{array}{ccc}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="02---Invert&#225;lhat&#243;s&#225;g">02 - Invert&#225;lhat&#243;s&#225;g<a class="anchor-link" href="#02---Invert&#225;lhat&#243;s&#225;g">&#182;</a></h2><ul>
-<li>Vizsgáljuk meg, hogy az előző feladatban definiált négy mátrix közül melyik <a href="https://hu.wikipedia.org/wiki/Invert%C3%A1lhat%C3%B3_m%C3%A1trix">invertálható</a>.</li>
-<li>Határozzuk meg azon mátrixok diagonális elemeinek összegét (spúrját), amelyek nem invertálhatóak!</li>
-</ul>
+<h1 id="Boml&#225;si-sorok">Boml&#225;si sorok<a class="anchor-link" href="#Boml&#225;si-sorok">&#182;</a></h1><p>Egy egyszerű radioaktív bomlás differenciálegyenlete a következőképpen néz ki:</p>
+$$-\frac{\mathrm{d}N}{\mathrm{d}t}=\lambda N,$$<p>ahol $N$ az adott elem atommagjainak a száma, $\lambda$ pedig a bomlási állandó, ami egy atommag átlagos várható élettartamának a reciproka. (Felezési idővel is kifejezhetjük, ekkor $\lambda=\ln 2 / T_{1/2}$.) A differenciálegyenlet tulajdonképpen annak a megfogalmazása, hogy a bomlások a magok előéletétől és egymástól függetlenül, ugyanakkora valószínűséggel következnek be.</p>
+<p>Vizsgáljunk egy egyszerű bomlási sort, melyben egy anyaelem ($1$), illetve az ő két további leányeleme ($2,3$) található! Hogyan változik ezek darabszáma az idő függvényében? Ábrázoljuk, <strong>értelmezzük</strong> néhány mondatban a kapott eredményt!</p>
+<p>Egyrészt az anyaelem száma folyamatosan csökken, másrészt a leányelemelet "táplálja" az anyaelem bomlása, mikörózben ők is tovább bomolnak:</p>
+\begin{align}
+\frac{\mathrm{d}N_1}{\mathrm{d}t}&=-\lambda_1 N_1\\
+\frac{\mathrm{d}N_2}{\mathrm{d}t}&=\lambda_1 N_1-\lambda_2 N_2\\
+\frac{\mathrm{d}N_3}{\mathrm{d}t}&=\lambda_2 N_2 - \lambda_3 N_3\\
+\end{align}<p>Legyen a három bomlási állandó és a kezdeti feltételek:
+\begin{align}
+\lambda_1&amp;=0.5~\frac{1}{\mathrm{s}} &amp; N_1(0)&amp;=10^5\
+\lambda_2&amp;=0.3~\frac{1}{\mathrm{s}} &amp; N_2(0)&amp;=10^4\
+\lambda_3&amp;=2~\frac{1}{\mathrm{s}} &amp; N_3(0)&amp;=10^4\
+\end{align}</p>
 
 </div>
 </div>
@@ -11819,104 +11840,9 @@ X=\left(\begin{array}{ccc}
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="03---3D-forgat&#225;s">03 - 3D forgat&#225;s<a class="anchor-link" href="#03---3D-forgat&#225;s">&#182;</a></h2><p>Az $x$ $y$ és $z$ tengely körüli forgatások mátrixai  a következő alakot öltik:
-$$
-R_x(\alpha)=\begin{pmatrix}
-1            &  0            & 0 \\
-0&\cos(\alpha) & -\sin(\alpha)  \\ 
-0&\sin(\alpha) & \cos(\alpha)                   
-\end{pmatrix},\quad
-R_y(\alpha)=\begin{pmatrix}
-\cos(\alpha) &  0 & -\sin(\alpha) \\ 
-0 & 1   & 0  \\
-\sin(\alpha)            & 0              & \cos(\alpha)
-\end{pmatrix},
-R_z(\alpha)=\begin{pmatrix}
-\cos(\alpha) & -\sin(\alpha)  & 0 \\ 
-\sin(\alpha) & \cos(\alpha)   & 0  \\
-0            & 0              & 1
-\end{pmatrix}.
-$$</p>
-<p>Melyik az az $u$ vektor, melyre igaz az, hogy 
-$$ R_x(\pi/3)R_z(\pi/7)R_y(\pi/5)u=
-\begin{pmatrix}
-137  \\ 
-42   \\
-36  
-\end{pmatrix}.
-$$
-Határozzuk meg a keresett $u$-t a mintapéldában szereplő <code>solve()</code> függvény segítségével!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="04---Saj&#225;t&#233;rt&#233;kek">04 - Saj&#225;t&#233;rt&#233;kek<a class="anchor-link" href="#04---Saj&#225;t&#233;rt&#233;kek">&#182;</a></h2><ul>
-<li>Határozzuk meg az első feladatban szereplő mátrixok sajátértékeit!</li>
-<li>Ellenőrizzük le, hogy a sajátértékek szorzata megegyezik a mátrixok determinánsával!</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="05-$\mathrm{CO}_2$-molekula-rezg&#233;sei">05-$\mathrm{CO}_2$ molekula rezg&#233;sei<a class="anchor-link" href="#05-$\mathrm{CO}_2$-molekula-rezg&#233;sei">&#182;</a></h2><p>A CO$_2$ molekula atomjainak rezgését az alábbi három egyenlet írja le 
-$$m_O \overset{..}{x}_1=k(x_1-x_2),\quad\quad\quad\quad\quad\quad$$</p>
-$$m_C \overset{..}{x}_2=k(x_2-x_1)+k(x_2-x_3),$$$$m_O \overset{..}{x}_3=k(x_3-x_2).\quad\quad\quad\quad\quad\quad$$<p>ahol az $x_1$, $x_2$ és $x_3$ rendre az egyik oxigén, a szénatom, illetve a másik oxigén koordinátái a térben.</p>
-<p>Feltéve, hogy a rendszer harmonikus mozgást végez ($x_i=A_i\mathrm{e}^{\mathrm{i}\omega t}$), az alábbi egyenletrendszerre jutunk:</p>
-$$m_O \omega^2 A_1=k(A_1-A_2),\quad\quad\quad\quad\quad\quad$$$$m_C \omega^2 A_2=k(A_2-A_1)+k(A_2-A_3),$$$$m_O \omega^2 A_3=k(A_3-A_2).\quad\quad\quad\quad\quad\quad$$<p>Vizsgáljuk ezt az egyenletrendszert egy dimenzióban! Azaz mindhárom $A_i$-t tekintsük egyszerű számoknak! Legyen továbbá $k=1$, $m_O=16$ és $m_C=12$. Határozuk meg a <strong>numpy</strong> eig() rutinja segítségével az $\omega_i$ sajátfrekvenciákat (sajátértékeket), illetve a sajátfrekvenciákhoz tartozó rezgési módusokat (sajátvektorokat)!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="06--Su$-$Schrieffer$-$Heeger-modell-s&#225;vszerkezete-&#9760;">06- Su$-$Schrieffer$-$Heeger-modell s&#225;vszerkezete &#9760;<a class="anchor-link" href="#06--Su$-$Schrieffer$-$Heeger-modell-s&#225;vszerkezete-&#9760;">&#182;</a></h2><p>A szilárdtestfizikában a Su$-$Schrieffer$-$Heeger-modell egy végtelen periodikus poliacetilén láncot ír le. A modell Hamilton-operátora az alábbi 2x2-es hermitikus mátrix:
-$$
-H=\left(
-\begin{array}{cc}
- 0 & 1+w e^{-i k} \\
- 1+w e^{i k} & 0 \\
-\end{array}
-\right).
-$$
-A fenti kifejezésben $k$ a hullámszámvektor, melynek értéke a $[-\pi,\pi]$ intervallumon változhat, $w$  pedig egy valós szám, melynek értéke $0.5$ és $1.5$ között változhat. Készítsünk egy interaktív ábrát, mely a Hamilton-operátor sajátértékeit ábrázolja $k$ függvényében, ahol egy csúszka segítségével $w$ értékét változtathatjuk!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="07--PageRank-&#9760;">07- PageRank &#9760;<a class="anchor-link" href="#07--PageRank-&#9760;">&#182;</a></h2><p>A Google-keresés áttörő sikerét a <a href="http://www.stat.cmu.edu/~ryantibs/datamining/lectures/03-pr.pdf">PageRank</a>-algoritmus indította el, melynek természetesen mára már a titkos és sokat finomított verzióját tartalmazza a keresőmotor. Az első PageRank-változat azonban egy nagyon szép és intuitív képre vezethető vissza, melynek segítségével végső soron a leghasznosabb honlapok megkeresése is a következő mátrix sajátérték-problémára egyszerűsödik:</p>
-$$\mathbf{V}=\mathbf{L}\mathbf{M^{-1}},$$<p></p>
-<p>ahol</p>
-<ul>
-<li>$n$ a csúcsok száma,</li>
-<li>$\mathbf{L}$ az ún. összekötöttségi mátrix, azaz<ul>
-<li>$L_{ij}=1$, ha $i$ és $j$ között van él, és</li>
-<li>$L_{ij}=0$, ha $i$ és $j$ között nincs él.</li>
-</ul>
-</li>
-<li>$\mathbf{M}$ pedig az az $n\times n$-es mátrix, melynek főátlójában a csúcsok fokszáma áll
-$$M_{ii}=\sum_{j=1}^n L_{ij}.$$</li>
-</ul>
-<p>Ennek a mátrixnak az 1 sajátértékű sajátvektorában szereplő számok lesznek a PageRankek.</p>
-<p>A Google által 2002-ben közzétett, az internet hálózatát feltérképező <a href="http://snap.stanford.edu/data/web-Google.html">adatokból</a> határozzuk meg, hogy melyik tíz honlap rangsorolódna a PageRank-algoritmus alapján legelőrébb az adatbázisban szereplő 875713 oldal közül (elég ha a honlapok sorszámát megállapítjuk).</p>
-<p>A feladat megoldása során felmerülő nagy mátrixot a <code>scipy</code> modul <a href="https://docs.scipy.org/doc/scipy-0.18.1/reference/sparse.linalg.html">ritkamátrixokért felelős függvényeivel</a> dolgozzuk fel!</p>
+<h1 id="&#9760;-Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal">&#9760; Ferde haj&#237;t&#225;s l&#233;gellen&#225;ll&#225;ssal<a class="anchor-link" href="#&#9760;-Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal">&#182;</a></h1><p>Számoljuk ki és ábrázoljuk, hogyan módosul a test pályája a parabolához képest, ha a ferde hajítás problémájába egy sebességnégyzettel arányos, a sebességgel éppen ellentétes irányú közegellenállási tagot is beleveszünk!</p>
+<h1 id="&#9760;-Anim&#225;lt-naprendszer">&#9760; Anim&#225;lt naprendszer<a class="anchor-link" href="#&#9760;-Anim&#225;lt-naprendszer">&#182;</a></h1><p>Készíts szép animációt, amely nagyjából valós adatokkal és arányokkal megmutatja, hogyan kering a Föld a Nap körül! Próbálj meg akár két bolygót is a Nap köré tenni, teljesülni fog-e a keringési időkre vonatkozó Kepler-törvény?</p>
+<h1 id="&#9760;-Energia">&#9760; Energia<a class="anchor-link" href="#&#9760;-Energia">&#182;</a></h1><p>A Kepler-problémában minden időponthoz számold ki a rendszer Hamilton-függvényét (energiáját). Ábrázold az idő függvényében. Mit vártál az elméletből, és mit látsz a numerikus számolás végeredményében? Vajon mi lehet az oka?</p>
 
 </div>
 </div>
