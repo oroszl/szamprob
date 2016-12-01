@@ -11751,24 +11751,23 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Line&#225;ris-algebra">Line&#225;ris algebra<a class="anchor-link" href="#Line&#225;ris-algebra">&#182;</a></h1><h3 style='color: darkcyan'>matrix-ok</h3>
-```python
-A=matrix(...) # mátrixok definiálása
-B=matrix(...) # 
-trace(A) # diagonális elemek összege
-inv(A)   # inverz
-det(A)   # determináns
-C=A*B # a * mátrixszorzás!
-```
-
-
-<h3 style='color: darkcyan'>Lineáris egyenletrendszer megoldása</h3><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># az egyenletrendszer megoldasa</span>
+<h1 id="Line&#225;ris-algebra">Line&#225;ris algebra<a class="anchor-link" href="#Line&#225;ris-algebra">&#182;</a></h1><h3 style='color: darkcyan'>matrix-ok</h3><blockquote><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># mátrixok definiálása</span>
+<span class="n">B</span><span class="o">=</span><span class="n">matrix</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># </span>
+<span class="n">trace</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># diagonális elemek összege</span>
+<span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>   <span class="c1"># inverz</span>
+<span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>   <span class="c1"># determináns</span>
+<span class="n">C</span><span class="o">=</span><span class="n">A</span><span class="o">*</span><span class="n">B</span> <span class="c1"># a * mátrixszorzás!</span>
 </pre></div>
-<h3 style='color: darkcyan'>Sajatérték-probléma</h3><div class="highlight"><pre><span></span><span class="n">ertek</span><span class="p">,</span><span class="n">vektor</span><span class="o">=</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># Az A matrix sajatertekei es sajatvektorai</span>
+</blockquote>
+<h3 style='color: darkcyan'>Lineáris egyenletrendszer megoldása</h3><blockquote><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># az egyenletrendszer megoldasa</span>
+</pre></div>
+</blockquote>
+<h3 style='color: darkcyan'>Sajatérték-probléma</h3><blockquote><div class="highlight"><pre><span></span><span class="n">ertek</span><span class="p">,</span><span class="n">vektor</span><span class="o">=</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># Az A matrix sajatertekei es sajatvektorai</span>
 
 <span class="n">v1</span><span class="o">=</span><span class="n">vektor</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ez az elso sajat vektor</span>
 <span class="n">w1</span><span class="o">=</span><span class="n">ertek</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ez az elso sajatertek</span>
 </pre></div>
+</blockquote>
 
 </div>
 </div>

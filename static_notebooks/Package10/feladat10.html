@@ -11751,7 +11751,36 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Ferde-haj&#237;t&#225;s">Ferde haj&#237;t&#225;s<a class="anchor-link" href="#Ferde-haj&#237;t&#225;s">&#182;</a></h1><p>Vizsgáljuk meg, hogy a $v_0=30~\mathrm{m}/\mathrm{s}$-os kezdősebességű, $\alpha=50^\circ$-os szögű <a href="https://hu.wikipedia.org/wiki/Ferde_haj%C3%ADt%C3%A1s#A_mozg.C3.A1s_p.C3.A1ly.C3.A1ja_ferde_haj.C3.ADt.C3.A1sn.C3.A1l">ferde hajítás</a> differenciálegyenlet-rendszerének megoldása ugyanazt a pályát adja-e, mint az analitikus megoldás! Ábrázoljuk a numerikus és az egzakt megoldást ugyanazon koordinátarendszerben!</p>
+<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ul>
+<li>Minden feladatot külön notebookba oldj meg! </li>
+<li>A megoldásnotebook <strong>neve</strong> tartalmazza a feladat <strong>számát</strong>! </li>
+<li>A megoldások kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
+<li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldásnotebook első <code>markdown</code> cellájában! </li>
+<li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd, hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
+</ul>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="01---Egyszer&#369;-integr&#225;l&#225;s">01 - Egyszer&#369; integr&#225;l&#225;s<a class="anchor-link" href="#01---Egyszer&#369;-integr&#225;l&#225;s">&#182;</a></h2><p>A quad függvény segítségével integráljuk a
+$$ f(x)=\cos^2(4 \arccos(x)) $$
+függvényt az [0,1] intervallumon!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="02---Ferde-haj&#237;t&#225;s">02 - Ferde haj&#237;t&#225;s<a class="anchor-link" href="#02---Ferde-haj&#237;t&#225;s">&#182;</a></h2><p>Vizsgáljuk meg, hogy a $v_0=30~\mathrm{m}/\mathrm{s}$-os kezdősebességű, $\alpha=50^\circ$-os szögű <a href="https://hu.wikipedia.org/wiki/Ferde_haj%C3%ADt%C3%A1s#A_mozg.C3.A1s_p.C3.A1ly.C3.A1ja_ferde_haj.C3.ADt.C3.A1sn.C3.A1l">ferde hajítás</a> differenciálegyenlet-rendszerének megoldása ugyanazt a pályát adja-e, mint az analitikus megoldás! Ábrázoljuk a numerikus és az egzakt megoldást ugyanazon koordinátarendszerben!</p>
 <p>Segítségül:</p>
 \begin{align}
 \ddot{x}&=0&\dot{x}_0&=v_0\cdot \cos\alpha &x_0&=0\\
@@ -11765,7 +11794,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Kepler-probl&#233;ma">Kepler-probl&#233;ma<a class="anchor-link" href="#Kepler-probl&#233;ma">&#182;</a></h1><p>A bolygómozgás Hamilton-függvénye a következőképpen néz ki:</p>
+<h2 id="03---Kepler-probl&#233;ma">03 - Kepler-probl&#233;ma<a class="anchor-link" href="#03---Kepler-probl&#233;ma">&#182;</a></h2><p>A bolygómozgás Hamilton-függvénye a következőképpen néz ki:</p>
 $$\mathscr{H}(p_x,p_y,x,y)=K+V=\frac{1}{2m}(p_x^2+p_y^2)-\gamma M \frac{m}{\sqrt{x^2+y^2}}$$<p>Legyen most az alternatív naprendszerünkben $M=\gamma=m=1$!</p>
 <p>Rajzoljuk fel a bolygó pályáját a kanonikus egyeneletek numerikus megoldásának segítségével:</p>
 \begin{align}
@@ -11783,7 +11812,7 @@ $$\mathscr{H}(p_x,p_y,x,y)=K+V=\frac{1}{2m}(p_x^2+p_y^2)-\gamma M \frac{m}{\sqrt
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">T&#246;lt&#246;tt r&#233;szecske elektrom&#225;gneses t&#233;rben<a class="anchor-link" href="#T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">&#182;</a></h1><p>Adott egy egymásra merőleges homogén elektromos és mágneses tér, a térerősségek</p>
+<h2 id="04---T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">04 - T&#246;lt&#246;tt r&#233;szecske elektrom&#225;gneses t&#233;rben<a class="anchor-link" href="#04---T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">&#182;</a></h2><p>Adott egy egymásra merőleges homogén elektromos és mágneses tér, a térerősségek</p>
 \begin{align}
 E&=0.01~\frac{\mathrm{N}}{\mathrm{C}}\\
 B&=1~T
@@ -11801,7 +11830,7 @@ m\ddot{z}&=-ev_yB & \dot{z}_0&=1 & z_0&=0\\
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Rak&#233;tamozg&#225;s">Rak&#233;tamozg&#225;s<a class="anchor-link" href="#Rak&#233;tamozg&#225;s">&#182;</a></h1><p>Modellezzünk <a href="https://hu.wikipedia.org/wiki/Ciolkovszkij-egyenlet">rakétamozgást</a>!</p>
+<h2 id="05---Rak&#233;tamozg&#225;s">05 - Rak&#233;tamozg&#225;s<a class="anchor-link" href="#05---Rak&#233;tamozg&#225;s">&#182;</a></h2><p>Modellezzünk <a href="https://hu.wikipedia.org/wiki/Ciolkovszkij-egyenlet">rakétamozgást</a>!</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Var_mass_system.PNG" alt=""></p>
 <p>Egy adott időpillanatban legyen a rakétánk $m$ tömegű, tegyük fel, hogy $v$ sebességgel halad. A rakéta hátulján egy kis, $\Delta m$ tömegű darabka a rakétához képest $v_e$, az álló megfigyelőhöz képest $v-v_e$ sebességgel távozik. A lendületmegmaradás miatt az álló megfigyelő szemszögévől:</p>
 $$ (m + \Delta m)\cdot v = m (v+\Delta v)+\Delta m\cdot  (v-v_e) ,$$<p>tehát</p>
@@ -11817,7 +11846,7 @@ $$\frac{\mathrm{d} v}{\mathrm{d} m}=-\frac{v_e}{m},$$<p>Ábrázoljuk a rakéta s
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Boml&#225;si-sorok">Boml&#225;si sorok<a class="anchor-link" href="#Boml&#225;si-sorok">&#182;</a></h1><p>Egy egyszerű radioaktív bomlás differenciálegyenlete a következőképpen néz ki:</p>
+<h2 id="06---Boml&#225;si-sorok-&#9760;">06 - Boml&#225;si sorok &#9760;<a class="anchor-link" href="#06---Boml&#225;si-sorok-&#9760;">&#182;</a></h2><p>Egy egyszerű radioaktív bomlás differenciálegyenlete a következőképpen néz ki:</p>
 $$-\frac{\mathrm{d}N}{\mathrm{d}t}=\lambda N,$$<p>ahol $N$ az adott elem atommagjainak a száma, $\lambda$ pedig a bomlási állandó, ami egy atommag átlagos várható élettartamának a reciproka. (Felezési idővel is kifejezhetjük, ekkor $\lambda=\ln 2 / T_{1/2}$.) A differenciálegyenlet tulajdonképpen annak a megfogalmazása, hogy a bomlások a magok előéletétől és egymástól függetlenül, ugyanakkora valószínűséggel következnek be.</p>
 <p>Vizsgáljunk egy egyszerű bomlási sort, melyben egy anyaelem ($1$), illetve az ő két további leányeleme ($2,3$) található! Hogyan változik ezek darabszáma az idő függvényében? Ábrázoljuk, <strong>értelmezzük</strong> néhány mondatban a kapott eredményt!</p>
 <p>Egyrészt az anyaelem száma folyamatosan csökken, másrészt a leányelemelet "táplálja" az anyaelem bomlása, mikörózben ők is tovább bomolnak:</p>
@@ -11840,9 +11869,27 @@ $$-\frac{\mathrm{d}N}{\mathrm{d}t}=\lambda N,$$<p>ahol $N$ az adott elem atommag
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#9760;-Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal">&#9760; Ferde haj&#237;t&#225;s l&#233;gellen&#225;ll&#225;ssal<a class="anchor-link" href="#&#9760;-Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal">&#182;</a></h1><p>Számoljuk ki és ábrázoljuk, hogyan módosul a test pályája a parabolához képest, ha a ferde hajítás problémájába egy sebességnégyzettel arányos, a sebességgel éppen ellentétes irányú közegellenállási tagot is beleveszünk!</p>
-<h1 id="&#9760;-Anim&#225;lt-naprendszer">&#9760; Anim&#225;lt naprendszer<a class="anchor-link" href="#&#9760;-Anim&#225;lt-naprendszer">&#182;</a></h1><p>Készíts szép animációt, amely nagyjából valós adatokkal és arányokkal megmutatja, hogyan kering a Föld a Nap körül! Próbálj meg akár két bolygót is a Nap köré tenni, teljesülni fog-e a keringési időkre vonatkozó Kepler-törvény?</p>
-<h1 id="&#9760;-Energia">&#9760; Energia<a class="anchor-link" href="#&#9760;-Energia">&#182;</a></h1><p>A Kepler-problémában minden időponthoz számold ki a rendszer Hamilton-függvényét (energiáját). Ábrázold az idő függvényében. Mit vártál az elméletből, és mit látsz a numerikus számolás végeredményében? Vajon mi lehet az oka?</p>
+<h2 id="07---Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal-&#9760;">07 - Ferde haj&#237;t&#225;s l&#233;gellen&#225;ll&#225;ssal &#9760;<a class="anchor-link" href="#07---Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal-&#9760;">&#182;</a></h2><p>Számoljuk ki és ábrázoljuk, hogyan módosul a test pályája a parabolához képest, ha a ferde hajítás problémájába egy sebességnégyzettel arányos, a sebességgel éppen ellentétes irányú közegellenállási tagot is beleveszünk!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="08---Anim&#225;lt-naprendszer-&#9760;">08 - Anim&#225;lt naprendszer &#9760;<a class="anchor-link" href="#08---Anim&#225;lt-naprendszer-&#9760;">&#182;</a></h2><p>Készíts szép animációt, amely nagyjából valós adatokkal és arányokkal megmutatja, hogyan kering a Föld a Nap körül! Próbálj meg akár két bolygót is a Nap köré tenni, teljesülni fog-e a keringési időkre vonatkozó Kepler-törvény?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="09---Energia-&#9760;">09 - Energia &#9760;<a class="anchor-link" href="#09---Energia-&#9760;">&#182;</a></h2><p>A Kepler-problémában minden időponthoz számold ki a rendszer Hamilton-függvényét (energiáját). Ábrázold az idő függvényében. Mit vártál az elméletből, és mit látsz a numerikus számolás végeredményében? Vajon mi lehet az oka?</p>
 
 </div>
 </div>
