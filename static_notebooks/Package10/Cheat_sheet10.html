@@ -11756,16 +11756,16 @@ div#notebook {
 <span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>           <span class="c1"># Az integrandus definiálása</span>
    <span class="k">return</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   
 
-<span class="n">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>        <span class="c1"># integraájuk f-et 1 es 2 között</span>
+<span class="n">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>        <span class="c1"># integráljuk f-et 1 es 2 között</span>
 </pre></div>
 </blockquote>
-<h3 style='color: darkcyan'>Differenciál egyenletek megoldása</h3><blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># a megfelelő rutinok betöltése</span>
+<h3 style='color: darkcyan'>Differenciálegyenletek megoldása</h3><blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># a megfelelő rutinok betöltése</span>
 
 <span class="k">def</span> <span class="nf">novekmeny</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>   
-   <span class="k">return</span> <span class="o">-</span><span class="n">q</span><span class="o">**</span><span class="mi">2</span>          <span class="c1"># a q&#39;=-q^2 egyenletnek megfelelo novekmeny</span>
+   <span class="k">return</span> <span class="o">-</span><span class="n">q</span><span class="o">**</span><span class="mi">2</span>          <span class="c1"># a q&#39;=-q^2 egyenletnek megfelelő növekmény</span>
 
 
-<span class="n">t</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>     <span class="c1"># ezek az érdekes idő pillanatok</span>
+<span class="n">t</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>     <span class="c1"># ezek az érdekes időpillanatok</span>
 <span class="n">q0</span><span class="o">=</span><span class="mi">0</span>                     <span class="c1"># A kezdeti érték</span>
 <span class="n">q</span><span class="o">=</span><span class="n">odeint</span><span class="p">(</span><span class="n">novekmeny</span><span class="p">,</span><span class="n">q0</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="c1"># itt oldjuk meg a diffegyenletet</span>
 </pre></div>
