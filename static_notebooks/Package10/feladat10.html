@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Cheat_sheet09</title>
+<title>feladat10</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,23 +11751,145 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Line&#225;ris-algebra">Line&#225;ris algebra<a class="anchor-link" href="#Line&#225;ris-algebra">&#182;</a></h1><h3 style='color: darkcyan'>matrix-ok</h3><blockquote><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># mátrixok definiálása</span>
-<span class="n">B</span><span class="o">=</span><span class="n">matrix</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># </span>
-<span class="n">trace</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># diagonális elemek összege</span>
-<span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>   <span class="c1"># inverz</span>
-<span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>   <span class="c1"># determináns</span>
-<span class="n">C</span><span class="o">=</span><span class="n">A</span><span class="o">*</span><span class="n">B</span> <span class="c1"># a * mátrixszorzás!</span>
-</pre></div>
-</blockquote>
-<h3 style='color: darkcyan'>Lineáris egyenletrendszer megoldása</h3><blockquote><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># az egyenletrendszer megoldasa</span>
-</pre></div>
-</blockquote>
-<h3 style='color: darkcyan'>Sajatérték-probléma</h3><blockquote><div class="highlight"><pre><span></span><span class="n">ertek</span><span class="p">,</span><span class="n">vektor</span><span class="o">=</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># Az A matrix sajatertekei es sajatvektorai</span>
+<h1 id="Feladatok">Feladatok<a class="anchor-link" href="#Feladatok">&#182;</a></h1><ul>
+<li>Minden feladatot külön notebookba oldj meg! </li>
+<li>A megoldásnotebook <strong>neve</strong> tartalmazza a feladat <strong>számát</strong>! </li>
+<li>A megoldások kerüljenek a <strong>MEGOLDASOK mappába</strong>!<br> Csak azok a feladatok kerülnek elbírálásra, amelyek a MEGOLDASOK mappában vannak!</li>
+<li>A megoldás tartalmazza a megoldandó <strong>feladat szövegét</strong> a megoldásnotebook első <code>markdown</code> cellájában! </li>
+<li><strong>Kommentekkel</strong>, illetve <code>markdown</code> cellákkal magyarázd, hogy éppen mit csinál az adott kódrészlet!<br> Magyarázat nélkül beküldött feladatok csak fél feladatnak számítanak!</li>
+</ul>
+<hr>
 
-<span class="n">v1</span><span class="o">=</span><span class="n">vektor</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ez az elso sajat vektor</span>
-<span class="n">w1</span><span class="o">=</span><span class="n">ertek</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ez az elso sajatertek</span>
-</pre></div>
-</blockquote>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="01---Egyszer&#369;-integr&#225;l&#225;s">01 - Egyszer&#369; integr&#225;l&#225;s<a class="anchor-link" href="#01---Egyszer&#369;-integr&#225;l&#225;s">&#182;</a></h2><p>A quad függvény segítségével integráljuk a
+$$ f(x)=\cos^2(4 \arccos(x)) $$
+függvényt az [0,1] intervallumon!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="02---Ferde-haj&#237;t&#225;s">02 - Ferde haj&#237;t&#225;s<a class="anchor-link" href="#02---Ferde-haj&#237;t&#225;s">&#182;</a></h2><p>Vizsgáljuk meg, hogy a $v_0=30~\mathrm{m}/\mathrm{s}$-os kezdősebességű, $\alpha=50^\circ$-os szögű <a href="https://hu.wikipedia.org/wiki/Ferde_haj%C3%ADt%C3%A1s#A_mozg.C3.A1s_p.C3.A1ly.C3.A1ja_ferde_haj.C3.ADt.C3.A1sn.C3.A1l">ferde hajítás</a> differenciálegyenlet-rendszerének megoldása ugyanazt a pályát adja-e, mint az analitikus megoldás! Ábrázoljuk a numerikus és az egzakt megoldást ugyanazon koordinátarendszerben!</p>
+<p>Segítségül:</p>
+\begin{align}
+\ddot{x}&=0&\dot{x}_0&=v_0\cdot \cos\alpha &x_0&=0\\
+\ddot{y}&=-g& \dot{y}_0&=v_0\cdot \sin\alpha & y_0&=0
+\end{align}
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="03---Kepler-probl&#233;ma">03 - Kepler-probl&#233;ma<a class="anchor-link" href="#03---Kepler-probl&#233;ma">&#182;</a></h2><p>A bolygómozgás Hamilton-függvénye a következőképpen néz ki:</p>
+$$\mathscr{H}(p_x,p_y,x,y)=K+V=\frac{1}{2m}(p_x^2+p_y^2)-\gamma M \frac{m}{\sqrt{x^2+y^2}}$$<p>Legyen most az alternatív naprendszerünkben $M=\gamma=m=1$!</p>
+<p>Rajzoljuk fel a bolygó pályáját a kanonikus egyeneletek numerikus megoldásának segítségével:</p>
+\begin{align}
+\dot{p_x}&=-\frac{\partial \mathscr{H}}{\partial{x}} & p_{x,0}&=0\\\\
+\dot{p_y}&=\frac{\partial \mathscr{H}}{\partial{y}} & p_{y,0}&=\frac{1}{\sqrt{10}}\\
+\dot{x}&=p_x & x_0&=4\\
+\dot{y}&=p_y & y_0&=0\\
+\end{align}<p>Milyen alakú pályát kaptunk?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="04---T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">04 - T&#246;lt&#246;tt r&#233;szecske elektrom&#225;gneses t&#233;rben<a class="anchor-link" href="#04---T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">&#182;</a></h2><p>Adott egy egymásra merőleges homogén elektromos és mágneses tér, a térerősségek</p>
+\begin{align}
+E&=0.01~\frac{\mathrm{N}}{\mathrm{C}}\\
+B&=1~T
+\end{align}<p>Egy elektront lövünk ebbe a térbe az elektromos erővonalakkal párhuzamosan, a mágneses térre merőlegesen. Rajzoljuk ki a differenciálegyenlet-megoldás segítségével, hogy a 3D térben milyen pályán mozog a részecske (egy jó választás pl. $t=0~\mathrm{s}$-tól $10~\mathrm{s}$-ig elmenni)! Ha <code>matplotlib</code>bel ábrázolsz, figyelj arra, hogy olyan szögből legyen a 3D ábra, hogy jól látszódjon a pálya alakja, <code>plotly</code>val pedig akár forgathatod is az elkészült ábrát. Magyarázzuk meg a látottakat néhány mondatban!</p>
+\begin{align}
+m\ddot{x}&=eE & \dot{x}_0&=0 & x_0&=0\\
+m\ddot{y}&=ev_zB & \dot{y}_0&=1 & y_0&=0\\
+m\ddot{z}&=-ev_yB & \dot{z}_0&=1 & z_0&=0\\
+\end{align}
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="05---Rak&#233;tamozg&#225;s">05 - Rak&#233;tamozg&#225;s<a class="anchor-link" href="#05---Rak&#233;tamozg&#225;s">&#182;</a></h2><p>Modellezzünk <a href="https://hu.wikipedia.org/wiki/Ciolkovszkij-egyenlet">rakétamozgást</a>!</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Var_mass_system.PNG" alt=""></p>
+<p>Egy adott időpillanatban legyen a rakétánk $m$ tömegű, tegyük fel, hogy $v$ sebességgel halad. A rakéta hátulján egy kis, $\Delta m$ tömegű darabka a rakétához képest $v_e$, az álló megfigyelőhöz képest $v-v_e$ sebességgel távozik. A lendületmegmaradás miatt az álló megfigyelő szemszögévől:</p>
+$$ (m + \Delta m)\cdot v = m (v+\Delta v)+\Delta m\cdot  (v-v_e) ,$$<p>tehát</p>
+$$ 0 = m \Delta v - \Delta m \cdot v_e $$<p>Rendezzük át:</p>
+$$\frac{\Delta v}{\Delta m}=-\frac{v_e}{m}$$<p>Tartsunk $\Delta m$-mel a 0-hoz:</p>
+$$\frac{\mathrm{d} v}{\mathrm{d} m}=-\frac{v_e}{m},$$<p>Ábrázoljuk a rakéta sebességét a rakéta tömegének függvényében! Vegyük a rakéta össztömegét 1-nek, és tételezzük fel, hogy az össztömeg 90%-a üzemanyag, tehát maximum 0.1-ig tud a tömeg csökkenni. Legyen $v_e=10$! Értelmezzük a kapott eredményt, vessük össze az analitikus megoldássa (a diffegyenlet szétválasztható)!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="06---Boml&#225;si-sorok-&#9760;">06 - Boml&#225;si sorok &#9760;<a class="anchor-link" href="#06---Boml&#225;si-sorok-&#9760;">&#182;</a></h2><p>Egy egyszerű radioaktív bomlás differenciálegyenlete a következőképpen néz ki:</p>
+$$-\frac{\mathrm{d}N}{\mathrm{d}t}=\lambda N,$$<p>ahol $N$ az adott elem atommagjainak a száma, $\lambda$ pedig a bomlási állandó, ami egy atommag átlagos várható élettartamának a reciproka. (Felezési idővel is kifejezhetjük, ekkor $\lambda=\ln 2 / T_{1/2}$.) A differenciálegyenlet tulajdonképpen annak a megfogalmazása, hogy a bomlások a magok előéletétől és egymástól függetlenül, ugyanakkora valószínűséggel következnek be.</p>
+<p>Vizsgáljunk egy egyszerű bomlási sort, melyben egy anyaelem ($1$), illetve az ő két további leányeleme ($2,3$) található! Hogyan változik ezek darabszáma az idő függvényében? Ábrázoljuk, <strong>értelmezzük</strong> néhány mondatban a kapott eredményt!</p>
+<p>Egyrészt az anyaelem száma folyamatosan csökken, másrészt a leányelemelet "táplálja" az anyaelem bomlása, mikörózben ők is tovább bomolnak:</p>
+\begin{align}
+\frac{\mathrm{d}N_1}{\mathrm{d}t}&=-\lambda_1 N_1\\
+\frac{\mathrm{d}N_2}{\mathrm{d}t}&=\lambda_1 N_1-\lambda_2 N_2\\
+\frac{\mathrm{d}N_3}{\mathrm{d}t}&=\lambda_2 N_2 - \lambda_3 N_3\\
+\end{align}<p>Legyen a három bomlási állandó és a kezdeti feltételek:
+\begin{align}
+\lambda_1&amp;=0.5~\frac{1}{\mathrm{s}} &amp; N_1(0)&amp;=10^5\
+\lambda_2&amp;=0.3~\frac{1}{\mathrm{s}} &amp; N_2(0)&amp;=10^4\
+\lambda_3&amp;=2~\frac{1}{\mathrm{s}} &amp; N_3(0)&amp;=10^4\
+\end{align}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="07---Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal-&#9760;">07 - Ferde haj&#237;t&#225;s l&#233;gellen&#225;ll&#225;ssal &#9760;<a class="anchor-link" href="#07---Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal-&#9760;">&#182;</a></h2><p>Számoljuk ki és ábrázoljuk, hogyan módosul a test pályája a parabolához képest, ha a ferde hajítás problémájába egy sebességnégyzettel arányos, a sebességgel éppen ellentétes irányú közegellenállási tagot is beleveszünk!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="08---Anim&#225;lt-naprendszer-&#9760;">08 - Anim&#225;lt naprendszer &#9760;<a class="anchor-link" href="#08---Anim&#225;lt-naprendszer-&#9760;">&#182;</a></h2><p>Készíts szép animációt, amely nagyjából valós adatokkal és arányokkal megmutatja, hogyan kering a Föld a Nap körül! Próbálj meg akár két bolygót is a Nap köré tenni, teljesülni fog-e a keringési időkre vonatkozó Kepler-törvény?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="09---Energia-&#9760;">09 - Energia &#9760;<a class="anchor-link" href="#09---Energia-&#9760;">&#182;</a></h2><p>A Kepler-problémában minden időponthoz számold ki a rendszer Hamilton-függvényét (energiáját). Ábrázold az idő függvényében. Mit vártál az elméletből, és mit látsz a numerikus számolás végeredményében? Vajon mi lehet az oka?</p>
 
 </div>
 </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Cheat_sheet09</title>
+<title>Cheat_sheet10</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,21 +11751,23 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Line&#225;ris-algebra">Line&#225;ris algebra<a class="anchor-link" href="#Line&#225;ris-algebra">&#182;</a></h1><h3 style='color: darkcyan'>matrix-ok</h3><blockquote><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="n">matrix</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># mátrixok definiálása</span>
-<span class="n">B</span><span class="o">=</span><span class="n">matrix</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> <span class="c1"># </span>
-<span class="n">trace</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># diagonális elemek összege</span>
-<span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>   <span class="c1"># inverz</span>
-<span class="n">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>   <span class="c1"># determináns</span>
-<span class="n">C</span><span class="o">=</span><span class="n">A</span><span class="o">*</span><span class="n">B</span> <span class="c1"># a * mátrixszorzás!</span>
-</pre></div>
-</blockquote>
-<h3 style='color: darkcyan'>Lineáris egyenletrendszer megoldása</h3><blockquote><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">solve</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>      <span class="c1"># az egyenletrendszer megoldasa</span>
-</pre></div>
-</blockquote>
-<h3 style='color: darkcyan'>Sajatérték-probléma</h3><blockquote><div class="highlight"><pre><span></span><span class="n">ertek</span><span class="p">,</span><span class="n">vektor</span><span class="o">=</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span> <span class="c1"># Az A matrix sajatertekei es sajatvektorai</span>
+<h1 id="M&#233;g-t&#246;bb-scipy...">M&#233;g t&#246;bb scipy...<a class="anchor-link" href="#M&#233;g-t&#246;bb-scipy...">&#182;</a></h1><h3 style='color: darkcyan'>Numerikus integrálás</h3><blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># az integráló rutinok betöltése</span>
 
-<span class="n">v1</span><span class="o">=</span><span class="n">vektor</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ez az elso sajat vektor</span>
-<span class="n">w1</span><span class="o">=</span><span class="n">ertek</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#ez az elso sajatertek</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>           <span class="c1"># Az integrandus definiálása</span>
+   <span class="k">return</span> <span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>   
+
+<span class="n">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>        <span class="c1"># integraájuk f-et 1 es 2 között</span>
+</pre></div>
+</blockquote>
+<h3 style='color: darkcyan'>Differenciál egyenletek megoldása</h3><blockquote><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="o">*</span> <span class="c1"># a megfelelő rutinok betöltése</span>
+
+<span class="k">def</span> <span class="nf">novekmeny</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>   
+   <span class="k">return</span> <span class="o">-</span><span class="n">q</span><span class="o">**</span><span class="mi">2</span>          <span class="c1"># a q&#39;=-q^2 egyenletnek megfelelo novekmeny</span>
+
+
+<span class="n">t</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>     <span class="c1"># ezek az érdekes idő pillanatok</span>
+<span class="n">q0</span><span class="o">=</span><span class="mi">0</span>                     <span class="c1"># A kezdeti érték</span>
+<span class="n">q</span><span class="o">=</span><span class="n">odeint</span><span class="p">(</span><span class="n">novekmeny</span><span class="p">,</span><span class="n">q0</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="c1"># itt oldjuk meg a diffegyenletet</span>
 </pre></div>
 </blockquote>
 

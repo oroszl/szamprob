@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>feladat10</title>
+<title>mintapelda10</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11751,29 +11751,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Ferde-haj&#237;t&#225;s">Ferde haj&#237;t&#225;s<a class="anchor-link" href="#Ferde-haj&#237;t&#225;s">&#182;</a></h1><p>Vizsgáljuk meg, hogy a $v_0=30~\mathrm{m}/\mathrm{s}$-os kezdősebességű, $\alpha=50^\circ$-os szögű <a href="https://hu.wikipedia.org/wiki/Ferde_haj%C3%ADt%C3%A1s#A_mozg.C3.A1s_p.C3.A1ly.C3.A1ja_ferde_haj.C3.ADt.C3.A1sn.C3.A1l">ferde hajítás</a> differenciálegyenlet-rendszerének megoldása ugyanazt a pályát adja-e, mint az analitikus megoldás! Ábrázoljuk a numerikus és az egzakt megoldást ugyanazon koordinátarendszerben!</p>
-<p>Segítségül:</p>
-\begin{align}
-\ddot{x}&=0&\dot{x}_0&=v_0\cdot \cos\alpha &x_0&=0\\
-\ddot{y}&=-g& \dot{y}_0&=v_0\cdot \sin\alpha & y_0&=0
-\end{align}
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Kepler-probl&#233;ma">Kepler-probl&#233;ma<a class="anchor-link" href="#Kepler-probl&#233;ma">&#182;</a></h1><p>A bolygómozgás Hamilton-függvénye a következőképpen néz ki:</p>
-$$\mathscr{H}(p_x,p_y,x,y)=K+V=\frac{1}{2m}(p_x^2+p_y^2)-\gamma M \frac{m}{\sqrt{x^2+y^2}}$$<p>Legyen most az alternatív naprendszerünkben $M=\gamma=m=1$!</p>
-<p>Rajzoljuk fel a bolygó pályáját a kanonikus egyeneletek numerikus megoldásának segítségével:</p>
-\begin{align}
-\dot{p_x}&=-\frac{\partial \mathscr{H}}{\partial{x}} & p_{x,0}&=0\\\\
-\dot{p_y}&=\frac{\partial \mathscr{H}}{\partial{y}} & p_{y,0}&=\frac{1}{\sqrt{10}}\\
-\dot{x}&=p_x & x_0&=4\\
-\dot{y}&=p_y & y_0&=0\\
-\end{align}<p>Milyen alakú pályát kaptunk?</p>
+<h1 id="M&#233;g-t&#246;bb-scipy-...">M&#233;g t&#246;bb scipy ...<a class="anchor-link" href="#M&#233;g-t&#246;bb-scipy-...">&#182;</a></h1><p>Az alábbi notebookban megismerkedünk két témával melyek, annak ellenére hogy magukban is fontos jelentőséggel bírnak, kulcs fontosságú szerepet töltenek be más problémák numerikus megoldásában. A numerikus integrálás témakörében megvizsgálunk néhány egyszerű integrált a <code>scipy</code> csomag <code>quad</code> fügvényével. Az második kérdéskör, a differenciál egyenletek megoldása, számos fizikai probléma megoldásában nyújthat segítséget. Gondoljunk csak arra hogy a klasszikus mechanika <a href="https://hu.wikipedia.org/wiki/Newton_t%C3%B6rv%C3%A9nyei">Newton törvényei</a> az elektrodinamika <a href="https://hu.wikipedia.org/wiki/Maxwell-egyenletek">Maxwell-egyenletei</a> a kvantummechanika <a href="https://hu.wikipedia.org/wiki/Schr%C3%B6dinger-egyenlet">Schrödinger-egyenlete</a> illetve az általános relativitás elmélet <a href="https://hu.wikipedia.org/wiki/%C3%81ltal%C3%A1nos_relativit%C3%A1selm%C3%A9let#Az_elm.C3.A9let_l.C3.A9nyege">Einsteni-egyenletei</a> mind mind differenciálegyenletek!</p>
 
 </div>
 </div>
@@ -11783,31 +11761,7 @@ $$\mathscr{H}(p_x,p_y,x,y)=K+V=\frac{1}{2m}(p_x^2+p_y^2)-\gamma M \frac{m}{\sqrt
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">T&#246;lt&#246;tt r&#233;szecske elektrom&#225;gneses t&#233;rben<a class="anchor-link" href="#T&#246;lt&#246;tt-r&#233;szecske-elektrom&#225;gneses-t&#233;rben">&#182;</a></h1><p>Adott egy egymásra merőleges homogén elektromos és mágneses tér, a térerősségek</p>
-\begin{align}
-E&=0.01~\frac{\mathrm{N}}{\mathrm{C}}\\
-B&=1~T
-\end{align}<p>Egy elektront lövünk ebbe a térbe az elektromos erővonalakkal párhuzamosan, a mágneses térre merőlegesen. Rajzoljuk ki a differenciálegyenlet-megoldás segítségével, hogy a 3D térben milyen pályán mozog a részecske (egy jó választás pl. $t=0~\mathrm{s}$-tól $10~\mathrm{s}$-ig elmenni)! Ha <code>matplotlib</code>bel ábrázolsz, figyelj arra, hogy olyan szögből legyen a 3D ábra, hogy jól látszódjon a pálya alakja, <code>plotly</code>val pedig akár forgathatod is az elkészült ábrát. Magyarázzuk meg a látottakat néhány mondatban!</p>
-\begin{align}
-m\ddot{x}&=eE & \dot{x}_0&=0 & x_0&=0\\
-m\ddot{y}&=ev_zB & \dot{y}_0&=1 & y_0&=0\\
-m\ddot{z}&=-ev_yB & \dot{z}_0&=1 & z_0&=0\\
-\end{align}
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Rak&#233;tamozg&#225;s">Rak&#233;tamozg&#225;s<a class="anchor-link" href="#Rak&#233;tamozg&#225;s">&#182;</a></h1><p>Modellezzünk <a href="https://hu.wikipedia.org/wiki/Ciolkovszkij-egyenlet">rakétamozgást</a>!</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Var_mass_system.PNG" alt=""></p>
-<p>Egy adott időpillanatban legyen a rakétánk $m$ tömegű, tegyük fel, hogy $v$ sebességgel halad. A rakéta hátulján egy kis, $\Delta m$ tömegű darabka a rakétához képest $v_e$, az álló megfigyelőhöz képest $v-v_e$ sebességgel távozik. A lendületmegmaradás miatt az álló megfigyelő szemszögévől:</p>
-$$ (m + \Delta m)\cdot v = m (v+\Delta v)+\Delta m\cdot  (v-v_e) ,$$<p>tehát</p>
-$$ 0 = m \Delta v - \Delta m \cdot v_e $$<p>Rendezzük át:</p>
-$$\frac{\Delta v}{\Delta m}=-\frac{v_e}{m}$$<p>Tartsunk $\Delta m$-mel a 0-hoz:</p>
-$$\frac{\mathrm{d} v}{\mathrm{d} m}=-\frac{v_e}{m},$$<p>Ábrázoljuk a rakéta sebességét a rakéta tömegének függvényében! Vegyük a rakéta össztömegét 1-nek, és tételezzük fel, hogy az össztömeg 90%-a üzemanyag, tehát maximum 0.1-ig tud a tömeg csökkenni. Legyen $v_e=10$! Értelmezzük a kapott eredményt, vessük össze az analitikus megoldássa (a diffegyenlet szétválasztható)!</p>
+<h1 id="Numerikus-integr&#225;l&#225;s">Numerikus integr&#225;l&#225;s<a class="anchor-link" href="#Numerikus-integr&#225;l&#225;s">&#182;</a></h1><p>Sok gyakorlati alkalmazásban előkerül egy fügvény integráljának, azaz a függvény görbéje alatti területnek a meghatározása. Sok analitikus függvény integrálját zárt alakban meg lehet határozni. A gyakorlatban viszont sokszor nem ismert a függvény analitikus alakja. Gondoljunk itt például egy zajos mérésre. Ilyen esetben a függvény integrálját a rendelkezésre áló mérési pontok $x_0,x_1,x_2,…x_j,…$ és mért értékek $f_0,f_1,f_2,…f_j,…$ alapján kell valahogy meghatároznunk. Ekkor az integrál értékét rendszerint egy véges összegzéssel határozhatjuk meg ahol az összeadandó értékek a mérési pontok és a mért mennyiségek valamilyen függvényei. Az alábbiakban a <code>scipy</code> csomag <code>quad</code> függvényével fogunk megismerkedni mely függvények numerikus integrálására alkalmas.</p>
 
 </div>
 </div>
@@ -11817,20 +11771,46 @@ $$\frac{\mathrm{d} v}{\mathrm{d} m}=-\frac{v_e}{m},$$<p>Ábrázoljuk a rakéta s
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Boml&#225;si-sorok">Boml&#225;si sorok<a class="anchor-link" href="#Boml&#225;si-sorok">&#182;</a></h1><p>Egy egyszerű radioaktív bomlás differenciálegyenlete a következőképpen néz ki:</p>
-$$-\frac{\mathrm{d}N}{\mathrm{d}t}=\lambda N,$$<p>ahol $N$ az adott elem atommagjainak a száma, $\lambda$ pedig a bomlási állandó, ami egy atommag átlagos várható élettartamának a reciproka. (Felezési idővel is kifejezhetjük, ekkor $\lambda=\ln 2 / T_{1/2}$.) A differenciálegyenlet tulajdonképpen annak a megfogalmazása, hogy a bomlások a magok előéletétől és egymástól függetlenül, ugyanakkora valószínűséggel következnek be.</p>
-<p>Vizsgáljunk egy egyszerű bomlási sort, melyben egy anyaelem ($1$), illetve az ő két további leányeleme ($2,3$) található! Hogyan változik ezek darabszáma az idő függvényében? Ábrázoljuk, <strong>értelmezzük</strong> néhány mondatban a kapott eredményt!</p>
-<p>Egyrészt az anyaelem száma folyamatosan csökken, másrészt a leányelemelet "táplálja" az anyaelem bomlása, mikörózben ők is tovább bomolnak:</p>
-\begin{align}
-\frac{\mathrm{d}N_1}{\mathrm{d}t}&=-\lambda_1 N_1\\
-\frac{\mathrm{d}N_2}{\mathrm{d}t}&=\lambda_1 N_1-\lambda_2 N_2\\
-\frac{\mathrm{d}N_3}{\mathrm{d}t}&=\lambda_2 N_2 - \lambda_3 N_3\\
-\end{align}<p>Legyen a három bomlási állandó és a kezdeti feltételek:
-\begin{align}
-\lambda_1&amp;=0.5~\frac{1}{\mathrm{s}} &amp; N_1(0)&amp;=10^5\
-\lambda_2&amp;=0.3~\frac{1}{\mathrm{s}} &amp; N_2(0)&amp;=10^4\
-\lambda_3&amp;=2~\frac{1}{\mathrm{s}} &amp; N_3(0)&amp;=10^4\
-\end{align}</p>
+<h2 id="1D-integr&#225;l">1D integr&#225;l<a class="anchor-link" href="#1D-integr&#225;l">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># a szokásos rutinok betöltése</span>
+<span class="o">%</span><span class="k">pylab</span> inline
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="k">import</span> <span class="o">*</span> <span class="c1"># az integráló rutinok betöltése</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Populating the interactive namespace from numpy and matplotlib
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vizsgáljuk meg az alábbi egyszerű integrált $$ \int_{-1}^1 (x^2+3x +2)\mathrm{d}x .$$ 
+Ennek az értéke némi <a href="http://www.wolframalpha.com/input/?i=%5Cint_%7B-1%7D%5E1+%28x%5E2%2B3x+%2B2%29">algebrával</a> $14/3\approx 4.66666$ Vajon ugyen ezt kapjuk e a <code>quad</code> fügvénnyel ?</p>
 
 </div>
 </div>
@@ -11840,12 +11820,1261 @@ $$-\frac{\mathrm{d}N}{\mathrm{d}t}=\lambda N,$$<p>ahol $N$ az adott elem atommag
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#9760;-Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal">&#9760; Ferde haj&#237;t&#225;s l&#233;gellen&#225;ll&#225;ssal<a class="anchor-link" href="#&#9760;-Ferde-haj&#237;t&#225;s-l&#233;gellen&#225;ll&#225;ssal">&#182;</a></h1><p>Számoljuk ki és ábrázoljuk, hogyan módosul a test pályája a parabolához képest, ha a ferde hajítás problémájába egy sebességnégyzettel arányos, a sebességgel éppen ellentétes irányú közegellenállási tagot is beleveszünk!</p>
-<h1 id="&#9760;-Anim&#225;lt-naprendszer">&#9760; Anim&#225;lt naprendszer<a class="anchor-link" href="#&#9760;-Anim&#225;lt-naprendszer">&#182;</a></h1><p>Készíts szép animációt, amely nagyjából valós adatokkal és arányokkal megmutatja, hogyan kering a Föld a Nap körül! Próbálj meg akár két bolygót is a Nap köré tenni, teljesülni fog-e a keringési időkre vonatkozó Kepler-törvény?</p>
-<h1 id="&#9760;-Energia">&#9760; Energia<a class="anchor-link" href="#&#9760;-Energia">&#182;</a></h1><p>A Kepler-problémában minden időponthoz számold ki a rendszer Hamilton-függvényét (energiáját). Ábrázold az idő függvényében. Mit vártál az elméletből, és mit látsz a numerikus számolás végeredményében? Vajon mi lehet az oka?</p>
+<p>Először definiáljuk az integrálandó függvényt.</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mostmár meghívhatjuk a <code>quad</code>-ot. Az első változó az integrálandó függvény a második és a harmadik pedig az integrálási határok. A kimenet két szám. Az első az integrál becsült értéke a második az algoritmus becsült hibája.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quad</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(4.666666666666666, 5.1810407815840634e-14)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Amint az eredmény is mutatja ez az analitikus számítás és a numerikus integrál megegyeznek.</p>
+<p>Előfordulhat hogy az integrgálási határok végtelenek. például vizsgáljuk meg a Gauss görbe alatti területet:
+$$ \int_{-\infty}^\infty \mathrm{e}^{-x^2}\mathrm{d}x =\sqrt{\pi}$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># az integrandus definiálása</span>
+<span class="k">def</span> <span class="nf">gauss</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>quad</code> függvénynek a végtelen integrálási határokat az <code>inf</code> jelöléssel adhatjuk meg.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quad</span><span class="p">(</span><span class="n">gauss</span><span class="p">,</span><span class="o">-</span><span class="n">inf</span><span class="p">,</span><span class="n">inf</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1.7724538509055159, 1.4202636780944923e-08)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sqrt</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.7724538509055159</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A fent vizsgált két példával különösebb gond nélkül meg tudott birkózni a <code>quad</code>. Előfordul azomban hogy az integrálás problémákba ütközik. Erre egy jó példa ha az integrandus szingulárissá válik a integrálási tartomány egy pontjában. Ez nem feltétlenül jelenti azt hogy az integrál nem létezik! Az ilyen pontokra külön felhívhatjuk a <code>quad</code> függvény figyelmét a <code>points</code> kulcsszó segítségével.</p>
+<p>Vizsgáljuk meg a $$h(x)=\sqrt[3]{\frac{1}{(x-1)^2}}$$ függvényt mely a $x=1$ esetén divergál:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mf">1.0</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span><span class="o">**</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="mf">3.0</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quad</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">ZeroDivisionError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-8-5e2f2a226d67&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>quad<span class="ansi-yellow-intense-fg ansi-bold">(</span>h<span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">/opt/conda/lib/python3.5/site-packages/scipy/integrate/quadpack.py</span> in <span class="ansi-cyan-fg">quad</span><span class="ansi-blue-intense-fg ansi-bold">(func, a, b, args, full_output, epsabs, epsrel, limit, points, weight, wvar, wopts, maxp1, limlst)</span>
+<span class="ansi-green-fg">    314</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>weight <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    315</span>         retval = _quad(func, a, b, args, full_output, epsabs, epsrel, limit,
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 316</span><span class="ansi-yellow-intense-fg ansi-bold">                        points)
+</span><span class="ansi-green-fg">    317</span>     <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    318</span>         retval = _quad_weight(func, a, b, args, full_output, epsabs, epsrel,
+
+<span class="ansi-green-intense-fg ansi-bold">/opt/conda/lib/python3.5/site-packages/scipy/integrate/quadpack.py</span> in <span class="ansi-cyan-fg">_quad</span><span class="ansi-blue-intense-fg ansi-bold">(func, a, b, args, full_output, epsabs, epsrel, limit, points)</span>
+<span class="ansi-green-fg">    379</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> points <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    380</span>         <span class="ansi-green-intense-fg ansi-bold">if</span> infbounds <span class="ansi-yellow-intense-fg ansi-bold">==</span> <span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 381</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">return</span> _quadpack<span class="ansi-yellow-intense-fg ansi-bold">.</span>_qagse<span class="ansi-yellow-intense-fg ansi-bold">(</span>func<span class="ansi-yellow-intense-fg ansi-bold">,</span>a<span class="ansi-yellow-intense-fg ansi-bold">,</span>b<span class="ansi-yellow-intense-fg ansi-bold">,</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span>full_output<span class="ansi-yellow-intense-fg ansi-bold">,</span>epsabs<span class="ansi-yellow-intense-fg ansi-bold">,</span>epsrel<span class="ansi-yellow-intense-fg ansi-bold">,</span>limit<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">    382</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">    383</span>             <span class="ansi-green-intense-fg ansi-bold">return</span> _quadpack<span class="ansi-yellow-intense-fg ansi-bold">.</span>_qagie<span class="ansi-yellow-intense-fg ansi-bold">(</span>func<span class="ansi-yellow-intense-fg ansi-bold">,</span>bound<span class="ansi-yellow-intense-fg ansi-bold">,</span>infbounds<span class="ansi-yellow-intense-fg ansi-bold">,</span>args<span class="ansi-yellow-intense-fg ansi-bold">,</span>full_output<span class="ansi-yellow-intense-fg ansi-bold">,</span>epsabs<span class="ansi-yellow-intense-fg ansi-bold">,</span>epsrel<span class="ansi-yellow-intense-fg ansi-bold">,</span>limit<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-7-6f67c98dcaf3&gt;</span> in <span class="ansi-cyan-fg">h</span><span class="ansi-blue-intense-fg ansi-bold">(x)</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-green-intense-fg ansi-bold">def</span> h<span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold">     </span><span class="ansi-green-intense-fg ansi-bold">return</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">(</span>x<span class="ansi-yellow-intense-fg ansi-bold">-</span><span class="ansi-cyan-intense-fg ansi-bold">1.0</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">**</span><span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">-</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">**</span><span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">1.0</span><span class="ansi-yellow-intense-fg ansi-bold">/</span><span class="ansi-cyan-intense-fg ansi-bold">3.0</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">ZeroDivisionError</span>: 0.0 cannot be raised to a negative power</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>quad</code> bizony nehézségekbe ütközik ha a 0 reciprokát kell vegye! Specifikáljuk most az $x=1$-et mint problémás pontot:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">quad</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">points</span><span class="o">=</span><span class="p">[</span><span class="mf">1.0</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(6.000000000001056, 4.723332835965266e-12)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Így az integrál már szépen elvégezhető.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2D-integr&#225;l">2D integr&#225;l<a class="anchor-link" href="#2D-integr&#225;l">&#182;</a></h2><p>A <code>quad</code> függvény két dimenziós változata a <code>dblquad</code>. Nézzünk két egyszerű példát két dimenziós integrálra is!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Integráljuk a $$ \cos(x) e^{-(x^2+y^2)} $$ függvényt az alábbi két integrálási tartományon:</p>
+<ul>
+<li>egy origó központú egységnyi hosszú négyzeten </li>
+<li>az origó központú egség körlapon!</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Az integrandus definiálása</span>
+<span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A <code>dblquad</code> első paramétere megint az integrálandó függvény. A második és harmadik bemenő paraméter az integrandus függvény első paraméterének határait adja meg. A negyedik és ötödik bemenő paraméter az első integrálási válltozó függvényeként kifejezve a második integrálási változó határai. A legegyszerűbb esetben ezek valamilyen konstans függvények. 
+Az első integrálási tartomány tehát így számítható :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dblquad</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0.8183636555228812, 9.085661728779128e-15)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A második integrálási tartományban az $x$ válltozó függvényében kell paraméterezni az $y$ válltozó szélső értékeit. Ha az integrálási tartomány az egység sugarú körlap akkor az alsó határt a $y(x)=-\sqrt{1-x^2}$ a felső határt pedig a $y(x)=\sqrt{1-x^2}$ adja:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dblquad</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1.7860608962993605, 2.211336003199449e-09)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Differenci&#225;l-egyenletek">Differenci&#225;l egyenletek<a class="anchor-link" href="#Differenci&#225;l-egyenletek">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Amint azt a bevezetőben is említettük a fizikai törvények jelentős része a differenciál egyenletek nyelvén van megfogalmazva. 
+Az alábbiakban megismerkedünk az <code>odeint</code> rutinnal amely differenciál egyenletek numerikus megoldását tesz lehetővé.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="k">import</span> <span class="o">*</span> <span class="c1"># ez kell a diffegyenletekhez is!!</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Egy egyenletet differenciál egyenletnek hívunk ha a meghatározandó függvény deriváltjai szerepelnek benne. Egy egyszerű differenciál egyenletre jutunk például ha megvizsgáljuk egy kondenzátor töltésének időbeli válltozását! 
+<img src="http://fizipedia.bme.hu/images/e/e0/RC_k%C3%B6r.JPG" width=300></img></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A kondenzátoron felhalmozott $Q$ töltés meghatározására induljunk ki a Kirchhoff huroktörvény-ből amit a fenti ábrán látható áramkörre írtunk fel:
+$$ \varepsilon= \underbrace{I R}_{U_R}+ \underbrace{Q C}_{U_C} = \frac{\mathrm{d}Q}{\mathrm{d}t}R+\frac{Q}{C}$$</p>
+<p>A megoldandó differenciálegyenlet tehát:</p>
+$$ \frac{\mathrm{d}Q}{\mathrm{d}t}= \frac{\varepsilon}{R}-\frac{Q}{RC} $$<p>Tegyük fel hogy a kezdetben üres volt a kondenzátor, tehát $Q(0)=0$ és számoljunk az $\varepsilon=1\mathrm{V}$, $R=1\mathrm{M}\Omega$ és $C=100nF$ paraméterekkel!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Paraméterek definiálása</span>
+<span class="n">epsilon</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">R</span><span class="o">=</span><span class="mf">1.0e6</span>
+<span class="n">C</span><span class="o">=</span><span class="mf">1.0e-7</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Az <code>odeint</code> függvény hívásához szükség van a paramétereken kívül a növekmény függvényre (azaz a fenti egyenlet jobb oldalára), definiáljuk most ezt:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">RCkor</span><span class="p">(</span><span class="n">q</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>   
+    <span class="k">return</span> <span class="n">epsilon</span><span class="o">/</span><span class="n">R</span><span class="o">-</span><span class="n">q</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">C</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mostmár készen vagyunk arra hogy meghívjuk a differenciál egyenlet megoldó függvényt! Az <code>odeint</code> alapvetően három bemenő paramétert vár. Az első a fent definiált növekmény függvény a második a meghatározandó függvény kezdeti értéke, a harmadik pedig azon időpontok halmaza ahol kíváncsiak vagyunk a megoldásra. A függvéyn visszatérési értéke maga a keresett adatsor.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span> <span class="c1"># ezek az érdekes idő pillanatok</span>
+<span class="n">q0</span><span class="o">=</span><span class="mi">0</span> <span class="c1"># A töltés kezdeti értéke</span>
+<span class="n">q</span><span class="o">=</span><span class="n">odeint</span><span class="p">(</span><span class="n">RCkor</span><span class="p">,</span><span class="n">q0</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="c1"># itt oldjuk meg a diffegyenletet</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Mostmár csak ábrázolni kell!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">q</span><span class="o">/</span><span class="n">C</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">r&#39;$t$[s]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ylabel</span><span class="p">(</span><span class="s1">r&#39;$Q/C$[V]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">grid</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vizsgáljunk meg egy másik példát ! Legyen ez egy rugóval rögzített test mely egy vonal mentén surlódás nélkül tud mozogni.
+<img src="https://i1.wp.com/www.paroc.com/knowhow/sound/~/media/Images/Knowhow/Sound/The-ideal-mass-spring-system-3244099.ashx" width=300></img></p>
+<p>Ennek a mozgás egyenlete, Newton szerint,</p>
+$$m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}(t)=-kx(t)$$<p>Írjuk át ez az időben másodrendő differenciál egyenletet két időben első rendű differenciál egyenletre!</p>
+$$\frac{\mathrm{d}x}{\mathrm{d}t}(t)=v(t)$$$$m \frac{\mathrm{d}v}{\mathrm{d}t}(t)=-k x(t)$$<p>Általában minden magasabb rendű differenciál egyenlet rendje hasonló módon csökkenthető. Azaz a legáltalánosabb esetben is új ismeretlen függvények bevezetésével első rendű differenciál egyenlet rendszer megoldására tudjuk redukálni a problémánkat!</p>
+<p>Vizsgáljuk meg azt az esetet ha $m=k=1$ !
+Most a növekmény függvényünk egy két elemű vektort  kell hogy kezeljen!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">u</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># az u első komponense a kitérés</span>
+    <span class="n">v</span><span class="o">=</span><span class="n">u</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># az u második komponense a sebesség</span>
+        
+    <span class="k">return</span>  <span class="p">[</span><span class="n">v</span><span class="p">,</span><span class="o">-</span><span class="n">x</span><span class="p">]</span> <span class="c1"># ez maga a növekmény kiértékelése </span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Oldjuk meg az egyenleteket úgy hogy kezdetben a kitérés 1 a kezdő sebesség pedig nulla!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span><span class="o">=</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span> <span class="c1"># az idő intervallum</span>
+<span class="n">u0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># kezdeti érték x-re és v-re</span>
+<span class="n">u</span><span class="o">=</span><span class="n">odeint</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">u0</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> <span class="c1"># itt történik a diffegyenlet megoldása</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">u</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">r&#39;$x(t)$ pozicio&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">u</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="s1">r&#39;$v(t)$ sebesseg&#39;</span><span class="p">)</span>
+<span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">xlabel</span><span class="p">(</span><span class="s1">r&#39;$t$[s]&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">grid</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+Km8t30q7lHZc8xV/u97ccQcUFnqfl1FdDc88Az/6ka9izOdUNa6+XJViY1PZJu2/vL/W1dU1m/bQ
+8UN60eMX6aHjh3yXU1Wl2rGj6oED3tIPGaL67LO+i0lK7/7rXe08t7MeO3Gs2bQnT53UjCcztKi8
+yHc5dXWqWVmqmzd7S3/nnapz5vguJilVf1at3Rd019LKUk/pbyq4SXPfzI2orAkTVBcu9JZ2yRLV
+0aMjKibphOKmr1ibtE/+ACMyRvDxiY89LSS24M8LmJg1kfTz032X06ED3HorzJ/ffNpt21wf5bhx
+votJSr069mLoV4ey/K3lzaYt+GvB6Q+K/RKBn/wEfvWr5p/+Kyvdh/j2ROmc2/5c7vnmPczdNrfZ
+tCWVJbxx4A2mZEfWp/nAAzBvnptA2ZTaWli4EH7844iKMRDdkz8wDvgrcAq4qol0w4G9wN+A2c2c
+M6Z3xILSAu23rJ+eqjsVNk3FxxXa8fGO+l7VexGXc/CgaqdOquXl4dPU1alefbVqXl7ExfiyZcuW
+1ikoSqWVpZo+L12Pfno0bJqa2hrNeDJDN/+/x0f3RtTWqvbpo/rKK02nmz5dddashscTpT1bQtWn
+VZo+L11LDpY0mW7k2pG6YNsCT+cM157jx6s+9ljTeRctUh02zP1Nmcie/KMN/plABvBauOCP+1xh
+H9ATaA/sAPo2cc6YNkpdXZ0OXDFQF29fHDbN2HVj9aFXH4q6rIcfVh0xIvwFmZenmp2teir8fSim
+nnjiidYpKAamvjBVZ2yaEfb1X279pY56dlTU5WzcqJqRofrJJ42//uabql27qh450vC1RGrPlrB4
++2Id8pshYR+knt/zvGY+lak1tTWezheuPffuVe3SRfUf/2g83wcfuN/R2297KiYQIgn+UXX7qGqZ
+qv4daGrb8W8Af1fV/apaCxQArTYRW0TIG53HnC1zKK0sbfD68reWs/vwbh689sGoy5o9Gyoq4Kmn
+Gr5WVgb33edGkLTW+iNVsd4duwXNv2E+L+97udFx/0X7i1hUvIin/ruRhvVp1Cjo3x9mzmzY/XP0
+qBt+m5sLnTo1zJtI7dkSpvWbBsAjf3qkwWv7q/Yz46UZLBu5jLR23mZbhWvPzEy491430qqm5szX
+amvhtttg2jTIzvZVfXOW1ghDlwDv1/v5QOhYq+nbpS+5I3IZvmb46c0PVJWn33qaOVvmsDFno6dJ
+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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
