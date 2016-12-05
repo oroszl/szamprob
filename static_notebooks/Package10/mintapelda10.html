@@ -12265,7 +12265,7 @@ Az alábbiakban megismerkedünk az <code>odeint</code> rutinnal amely differenci
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>A kondenzátoron felhalmozott $Q$ töltés meghatározására induljunk ki a Kirchhoff huroktörvény-ből amit a fenti ábrán látható áramkörre írtunk fel:
-$$ \varepsilon= \underbrace{I R}_{U_R}+ \underbrace{Q C}_{U_C} = \frac{\mathrm{d}Q}{\mathrm{d}t}R+\frac{Q}{C}$$</p>
+$$ \varepsilon= \underbrace{I R}_{U_R}+ \underbrace{\frac{Q}{C}}_{U_C} = \frac{\mathrm{d}Q}{\mathrm{d}t}R+\frac{Q}{C}$$</p>
 <p>A megoldandó differenciálegyenlet tehát:</p>
 $$ \frac{\mathrm{d}Q}{\mathrm{d}t}= \frac{\varepsilon}{R}-\frac{Q}{RC} $$<p>Tegyük fel hogy a kezdetben üres volt a kondenzátor, tehát $Q(0)=0$ és számoljunk az $\varepsilon=1\mathrm{V}$, $R=1\mathrm{M}\Omega$ és $C=100nF$ paraméterekkel!</p>
 
