@@ -11751,7 +11751,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="M&#233;g-t&#246;bb-scipy-...">M&#233;g t&#246;bb scipy ...<a class="anchor-link" href="#M&#233;g-t&#246;bb-scipy-...">&#182;</a></h1><p>Az alábbi notebookban megismerkedünk két témával melyek, annak ellenére hogy magukban is fontos jelentőséggel bírnak, kulcs fontosságú szerepet töltenek be más problémák numerikus megoldásában. A numerikus integrálás témakörében megvizsgálunk néhány egyszerű integrált a <code>scipy</code> csomag <code>quad</code> fügvényével. Az második kérdéskör, a differenciál egyenletek megoldása, számos fizikai probléma megoldásában nyújthat segítséget. Gondoljunk csak arra hogy a klasszikus mechanika <a href="https://hu.wikipedia.org/wiki/Newton_t%C3%B6rv%C3%A9nyei">Newton törvényei</a> az elektrodinamika <a href="https://hu.wikipedia.org/wiki/Maxwell-egyenletek">Maxwell-egyenletei</a> a kvantummechanika <a href="https://hu.wikipedia.org/wiki/Schr%C3%B6dinger-egyenlet">Schrödinger-egyenlete</a> illetve az általános relativitás elmélet <a href="https://hu.wikipedia.org/wiki/%C3%81ltal%C3%A1nos_relativit%C3%A1selm%C3%A9let#Az_elm.C3.A9let_l.C3.A9nyege">Einsteni-egyenletei</a> mind mind differenciálegyenletek!</p>
+<h1 id="M&#233;g-t&#246;bb-scipy-...">M&#233;g t&#246;bb scipy ...<a class="anchor-link" href="#M&#233;g-t&#246;bb-scipy-...">&#182;</a></h1><p>Az alábbi notebookban megismerkedünk két témával, melyek annak ellenére hogy magukban is fontos jelentőséggel bírnak, kulcs fontosságú szerepet töltenek be más problémák numerikus megoldásában. A numerikus integrálás témakörében megvizsgálunk néhány egyszerű integrált a <code>scipy</code> csomag <code>quad</code> fügvényével. Az második kérdéskör, a differenciál egyenletek megoldása, számos fizikai probléma megoldásában nyújthat segítséget. Gondoljunk csak arra hogy a klasszikus mechanika <a href="https://hu.wikipedia.org/wiki/Newton_t%C3%B6rv%C3%A9nyei">Newton törvényei</a> az elektrodinamika <a href="https://hu.wikipedia.org/wiki/Maxwell-egyenletek">Maxwell-egyenletei</a> a kvantummechanika <a href="https://hu.wikipedia.org/wiki/Schr%C3%B6dinger-egyenlet">Schrödinger-egyenlete</a> illetve az általános relativitás elmélet <a href="https://hu.wikipedia.org/wiki/%C3%81ltal%C3%A1nos_relativit%C3%A1selm%C3%A9let#Az_elm.C3.A9let_l.C3.A9nyege">Einsteni-egyenletei</a> mind mind differenciálegyenletek!</p>
 
 </div>
 </div>
@@ -11810,7 +11810,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Vizsgáljuk meg az alábbi egyszerű integrált $$ \int_{-1}^1 (x^2+3x +2)\mathrm{d}x .$$ 
-Ennek az értéke némi <a href="http://www.wolframalpha.com/input/?i=%5Cint_%7B-1%7D%5E1+%28x%5E2%2B3x+%2B2%29">algebrával</a> $14/3\approx 4.66666$ Vajon ugyen ezt kapjuk e a <code>quad</code> fügvénnyel ?</p>
+Ennek az értéke némi <a href="http://www.wolframalpha.com/input/?i=%5Cint_%7B-1%7D%5E1+%28x%5E2%2B3x+%2B2%29">algebrával</a> $14/3\approx 4.66666$ Vajon ugyen ezt kapjuk-e a <code>quad</code> fügvénnyel ?</p>
 
 </div>
 </div>
@@ -11844,7 +11844,7 @@ Ennek az értéke némi <a href="http://www.wolframalpha.com/input/?i=%5Cint_%7B
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mostmár meghívhatjuk a <code>quad</code>-ot. Az első változó az integrálandó függvény a második és a harmadik pedig az integrálási határok. A kimenet két szám. Az első az integrál becsült értéke a második az algoritmus becsült hibája.</p>
+<p>Most már meghívhatjuk a <code>quad</code>-ot. Az első változó az integrálandó függvény, a második és a harmadik pedig az integrálási határok. A kimenet két szám. Az első az integrál becsült értéke a második az algoritmus becsült hibája.</p>
 
 </div>
 </div>
@@ -11884,7 +11884,7 @@ Ennek az értéke némi <a href="http://www.wolframalpha.com/input/?i=%5Cint_%7B
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Amint az eredmény is mutatja ez az analitikus számítás és a numerikus integrál megegyeznek.</p>
-<p>Előfordulhat hogy az integrgálási határok végtelenek. például vizsgáljuk meg a Gauss görbe alatti területet:
+<p>Előfordulhat hogy az integrgálási határok végtelenek. Például vizsgáljuk meg a Gauss görbe alatti területet:
 $$ \int_{-\infty}^\infty \mathrm{e}^{-x^2}\mathrm{d}x =\sqrt{\pi}$$</p>
 
 </div>
@@ -11978,7 +11978,7 @@ $$ \int_{-\infty}^\infty \mathrm{e}^{-x^2}\mathrm{d}x =\sqrt{\pi}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A fent vizsgált két példával különösebb gond nélkül meg tudott birkózni a <code>quad</code>. Előfordul azomban hogy az integrálás problémákba ütközik. Erre egy jó példa ha az integrandus szingulárissá válik a integrálási tartomány egy pontjában. Ez nem feltétlenül jelenti azt hogy az integrál nem létezik! Az ilyen pontokra külön felhívhatjuk a <code>quad</code> függvény figyelmét a <code>points</code> kulcsszó segítségével.</p>
+<p>A fent vizsgált két példával különösebb gond nélkül meg tudott birkózni a <code>quad</code>. Előfordul azonban, hogy az integrálás problémákba ütközik. Erre egy jó példa ha az integrandus szingulárissá válik a integrálási tartomány egy pontjában. Ez nem feltétlenül jelenti azt hogy az integrál nem létezik! Az ilyen pontokra külön felhívhatjuk a <code>quad</code> függvény figyelmét a <code>points</code> kulcsszó segítségével.</p>
 <p>Vizsgáljuk meg a $$h(x)=\sqrt[3]{\frac{1}{(x-1)^2}}$$ függvényt mely a $x=1$ esetén divergál:</p>
 
 </div>
@@ -12053,7 +12053,7 @@ $$ \int_{-\infty}^\infty \mathrm{e}^{-x^2}\mathrm{d}x =\sqrt{\pi}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A <code>quad</code> bizony nehézségekbe ütközik ha a 0 reciprokát kell vegye! Specifikáljuk most az $x=1$-et mint problémás pontot:</p>
+<p>A <code>quad</code> bizony nehézségekbe ütközik, ha a 0 reciprokát kell vennie! Specifikáljuk most az $x=1$-et mint problémás pontot:</p>
 
 </div>
 </div>
@@ -12102,7 +12102,7 @@ $$ \int_{-\infty}^\infty \mathrm{e}^{-x^2}\mathrm{d}x =\sqrt{\pi}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2D-integr&#225;l">2D integr&#225;l<a class="anchor-link" href="#2D-integr&#225;l">&#182;</a></h2><p>A <code>quad</code> függvény két dimenziós változata a <code>dblquad</code>. Nézzünk két egyszerű példát két dimenziós integrálra is!</p>
+<h2 id="2D-integr&#225;l">2D integr&#225;l<a class="anchor-link" href="#2D-integr&#225;l">&#182;</a></h2><p>A <code>quad</code> függvény kétdimenziós változata a <code>dblquad</code>. Nézzünk két egyszerű példát kétdimenziós integrálra is!</p>
 
 </div>
 </div>
@@ -12115,7 +12115,7 @@ $$ \int_{-\infty}^\infty \mathrm{e}^{-x^2}\mathrm{d}x =\sqrt{\pi}$$</p>
 <p>Integráljuk a $$ \cos(x) e^{-(x^2+y^2)} $$ függvényt az alábbi két integrálási tartományon:</p>
 <ul>
 <li>egy origó központú egységnyi hosszú négyzeten </li>
-<li>az origó központú egség körlapon!</li>
+<li>az origó központú egység körlapon!</li>
 </ul>
 
 </div>
@@ -12141,7 +12141,7 @@ $$ \int_{-\infty}^\infty \mathrm{e}^{-x^2}\mathrm{d}x =\sqrt{\pi}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A <code>dblquad</code> első paramétere megint az integrálandó függvény. A második és harmadik bemenő paraméter az integrandus függvény első paraméterének határait adja meg. A negyedik és ötödik bemenő paraméter az első integrálási válltozó függvényeként kifejezve a második integrálási változó határai. A legegyszerűbb esetben ezek valamilyen konstans függvények. 
+<p>A <code>dblquad</code> első paramétere megint az integrálandó függvény. A második és harmadik bemenő paraméter az integrandusfüggvény első paraméterének határait adja meg. A negyedik és ötödik bemenő paraméter az első integrálási változó függvényeként kifejezve a második integrálási változó határai. A legegyszerűbb esetben ezek valamilyen konstansfüggvények. 
 Az első integrálási tartomány tehát így számítható :</p>
 
 </div>
@@ -12181,7 +12181,7 @@ Az első integrálási tartomány tehát így számítható :</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A második integrálási tartományban az $x$ válltozó függvényében kell paraméterezni az $y$ válltozó szélső értékeit. Ha az integrálási tartomány az egység sugarú körlap akkor az alsó határt a $y(x)=-\sqrt{1-x^2}$ a felső határt pedig a $y(x)=\sqrt{1-x^2}$ adja:</p>
+<p>A második integrálási tartományban az $x$ válltozó függvényében kell paraméterezni az $y$ válltozó szélső értékeit. Ha az integrálási tartomány az egység sugarú körlap, akkor az alsó határt a $y(x)=-\sqrt{1-x^2}$ a felső határt pedig a $y(x)=\sqrt{1-x^2}$ adja:</p>
 
 </div>
 </div>
@@ -12220,7 +12220,7 @@ Az első integrálási tartomány tehát így számítható :</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Differenci&#225;l-egyenletek">Differenci&#225;l egyenletek<a class="anchor-link" href="#Differenci&#225;l-egyenletek">&#182;</a></h1>
+<h1 id="Differenci&#225;legyenletek">Differenci&#225;legyenletek<a class="anchor-link" href="#Differenci&#225;legyenletek">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -12229,8 +12229,8 @@ Az első integrálási tartomány tehát így számítható :</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Amint azt a bevezetőben is említettük a fizikai törvények jelentős része a differenciál egyenletek nyelvén van megfogalmazva. 
-Az alábbiakban megismerkedünk az <code>odeint</code> rutinnal amely differenciál egyenletek numerikus megoldását tesz lehetővé.</p>
+<p>Amint azt a bevezetőben is említettük, a fizikai törvények jelentős része a differenciálegyenletek nyelvén van megfogalmazva. 
+Az alábbiakban megismerkedünk az <code>odeint</code> rutinnal amely differenciálegyenletek numerikus megoldását tesz lehetővé.</p>
 
 </div>
 </div>
@@ -12253,7 +12253,7 @@ Az alábbiakban megismerkedünk az <code>odeint</code> rutinnal amely differenci
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Egy egyenletet differenciál egyenletnek hívunk ha a meghatározandó függvény deriváltjai szerepelnek benne. Egy egyszerű differenciál egyenletre jutunk például ha megvizsgáljuk egy kondenzátor töltésének időbeli válltozását! 
+<p>Egy egyenletet differenciálegyenletnek hívunk, ha a meghatározandó függvény deriváltjai szerepelnek benne. Egy egyszerű differenciálegyenletre jutunk például ha megvizsgáljuk egy kondenzátor töltésének időbeli válltozását! 
 <img src="http://fizipedia.bme.hu/images/e/e0/RC_k%C3%B6r.JPG" width=300></img></p>
 
 </div>
@@ -12264,10 +12264,10 @@ Az alábbiakban megismerkedünk az <code>odeint</code> rutinnal amely differenci
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A kondenzátoron felhalmozott $Q$ töltés meghatározására induljunk ki a Kirchhoff huroktörvény-ből amit a fenti ábrán látható áramkörre írtunk fel:
+<p>A kondenzátoron felhalmozott $Q$ töltés meghatározására induljunk ki a Kirchhoff féle huroktörvényből amit a fenti ábrán látható áramkörre írtunk fel:
 $$ \varepsilon= \underbrace{I R}_{U_R}+ \underbrace{\frac{Q}{C}}_{U_C} = \frac{\mathrm{d}Q}{\mathrm{d}t}R+\frac{Q}{C}$$</p>
 <p>A megoldandó differenciálegyenlet tehát:</p>
-$$ \frac{\mathrm{d}Q}{\mathrm{d}t}= \frac{\varepsilon}{R}-\frac{Q}{RC} $$<p>Tegyük fel hogy a kezdetben üres volt a kondenzátor, tehát $Q(0)=0$ és számoljunk az $\varepsilon=1\mathrm{V}$, $R=1\mathrm{M}\Omega$ és $C=100nF$ paraméterekkel!</p>
+$$ \frac{\mathrm{d}Q}{\mathrm{d}t}= \frac{\varepsilon}{R}-\frac{Q}{RC} $$<p>Tegyük fel, hogy a kezdetben üres volt a kondenzátor, tehát $Q(0)=0$ és számoljunk az $\varepsilon=1\mathrm{V}$, $R=1\mathrm{M}\Omega$ és $C=100nF$ paraméterekkel!</p>
 
 </div>
 </div>
@@ -12293,7 +12293,7 @@ $$ \frac{\mathrm{d}Q}{\mathrm{d}t}= \frac{\varepsilon}{R}-\frac{Q}{RC} $$<p>Tegy
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Az <code>odeint</code> függvény hívásához szükség van a paramétereken kívül a növekmény függvényre (azaz a fenti egyenlet jobb oldalára), definiáljuk most ezt:</p>
+<p>Az <code>odeint</code> függvény hívásához szükség van a paramétereken kívül a növekményfüggvényre (azaz a fenti egyenlet jobb oldalára), definiáljuk most ezt:</p>
 
 </div>
 </div>
@@ -12317,7 +12317,7 @@ $$ \frac{\mathrm{d}Q}{\mathrm{d}t}= \frac{\varepsilon}{R}-\frac{Q}{RC} $$<p>Tegy
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mostmár készen vagyunk arra hogy meghívjuk a differenciál egyenlet megoldó függvényt! Az <code>odeint</code> alapvetően három bemenő paramétert vár. Az első a fent definiált növekmény függvény a második a meghatározandó függvény kezdeti értéke, a harmadik pedig azon időpontok halmaza ahol kíváncsiak vagyunk a megoldásra. A függvéyn visszatérési értéke maga a keresett adatsor.</p>
+<p>Mostmár készen vagyunk arra hogy meghívjuk a differenciálegyenlet megoldó függvényt! Az <code>odeint</code> alapvetően három bemenő paramétert vár. Az első a fent definiált növekményfüggvény a második a meghatározandó függvény kezdeti értéke, a harmadik pedig azon időpontok halmaza ahol kíváncsiak vagyunk a megoldásra. A függvéyn visszatérési értéke maga a keresett adatsor.</p>
 
 </div>
 </div>
@@ -12342,7 +12342,7 @@ $$ \frac{\mathrm{d}Q}{\mathrm{d}t}= \frac{\varepsilon}{R}-\frac{Q}{RC} $$<p>Tegy
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mostmár csak ábrázolni kell!</p>
+<p>Most már csak ábrázolni kell!</p>
 
 </div>
 </div>
@@ -12558,13 +12558,13 @@ qbiIiEjiVFxERCRxKi4iIpI4FRcREUnc/wHx5FcaNVNl5QAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vizsgáljunk meg egy másik példát ! Legyen ez egy rugóval rögzített test mely egy vonal mentén surlódás nélkül tud mozogni.
+<p>Vizsgáljunk meg egy másik példát ! Legyen ez egy rugóval rögzített test, mely egy vonal mentén súrlódás nélkül tud mozogni.
 <img src="https://i1.wp.com/www.paroc.com/knowhow/sound/~/media/Images/Knowhow/Sound/The-ideal-mass-spring-system-3244099.ashx" width=300></img></p>
-<p>Ennek a mozgás egyenlete, Newton szerint,</p>
-$$m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}(t)=-kx(t)$$<p>Írjuk át ez az időben másodrendő differenciál egyenletet két időben első rendű differenciál egyenletre!</p>
-$$\frac{\mathrm{d}x}{\mathrm{d}t}(t)=v(t)$$$$m \frac{\mathrm{d}v}{\mathrm{d}t}(t)=-k x(t)$$<p>Általában minden magasabb rendű differenciál egyenlet rendje hasonló módon csökkenthető. Azaz a legáltalánosabb esetben is új ismeretlen függvények bevezetésével első rendű differenciál egyenlet rendszer megoldására tudjuk redukálni a problémánkat!</p>
+<p>Ennek a mozgásnak az egyenlete, Newton szerint,</p>
+$$m\frac{\mathrm{d}^2x}{\mathrm{d}t^2}(t)=-kx(t)$$<p>Írjuk át ez az időben másodrendő differenciálegyenletet két időben elsőrendű differenciálegyenletre!</p>
+$$\frac{\mathrm{d}x}{\mathrm{d}t}(t)=v(t)$$$$m \frac{\mathrm{d}v}{\mathrm{d}t}(t)=-k x(t)$$<p>Általában minden magasabb rendű differenciálegyenlet rendje hasonló módon csökkenthető. Azaz a legáltalánosabb esetben is új ismeretlen függvények bevezetésével első rendű differenciálegyenlet rendszer megoldására tudjuk redukálni a problémánkat!</p>
 <p>Vizsgáljuk meg azt az esetet ha $m=k=1$ !
-Most a növekmény függvényünk egy két elemű vektort  kell hogy kezeljen!</p>
+Most a növekmény függvényünk egy kételemű vektort  kell, hogy kezeljen!</p>
 
 </div>
 </div>
@@ -12591,7 +12591,7 @@ Most a növekmény függvényünk egy két elemű vektort  kell hogy kezeljen!</
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Oldjuk meg az egyenleteket úgy hogy kezdetben a kitérés 1 a kezdő sebesség pedig nulla!</p>
+<p>Oldjuk meg az egyenleteket úgy, hogy kezdetben a kitérés 1 és a kezdő sebesség pedig nulla!</p>
 
 </div>
 </div>
